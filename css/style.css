@@ -1,0 +1,145 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  font-size: 10px; }
+
+body {
+  box-sizing: border-box;
+  direction: rtl;
+  text-align: right;
+  font-family: "IRANSans", "robotolight", sans-serif !important;
+  font-size: 1.6rem; }
+
+@font-face {
+  font-family: IRANSansBlack;
+  font-style: normal;
+  font-weight: 900;
+  src: url("./fonts/IRANSansWeb_Black.eot?");
+  src: url("./fonts/IRANSansWeb_Black.eot?#iefix") format("embedded-opentype"), url("./fonts/IRANSansWeb_Black.woff2") format("woff2"), url("./fonts/IRANSansWeb_Black.woff") format("woff"), url("./fonts/IRANSansWeb_Black.ttf") format("truetype"); }
+
+@font-face {
+  font-family: IRANSansBold;
+  font-style: normal;
+  font-weight: bold;
+  src: url("./fonts/IRANSansWeb_Bold.eot?");
+  src: url("./fonts/IRANSansWeb_Bold.eot?#iefix") format("embedded-opentype"), url("./fonts/IRANSansWeb_Bold.woff2") format("woff2"), url("./fonts/IRANSansWeb_Bold.woff") format("woff"), url("./fonts/IRANSansWeb_Bold.ttf") format("truetype"); }
+
+@font-face {
+  font-family: IRANSansMedium;
+  font-style: normal;
+  font-weight: 500;
+  src: url("./fonts/IRANSansWeb_Medium.eot?");
+  src: url("./fonts/IRANSansWeb_Medium.eot?#iefix") format("embedded-opentype"), url("./fonts/IRANSansWeb_Medium.woff2") format("woff2"), url("./fonts/IRANSansWeb_Medium.woff") format("woff"), url("./fonts/IRANSansWeb_Medium.ttf") format("truetype"); }
+
+@font-face {
+  font-family: IRANSansLight;
+  font-style: normal;
+  font-weight: 300;
+  src: url("./fonts/IRANSansWeb_Light.eot?");
+  src: url("./fonts/IRANSansWeb_Light.eot?#iefix") format("embedded-opentype"), url("./fonts/IRANSansWeb_Light.woff2") format("woff2"), url("./fonts/IRANSansWeb_Light.woff") format("woff"), url("./fonts/IRANSansWeb_Light.ttf") format("truetype"); }
+
+@font-face {
+  font-family: IRANSansUltraLight;
+  font-style: normal;
+  font-weight: 200;
+  src: url("./fonts/IRANSansWeb_UltraLight.eot?");
+  src: url("./fonts/IRANSansWeb_UltraLight.eot?#iefix") format("embedded-opentype"), url("./fonts/IRANSansWeb_UltraLight.woff2") format("woff2"), url("./fonts/IRANSansWeb_UltraLight.woff") format("woff"), url("./fonts/IRANSansWeb_UltraLight.ttf") format("truetype"); }
+
+@font-face {
+  font-family: IRANSans;
+  font-style: normal;
+  font-weight: normal;
+  src: url("./fonts/IRANSansWeb.eot?");
+  src: url("./fonts/IRANSansWeb.eot?#iefix") format("embedded-opentype"), url("./fonts/IRANSansWeb.woff2") format("woff2"), url("./fonts/IRANSansWeb.woff") format("woff"), url("./fonts/IRANSansWeb.ttf") format("truetype"); }
+
+@font-face {
+  font-family: iranyekanweblight;
+  src: url(./fonts/iranyekanweblight.eot);
+  src: url(./fonts/iranyekanweblight.eot?#iefix&v=4.6.2) format("embedded-opentype"), url(./fonts/iranyekanweblight.woff2) format("woff2"), url(./fonts/iranyekanweblight.woff) format("woff"), url(./fonts/iranyekanweblight.ttf) format("truetype"), url(./fonts/iranyekanweblight.svg?v=4.6.2#fontawesomeregular) format("svg");
+  font-weight: 400;
+  font-style: normal; }
+
+@font-face {
+  font-family: iranyekanwebbold;
+  src: url(./fonts/iranyekanwebbold.eot);
+  src: url(./fonts/iranyekanwebbold.eot?#iefix&v=4.6.2) format("embedded-opentype"), url(./fonts/iranyekanwebbold.woff2) format("woff2"), url(./fonts/iranyekanwebbold.woff) format("woff"), url(./fonts/iranyekanwebbold.ttf) format("truetype"), url(./fonts/iranyekanwebbold.svg?v=4.6.2#fontawesomeregular) format("svg");
+  font-weight: 400;
+  font-style: normal; }
+
+@font-face {
+  font-family: iranyekanwebregular;
+  src: url(./fonts/iranyekanwebregular.eot);
+  src: url(./fonts/iranyekanwebregular.eot?#iefix&v=4.6.2) format("embedded-opentype"), url(./fonts/iranyekanwebregular.woff2) format("woff2"), url(./fonts/iranyekanwebregular.woff) format("woff"), url(./fonts/iranyekanwebregular.ttf) format("truetype"), url(./fonts/iranyekanwebregular.svg?v=4.6.2#fontawesomeregular) format("svg");
+  font-weight: 400;
+  font-style: normal; }
+
+a {
+  text-decoration: none; }
+
+ul {
+  list-style: none; }
+
+.slider {
+  background: url(/img/bg2.jpg) no-repeat center;
+  background-size: cover;
+  width: 100%;
+  height: 100vh; }
+
+.topmenu {
+  width: 100%;
+  height: 48px;
+  background: rgba(236, 236, 237, 0.8);
+  border-bottom: 1px solid #b8b8b8; }
+
+.airplane img {
+  width: 750px;
+  height: auto;
+  text-align: center;
+  position: relative;
+  top: -20px;
+  transform: translateX(-50%); }
+
+.topmenu-container {
+  height: 90%;
+  width: 85%;
+  margin-right: auto;
+  margin-left: auto;
+  display: flex; }
+
+ul.menu {
+  display: flex;
+  align-items: center;
+  height: 100%; }
+
+.menu-item {
+  display: flex;
+  padding: 0 5px;
+  border-left: 1px solid #b8b8b8;
+  cursor: pointer; }
+  .menu-item img {
+    height: 20px;
+    width: 20px;
+    margin-left: 5px; }
+  .menu-item a {
+    color: #58595b;
+    font-size: 14px; }
+  .menu-item .tel {
+    padding-right: 3px; }
+
+.other {
+  border: none; }
+  .other a {
+    font-size: 20px; }
+
+.left-menu {
+  margin-right: auto; }
+  .left-menu:first-child, .left-menu :last-child {
+    border: none; }
+
+.logo img {
+  width: 100px;
+  height: 40px;
+  padding-top: 5px; }
