@@ -34,16 +34,18 @@ select{
     // padding-right: 15px;
 }
 
-input[type="button"]{
+input[type="button"],.button{
     margin-right: 10px;
-    width:80%;
-    font-family: "iranyekanwebregular", "robotolight", sans-serif !important;
+    width:168px;
+    font-family: inherit;
     background:linear-gradient(70deg,#006d51,#006d51 85%,#013a32 85%,#036e60);
     outline:none;
     border:#ffb700;
     color:#fff;
     font-size: 15px;
-    height: inherit;
+    height: 38px;
+    border-radius: 10px;
+    cursor: pointer;
     &:hover{
         background:#dfa105;
     }
@@ -87,4 +89,10 @@ input[type="button"]{
         color: #fff;
         transform: translate(-50%,-30%);
     }
+}
+
+[placeholder]:focus::placeholder{
+    transition: text-indent .5s ease;
+    text-indent: -100%;
+    opacity: 1;
 }
