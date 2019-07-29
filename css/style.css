@@ -1,4 +1,7 @@
-* {
+:root {
+  box-sizing: border-box; }
+
+*, ::before, ::after {
   margin: 0;
   padding: 0;
   box-sizing: inherit; }
@@ -7,7 +10,6 @@ html {
   font-size: 10px; }
 
 body {
-  box-sizing: border-box;
   direction: rtl;
   text-align: right;
   font-family: "IRANSans", "robotolight", sans-serif !important;
@@ -82,69 +84,6 @@ a {
 ul {
   list-style: none; }
 
-.slider {
-  background: url(/img/bg2.jpg) no-repeat center;
-  background-size: cover;
-  width: 100%;
-  height: 100vh;
-  position: relative; }
-
-.topmenu {
-  width: 100%;
-  height: 48px;
-  background: rgba(236, 236, 237, 0.8);
-  border-bottom: 1px solid #b8b8b8; }
-
-.airplane img {
-  width: 750px;
-  height: auto;
-  text-align: center;
-  position: relative;
-  top: -20px;
-  transform: translateX(-50%); }
-
-.topmenu-container {
-  height: 90%;
-  width: 85%;
-  margin-right: auto;
-  margin-left: auto;
-  display: flex; }
-
-ul.menu {
-  display: flex;
-  align-items: center;
-  height: 100%; }
-
-.menu-item {
-  display: flex;
-  padding: 0 5px;
-  border-left: 1px solid #b8b8b8;
-  cursor: pointer; }
-  .menu-item img {
-    height: 20px;
-    width: 20px;
-    margin-left: 5px; }
-  .menu-item a {
-    color: #58595b;
-    font-size: 14px; }
-  .menu-item .tel {
-    padding-right: 3px; }
-
-.other {
-  border: none; }
-  .other a {
-    font-size: 20px; }
-
-.left-menu {
-  margin-right: auto; }
-  .left-menu:first-child, .left-menu :last-child {
-    border: none; }
-
-.logo img {
-  width: 100px;
-  height: 40px;
-  padding-top: 5px; }
-
 .margin-right {
   margin-right: 10px; }
 
@@ -185,11 +124,6 @@ ul.menu {
   height: 220px;
   margin-top: 10px; }
 
-.blog_slides {
-  margin-top: 20px;
-  width: 90%;
-  height: 200px; }
-
 .flex {
   display: flex;
   justify-content: space-around; }
@@ -199,19 +133,92 @@ ul.menu {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 200px; }
+  height: 300px; }
   .fcolumn .blog_slide {
-    width: 80%;
+    width: 90%;
     height: 50%;
     padding: 5px 0; }
 
+.topmenu {
+  width: 100%;
+  height: 48px;
+  background: rgba(236, 236, 237, 0.8);
+  border-bottom: 1px solid #b8b8b8; }
+
+.airplane img {
+  width: 750px;
+  height: auto;
+  text-align: center;
+  position: relative;
+  top: -20px;
+  transform: translateX(-50%);
+  animation: airplane 2.5s .05s ease-in-out backwards; }
+
+.topmenu-container {
+  height: 90%;
+  width: 85%;
+  margin-right: auto;
+  margin-left: auto;
+  display: flex; }
+
+ul.menu {
+  display: flex;
+  align-items: center;
+  height: 100%; }
+
+.menu-item {
+  display: flex;
+  padding: 0 5px;
+  border-left: 1px solid #b8b8b8;
+  cursor: pointer;
+  transition: all .5s ease; }
+  .menu-item img {
+    height: 20px;
+    width: 20px;
+    margin-left: 5px; }
+  .menu-item a {
+    color: #58595b;
+    font-size: 14px; }
+  .menu-item .tel {
+    padding-right: 3px; }
+  .menu-item:hover {
+    background-color: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(5px);
+    padding: 5px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 5px;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3); }
+
+.other {
+  border: none; }
+  .other a {
+    font-size: 20px; }
+
+.left-menu {
+  margin-right: auto; }
+  .left-menu:first-child, .left-menu :last-child {
+    border: none; }
+
+.logo img {
+  width: 100px;
+  height: 40px;
+  padding-top: 5px; }
+
 .blog_slide {
   cursor: pointer;
-  width: 30%;
-  height: 200px;
+  width: 33%;
+  height: 300px;
   border-radius: 5px;
   position: relative;
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0), 80% rgba(0, 0, 0, 0), 80% black, rgba(0, 0, 0, 0)); }
+  .blog_slide:hover {
+    filter: blur(0.1px); }
+    .blog_slide:hover p {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) scale(1.2);
+      text-shadow: 2px 2px 3px black; }
   .blog_slide img {
     width: 100%;
     height: 100%;
@@ -221,19 +228,32 @@ ul.menu {
     position: absolute;
     left: 3px;
     bottom: 5%;
-    color: #fff; }
+    color: #fff;
+    transition: all 1.5s ease; }
 
 .home_icons {
   width: 100%;
-  margin-bottom: 40px; }
+  margin-bottom: 40px;
+  cursor: pointer; }
 
 .home_icon {
-  width: 20%; }
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center; }
   .home_icon img {
-    width: 100%;
-    height: auto; }
+    width: 70%;
+    text-align: center;
+    height: auto;
+    margin-bottom: 15px; }
   .home_icon p {
     text-align: center; }
+
+.blog_slides {
+  margin-top: 20px;
+  width: 90%;
+  height: 300px; }
 
 .tours {
   display: flex;
@@ -281,6 +301,13 @@ ul.menu {
   width: 465px;
   border: 1px solid #eee; }
 
+.slider {
+  background: url(/img/bg2.jpg) no-repeat center;
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+  position: relative; }
+
 .search-container {
   position: absolute;
   top: 70vh;
@@ -295,6 +322,7 @@ ul.menu {
   color: #fff; }
 
 .search_icons {
+  overflow: hidden;
   display: flex;
   width: 60%;
   justify-content: space-around; }
@@ -315,16 +343,27 @@ ul.menu {
   align-items: center;
   margin-bottom: 5px; }
   .icon_container:hover {
-    background: #cecece;
-    border: 1px solid #aaaaaa; }
+    background: transparent;
+    border: 1px solid #006C50;
+    background-color: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(5px);
+    transition: all .5s ease; }
+    .icon_container:hover img {
+      transform: scale(1.2); }
   .icon_container img {
+    overflow: hidden;
+    transition: all 1s ease;
     width: auto;
     height: 40px; }
 
 .form {
   width: 100%;
-  padding-bottom: 10px;
-  margin-top: 10px; }
+  padding-bottom: 15px;
+  padding-left: 5px;
+  border-radius: 5px;
+  margin-top: 10px;
+  background: rgba(0, 0, 0, 0.3);
+  filter: blur(0.5); }
 
 .filters {
   margin: 20px 0; }
@@ -373,7 +412,8 @@ input[type="button"], .button {
   font-size: 15px;
   height: 38px;
   border-radius: 10px;
-  cursor: pointer; }
+  cursor: pointer;
+  transition: all .5s ease; }
   input[type="button"]:hover, .button:hover {
     background: #dfa105; }
 
@@ -414,3 +454,96 @@ input[type="button"], .button {
   transition: text-indent .5s ease;
   text-indent: -100%;
   opacity: 1; }
+
+@keyframes airplane {
+  0% {
+    transform: translateX(-100%) scale(0.1); }
+  5% {
+    transform: translateX(-97%) scale(0.05); }
+  10% {
+    transform: translateX(-95%) scale(0.1); }
+  15% {
+    transform: translateX(-93%) scale(0.15); }
+  20% {
+    transform: translateX(-90%) scale(0.2); }
+  25% {
+    transform: translateX(-87%) scale(0.25); }
+  30% {
+    transform: translateX(-85%) scale(0.3); }
+  35% {
+    transform: translateX(-82%) scale(0.35); }
+  40% {
+    transform: translateX(-80%) scale(0.4); }
+  45% {
+    transform: translateX(-77%) scale(0.45); }
+  50% {
+    transform: translateX(-75%) scale(0.5); }
+  55% {
+    transform: translateX(-72%) scale(0.55); }
+  60% {
+    transform: translateX(-70%) scale(0.6); }
+  65% {
+    transform: translateX(-67%) scale(0.65); }
+  70% {
+    transform: translateX(-65%) scale(0.7); }
+  75% {
+    transform: translateX(-62%) scale(0.75); }
+  80% {
+    transform: translateX(-60%) scale(0.8); }
+  85% {
+    transform: translateX(-57%) scale(0.85); }
+  90% {
+    transform: translateX(-55%) scale(0.9); }
+  95% {
+    transform: translateX(-52%) scale(0.95); }
+  100% {
+    transform: translateX(-50%) scale(1); } }
+
+footer {
+  width: 100%;
+  height: 400px;
+  background: url(../img/footer-bg.png) no-repeat center;
+  background-size: cover;
+  color: #fff;
+  position: relative;
+  text-align: justify; }
+  footer ul {
+    list-style: disc;
+    padding-right: 15px; }
+  footer a {
+    color: #fff; }
+    footer a:hover {
+      color: orange; }
+  footer .footer {
+    width: 80%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: space-evenly; }
+  footer h3 {
+    margin-bottom: 10px; }
+
+.footer1 {
+  flex-basis: 40%; }
+  .footer1 .address {
+    margin-top: 20px; }
+
+.footer2 {
+  flex-basis: 20%; }
+
+.footer3 {
+  flex-basis: 20%; }
+
+.mojavezha {
+  width: 100;
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 20px; }
+  .mojavezha a {
+    background: #fff;
+    border-radius: 10px; }
+    .mojavezha a img {
+      width: 50px;
+      height: 50px; }

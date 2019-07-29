@@ -46,8 +46,11 @@ input[type="button"],.button{
     height: 38px;
     border-radius: 10px;
     cursor: pointer;
+    transition: all .5s ease;
     &:hover{
         background:#dfa105;
+        // background:linear-gradient(70deg,#006d51,#006d51 55%,#013a32 55%,#036e60);
+
     }
 }
 
