@@ -47,9 +47,12 @@
     align-items: center;
     margin-bottom: 5px;
 
+   
+
     &:hover{
         background:transparent;
-        border:1px solid $font-green;
+        border:1px solid $white_color;
+        border-spacing:20px;
         background-color: rgba(255, 255, 255, .4);  
         backdrop-filter: blur(5px);
         transition: all .5s ease;
@@ -65,7 +68,11 @@
         height: 40px;
     }
 }
+.search_icon_border{
+    border:1px solid black;
+    border-radius: 50%;
 
+}
 .form{
     // border:1px skyblue solid;
     width:100%;

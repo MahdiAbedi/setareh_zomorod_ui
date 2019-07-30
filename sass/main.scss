@@ -150,7 +150,7 @@ ul{
     padding:20px 0;
 }
 
-.container{
+.main-container{
     // border:1px solid red;
     width:80%;
     height:auto;
@@ -180,6 +180,11 @@ ul{
     justify-content: space-around;
 }
 
+.flex-between{
+    display: flex;
+    justify-content: space-between;
+}
+
 .fcolumn{
     display: flex;
     flex-direction: column;
@@ -196,6 +201,14 @@ ul{
     }
 }
 
+.container{
+    width:80%;
+    position: absolute;
+    left:50%;
+    transform: translateX(-50%);
+}
+
+
 @import 'modules/menu';
 @import 'pages/home';
 @import 'modules/tours';
@@ -203,3 +216,5 @@ ul{
 @import 'modules/form';
 @import 'modules/animations';
 @import 'modules/footer';
+
+@import 'pages/ticket_result';
