@@ -34,6 +34,20 @@ select{
     // padding-right: 15px;
 }
 
+.btn{
+    outline: none;
+    border:2px solid transparent;
+    // background:transparent;
+    padding:10px;
+    border-radius: $border-radius;
+    font-family: inherit;
+    width: 100%;
+    cursor: pointer;
+}
+.btn-blue{
+    background:$light_blue;
+    color:#fff;
+}
 input[type="button"],.button{
     margin-right: 10px;
     width:168px;

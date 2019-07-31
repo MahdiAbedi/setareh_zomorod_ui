@@ -5,10 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta author="MahdiAbedi220@yahoo.com">
-    <meta date="1398/05/01">
+    <meta name="author" content="MahdiAbedi220@yahoo.com">
     <link rel="stylesheet" href="css/style.css">
     <title>نتایج جستجوی بلیط</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.css">
 </head>
 
 <body>
@@ -72,33 +72,30 @@
             </ul>
         </nav>
     </div>
+<!-- مسیر هوایی -->
+<div class="path-title">
+        <div class="flex container">
+            <div class="path-title1">
+                <p>بلیط هواپیما تهران به اهواز</p>
+            </div>
 
+            <div class="path-change">
+                <p>تغییر جستجو</p>
+            </div>
+
+            <div class="path-date">
+                <span>رفت:سه شنبه 8 مرداد</span>
+                <span>برگشت:پنج شنبه 10 مرداد</span>
+            </div>
+
+        </div>
+    </div>
 
     <main>
-        <!-- مسیر هوایی -->
-        <div class="path-title">
-            <div class="flex container">
-                <div class="path-title1">
-                    <p>بلیط هواپیما تهران به اهواز</p>
-                </div>
-
-                <div class="path-change">
-                    <p>تغییر جستجو</p>
-                </div>
-
-                <div class="path-date">
-                    <span>رفت:سه شنبه 8 مرداد</span>
-                    <span>برگشت:پنج شنبه 10 مرداد</span>
-                </div>
-
-            </div>
-        </div>
-
-
-
+        
         <!-- بخش نمایش نتایج جستجو -->
-        <section class="result-panel flex container">
-
+        <section class="result-panel container">
+            <!-- فیلترها -->
             <aside class="filters">
                 <section class="flex">
                     <button class="reset">لغو فیلترها</button>
@@ -108,7 +105,7 @@
                 <section class="panel">
                     <header class="panel-title flex-between">
                         <span>زمان پرواز</span>
-                        <span>&DownArrow;</span>
+                        <a href="#"><i class="fas fa-chevron-down"></i></a>
                     </header>
                     <div class="panel-body">
                         <div>
@@ -133,26 +130,27 @@
                 <!-- قیمت -->
                 <section class="panel">
                     <header class="panel-title flex-between">
-                        <span>قیمت</span>
-                        <span>&DownArrow;</span>
+                        <p>قیمت <span>(هزار تومان)</span></p>
+                        <a href="#"><i class="fas fa-chevron-down"></i></a>
                     </header>
                     <div class="panel-body">
                         <div>
                             <input type="checkbox" name="check1" id="check1">
-                            <label for="check1">از ساعت 6:00 تا 10:00</label>
+                            <label for="check1">کمتر از 300</label>
                         </div>
                         <div>
                             <input type="checkbox" name="check1" id="check1">
-                            <label for="check1">از ساعت 6:00 تا 10:00</label>
+                            <label for="check1">300 تا 400</label>
                         </div>
                         <div>
                             <input type="checkbox" name="check1" id="check1">
-                            <label for="check1">از ساعت 6:00 تا 10:00</label>
+                            <label for="check1">400 تا 500</label>
                         </div>
                         <div>
                             <input type="checkbox" name="check1" id="check1">
-                            <label for="check1">از ساعت 6:00 تا 10:00</label>
+                            <label for="check1">بی از 500</label>
                         </div>
+
                     </div>
 
                 </section>
@@ -160,25 +158,18 @@
                 <section class="panel">
                     <header class="panel-title flex-between">
                         <span>نوع فروش</span>
-                        <span>&DownArrow;</span>
+                        <a href="#"><i class="fas fa-chevron-down"></i></a>
                     </header>
                     <div class="panel-body">
                         <div>
                             <input type="checkbox" name="check1" id="check1">
-                            <label for="check1">از ساعت 6:00 تا 10:00</label>
+                            <label for="check1">سیستمی</label>
                         </div>
                         <div>
                             <input type="checkbox" name="check1" id="check1">
-                            <label for="check1">از ساعت 6:00 تا 10:00</label>
+                            <label for="check1">چارتر</label>
                         </div>
-                        <div>
-                            <input type="checkbox" name="check1" id="check1">
-                            <label for="check1">از ساعت 6:00 تا 10:00</label>
-                        </div>
-                        <div>
-                            <input type="checkbox" name="check1" id="check1">
-                            <label for="check1">از ساعت 6:00 تا 10:00</label>
-                        </div>
+
                     </div>
 
                 </section>
@@ -186,41 +177,267 @@
                 <section class="panel">
                     <header class="panel-title flex-between">
                         <span>کلاس پروازی</span>
-                        <span>&DownArrow;</span>
+                        <a href="#"><i class="fas fa-chevron-down"></i></a>
                     </header>
                     <div class="panel-body">
                         <div>
                             <input type="checkbox" name="check1" id="check1">
-                            <label for="check1">از ساعت 6:00 تا 10:00</label>
+                            <label for="check1">Economy</label>
                         </div>
                         <div>
                             <input type="checkbox" name="check1" id="check1">
-                            <label for="check1">از ساعت 6:00 تا 10:00</label>
+                            <label for="check1">Bussiness</label>
                         </div>
+
+                    </div>
+
+                </section>
+                <!-- شرکتهای هواپیمایی -->
+                <section class="panel">
+                    <header class="panel-title flex-between">
+                        <span>شرکتهای هواپیمایی</span>
+                        <a href="#"><i class="fas fa-chevron-down"></i></a>
+                    </header>
+                    <div class="panel-body">
+                        <div class="airline-filter">
+                            <input type="checkbox" name="check1" id="check1">
+                            <img src="/img/airlines-logo/pooya.png" alt="">
+                            <label for="check1">پویا</label>
+                            <p class="price"><span>200,000,000</span>تومان</p>
+                        </div>
+                        <div class="airline-filter">
+                            <input type="checkbox" name="check1" id="check1">
+                            <img src="/img/airlines-logo/aseman.png" alt="">
+                            <label for="check1">آسمان</label>
+                            <p class="price"><span>200,000,000</span>تومان</p>
+                        </div>
+                        <div class="airline-filter">
+                            <input type="checkbox" name="check1" id="check1">
+                            <img src="/img/airlines-logo/ata.png" alt="">
+                            <label for="check1">آتا</label>
+                            <p class="price"><span>200,000,000</span>تومان</p>
+                        </div>
+                        <div class="airline-filter">
+                            <input type="checkbox" name="check1" id="check1">
+                            <img src="/img/airlines-logo/iran-air-tour.png" alt="">
+                            <label for="check1">ایران ایر تور</label>
+                            <p class="price"><span>200,000,000</span>تومان</p>
+                        </div>
+                        <div class="airline-filter">
+                            <input type="checkbox" name="check1" id="check1">
+                            <img src="/img/airlines-logo/iran-air.png" alt="">
+                            <label for="check1">ایران ایر</label>
+                            <p class="price"><span>200,000,000</span>تومان</p>
+                        </div>
+                        <div class="airline-filter">
+                            <input type="checkbox" name="check1" id="check1">
+                            <img src="/img/airlines-logo/kaspian.png" alt="">
+                            <label for="check1">کاسپین</label>
+                            <p class="price"><span>200,000,000</span>تومان</p>
+                        </div>
+                        <div class="airline-filter">
+                            <input type="checkbox" name="check1" id="check1">
+                            <img src="/img/airlines-logo/mahan.png" alt="">
+                            <label for="check1">ماهان ایر</label>
+                            <p class="price"><span>200,000,000</span>تومان</p>
+                        </div>
+
 
                     </div>
 
                 </section>
             </aside>
 
-
+            <!-- نتایج -->
             <section class="results ">
                 <!-- قسمت مرتبط سازی نتایج بر اساس قیمت و.. و نمایش تاریخ -->
                 <section class="sorting flex">
                     <section class="sort">
                         <ul class="flex">
-                            <li><a href="#">ساعت پرواز</a></li>
-                            <li><a href="#">ظرفیت</a></li>
-                            <li><a href="#">قیمت</a></li>
+                            <li><a href="#"><i class="fas fa-sort-amount-up-alt"></i>ساعت پرواز</a></li>
+                            <li><a href="#"><i class="fas fa-sort-amount-up-alt"></i>ظرفیت</a></li>
+                            <li><a href="#"><i class="fas fa-sort-amount-down-alt"></i>قیمت</a></li>
                         </ul>
                     </section>
                     <section class="date">
                         <ul class="flex">
-                            <li><a href="#">روز قبل</a></li>
-                            <li><a href="#">98/05/08</a></li>
-                            <li><a href="#">روز بعد</a></li>
+                            <li><a href="#"><i class="fas fa-angle-right"></i>روز قبل</a></li>
+                            <li class="current-date"><a href="#">98/05/08</a></li>
+                            <li><a href="#">روز بعد<i class="fas fa-angle-left"></i></a></li>
                         </ul>
                     </section>
+                </section>
+                <!-- بخش نمایش تیکت ها -->
+                <section class="tickets">
+                    <!-- یک تیکت تک -->
+                    <section class="ticket flex-between">
+                        <div class="airlinelogo fcolumn">
+                            <img src="/img/airlines-logo/taban.png" alt="هواپیمایی آسمان">
+                            <p>شماره پرواز:<span>1200</span></p>
+                        </div>
+                        <p class="airline-type">M82</p>
+                        <div class="flight-time fcolumn">
+                            <p class="divider"><i class="far fa-clock"></i> ساعت پرواز : 06:40</p>
+                            <p> <i class="far fa-clock"></i>مدت پرواز:1 ساعت و 15 دقیق</p>
+                        </div>
+                        <p class="seat-type">اکنومی Y</p>
+                        <div class="avalibility"><i class="fas fa-user-check"></i> 2 نفر</div>
+                        <div class="ticket-price fcolumn">
+                            <span class="orange-color">قسمت هر بزرگسال</span>
+                            <p class="price">6,080,000 <span>ریال</span></p>
+                        </div>
+                        <div class="btns fcolumn">
+                            <button class="btn btn-blue">انتخاب</button>
+                        </div>
+                    </section>
+                    <!-- یک تیکت تک -->
+                    <section class="ticket flex-between">
+                        <div class="airlinelogo fcolumn">
+                            <img src="/img/airlines-logo/kaspian.png" alt="هواپیمایی آسمان">
+                            <p>شماره پرواز:<span>1200</span></p>
+                        </div>
+                        <p class="airline-type">M82</p>
+                        <div class="flight-time fcolumn">
+                            <p class="divider"><i class="far fa-clock"></i> ساعت پرواز : 06:40</p>
+                            <p> <i class="far fa-clock"></i>مدت پرواز:1 ساعت و 15 دقیق</p>
+                        </div>
+                        <p class="seat-type">اکنومی Y</p>
+                        <div class="avalibility"><i class="fas fa-user-check"></i> 2 نفر</div>
+                        <div class="ticket-price fcolumn">
+                            <span class="orange-color">قسمت هر بزرگسال</span>
+                            <p class="price">6,080,000 <span>ریال</span></p>
+                        </div>
+                        <div class="btns fcolumn">
+                            <button class="btn btn-blue">انتخاب</button>
+                        </div>
+                    </section>
+                    <!-- یک تیکت تک -->
+                    <section class="ticket flex-between">
+                        <div class="airlinelogo fcolumn">
+                            <img src="/img/airlines-logo/kish.png" alt="هواپیمایی آسمان">
+                            <p>شماره پرواز:<span>1200</span></p>
+                        </div>
+                        <p class="airline-type">M82</p>
+                        <div class="flight-time fcolumn">
+                            <p class="divider"><i class="far fa-clock"></i> ساعت پرواز : 06:40</p>
+                            <p> <i class="far fa-clock"></i>مدت پرواز:1 ساعت و 15 دقیق</p>
+                        </div>
+                        <p class="seat-type">اکنومی Y</p>
+                        <div class="avalibility"><i class="fas fa-user-check"></i> 2 نفر</div>
+                        <div class="ticket-price fcolumn">
+                            <span class="orange-color">قسمت هر بزرگسال</span>
+                            <p class="price">6,080,000 <span>ریال</span></p>
+                        </div>
+                        <div class="btns fcolumn">
+                            <button class="btn btn-blue">انتخاب</button>
+                        </div>
+                    </section>
+                    <!-- یک تیکت تک -->
+                    <section class="ticket flex-between">
+                        <div class="airlinelogo fcolumn">
+                            <img src="/img/airlines-logo/mahan.png" alt="هواپیمایی آسمان">
+                            <p>شماره پرواز:<span>1200</span></p>
+                        </div>
+                        <p class="airline-type">M82</p>
+                        <div class="flight-time fcolumn">
+                            <p class="divider"><i class="far fa-clock"></i> ساعت پرواز : 06:40</p>
+                            <p> <i class="far fa-clock"></i>مدت پرواز:1 ساعت و 15 دقیق</p>
+                        </div>
+                        <p class="seat-type">اکنومی Y</p>
+                        <div class="avalibility"><i class="fas fa-user-check"></i> 2 نفر</div>
+                        <div class="ticket-price fcolumn">
+                            <span class="orange-color">قسمت هر بزرگسال</span>
+                            <p class="price">6,080,000 <span>ریال</span></p>
+                        </div>
+                        <div class="btns fcolumn">
+                            <button class="btn btn-blue">انتخاب</button>
+                        </div>
+                    </section>
+                    <!-- یک تیکت تک -->
+                    <section class="ticket flex-between">
+                        <div class="airlinelogo fcolumn">
+                            <img src="/img/airlines-logo/meraj.png" alt="هواپیمایی آسمان">
+                            <p>شماره پرواز:<span>1200</span></p>
+                        </div>
+                        <p class="airline-type">M82</p>
+                        <div class="flight-time fcolumn">
+                            <p class="divider"><i class="far fa-clock"></i> ساعت پرواز : 06:40</p>
+                            <p> <i class="far fa-clock"></i>مدت پرواز:1 ساعت و 15 دقیق</p>
+                        </div>
+                        <p class="seat-type">اکنومی Y</p>
+                        <div class="avalibility"><i class="fas fa-user-check"></i> 2 نفر</div>
+                        <div class="ticket-price fcolumn">
+                            <span class="orange-color">قسمت هر بزرگسال</span>
+                            <p class="price">6,080,000 <span>ریال</span></p>
+                        </div>
+                        <div class="btns fcolumn">
+                            <button class="btn btn-blue">انتخاب</button>
+                        </div>
+                    </section>
+                    <!-- یک تیکت تک -->
+                    <section class="ticket flex-between">
+                        <div class="airlinelogo fcolumn">
+                            <img src="/img/airlines-logo/taban.png" alt="هواپیمایی آسمان">
+                            <p>شماره پرواز:<span>1200</span></p>
+                        </div>
+                        <p class="airline-type">M82</p>
+                        <div class="flight-time fcolumn">
+                            <p class="divider"><i class="far fa-clock"></i> ساعت پرواز : 06:40</p>
+                            <p> <i class="far fa-clock"></i>مدت پرواز:1 ساعت و 15 دقیق</p>
+                        </div>
+                        <p class="seat-type">اکنومی Y</p>
+                        <div class="avalibility"><i class="fas fa-user-check"></i> 2 نفر</div>
+                        <div class="ticket-price fcolumn">
+                            <span class="orange-color">قسمت هر بزرگسال</span>
+                            <p class="price">6,080,000 <span>ریال</span></p>
+                        </div>
+                        <div class="btns fcolumn">
+                            <button class="btn btn-blue">انتخاب</button>
+                        </div>
+                    </section>
+                    <!-- یک تیکت تک -->
+                    <!-- <section class="ticket flex-between">
+                        <div class="airlinelogo fcolumn">
+                            <img src="/img/airlines-logo/naft.png" alt="هواپیمایی آسمان">
+                            <p>شماره پرواز:<span>1200</span></p>
+                        </div>
+                        <p class="airline-type">M82</p>
+                        <div class="flight-time fcolumn">
+                            <p class="divider"><i class="far fa-clock"></i> ساعت پرواز : 06:40</p>
+                            <p> <i class="far fa-clock"></i>مدت پرواز:1 ساعت و 15 دقیق</p>
+                        </div>
+                        <p class="seat-type">اکنومی Y</p>
+                        <div class="avalibility"><i class="fas fa-user-check"></i> 2 نفر</div>
+                        <div class="ticket-price fcolumn">
+                            <span class="orange-color">قسمت هر بزرگسال</span>
+                            <p class="price">6,080,000 <span>ریال</span></p>
+                        </div>
+                        <div class="btns fcolumn">
+                            <button class="btn btn-blue">انتخاب</button>
+                        </div>
+                    </section> -->
+                    <!-- یک تیکت تک -->
+                    <!-- <section class="ticket flex-between">
+                        <div class="airlinelogo fcolumn">
+                            <img src="/img/airlines-logo/pooya.png" alt="هواپیمایی آسمان">
+                            <p>شماره پرواز:<span>1200</span></p>
+                        </div>
+                        <p class="airline-type">M82</p>
+                        <div class="flight-time fcolumn">
+                            <p class="divider"><i class="far fa-clock"></i> ساعت پرواز : 06:40</p>
+                            <p> <i class="far fa-clock"></i>مدت پرواز:1 ساعت و 15 دقیق</p>
+                        </div>
+                        <p class="seat-type">اکنومی Y</p>
+                        <div class="avalibility"><i class="fas fa-user-check"></i> 2 نفر</div>
+                        <div class="ticket-price fcolumn">
+                            <span class="orange-color">قسمت هر بزرگسال</span>
+                            <p class="price">6,080,000 <span>ریال</span></p>
+                        </div>
+                        <div class="btns fcolumn">
+                            <button class="btn btn-blue">انتخاب</button>
+                        </div>
+                    </section>
+                     -->
                 </section>
             </section>
 
