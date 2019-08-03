@@ -168,11 +168,14 @@
     padding:5px 0;
     border-bottom: 1px dashed $light_gray;
     cursor: pointer;
+    transition: all .1s ease;
 
     &:hover{
-        background: rgb(29, 29, 29);;
+        background: rgb(29, 29, 29);
+        border-radius: $border_radius;
         color:#fff;
         padding:5px;
+        transform: scale(1.06);
         
     }
     img{

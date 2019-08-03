@@ -2,11 +2,13 @@ footer{
     width:100%;
     min-height:400px;
     // border:1px solid orange;
-    background:url(../img/footer-bg.png) no-repeat center;
+    background:url(../img/footer-bg.jpg) no-repeat center;
     background-size: cover;
     color:#fff;
     position: relative;
     text-align: justify;
+    float:left;
+    // padding-top:50px;
     ul{
         list-style: disc;
         padding-right: 15px;
@@ -26,8 +28,12 @@ footer{
         left:50%;
         transform: translate(-50%,-50%);
 
+        // margin-right:auto;
+        // margin-left:auto;
+
         display: flex;
         justify-content: space-evenly;
+        align-items: center;
     }
 
     h3{
