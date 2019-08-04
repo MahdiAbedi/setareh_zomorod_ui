@@ -15,7 +15,9 @@ body {
   direction: rtl;
   text-align: right;
   font-family: "IRANSans", "robotolight", sans-serif !important;
-  font-size: 1.6rem; }
+  font-size: 1.6rem;
+  display: flex;
+  flex-direction: column; }
 
 @font-face {
   font-family: IRANSansBlack;
@@ -102,15 +104,11 @@ ul {
   border-bottom-left-radius: 10px; }
 
 main {
-  background-color: #f5f5f5;
-  margin-bottom: 100px; }
+  background-color: #f5f5f5; }
 
 .main-container {
   width: 80%;
-  height: auto;
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
+  margin: 20px auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -144,9 +142,7 @@ main {
 
 .container {
   width: 80%;
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%); }
+  margin: 0 auto; }
 
 .divider {
   border-bottom: 1px dashed #E8E8E8;
@@ -426,15 +422,25 @@ select {
 .btn {
   outline: none;
   border: 2px solid transparent;
-  padding: 10px;
+  padding: 2px 15px;
   border-radius: 5px;
   font-family: inherit;
   width: 100%;
-  cursor: pointer; }
+  cursor: pointer;
+  margin-top: 5px; }
 
 .btn-blue {
   background: #1EBAFF;
   color: #fff; }
+
+.btn-yellow {
+  color: #ffa700;
+  border: 1px solid #ffa700;
+  background: #fff4df; }
+  .btn-yellow:hover {
+    color: #fff;
+    border-color: #ffa700;
+    background-color: #ffa700; }
 
 input[type="button"], .button {
   margin-right: 10px;
@@ -665,6 +671,7 @@ footer {
       padding-top: 10px; }
 
 .ticket {
+  cursor: grabbing;
   font-size: 13px;
   border: 2px solid transparent;
   background-color: #fff;
@@ -682,37 +689,131 @@ footer {
   .ticket img {
     width: 80px;
     height: 80px;
-    border-bottom: 1px dashed #E8E8E8; }
-  .ticket .flight-time, .ticket .ticket-price {
+    border-bottom: 1px dashed #E8E8E8;
+    margin-bottom: 3px; }
+  .ticket .flight-time,
+  .ticket .ticket-price {
     justify-content: space-evenly; }
   .ticket .price {
     color: #0ebb79; }
   .ticket:hover {
     border: 2px solid #1EBAFF;
-    transform: scale(1.05);
-    background: #1d1d1d;
-    color: #fff;
+    transform: scale(1.02);
     box-shadow: 0 0 5px 10px rgba(30, 186, 255, 0.1); }
+  .ticket + .detail {
+    background: #fbf9f3; }
+    .ticket + .detail ul {
+      display: flex;
+      margin-right: 10px; }
+      .ticket + .detail ul li {
+        background: #fff;
+        margin: 5px 2px;
+        padding: 5px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+        border: 1px solid #dcdbd5; }
+    .ticket + .detail section {
+      background: #fff;
+      padding: 10px;
+      border-radius: 5px;
+      margin-bottom: 10px;
+      border: 1px solid #dcdbd5; }
 
-.airline-filter, .panel-body > * {
+.ticket-container {
+  background: transparent;
+  border-radius: 5px; }
+
+.flight-info table {
+  background: #fbf9f3;
+  float: right;
+  width: 100%;
+  height: auto; }
+  .flight-info table thead {
+    float: right;
+    width: 100%;
+    height: auto;
+    background-color: #fbf9f3;
+    border-bottom: 1px solid #dcdbd5;
+    border-radius: 3px 3px 0 0;
+    text-align: center; }
+    .flight-info table thead th {
+      float: right;
+      height: 30px;
+      width: 25%;
+      font-size: 1.2rem;
+      font-weight: 100;
+      border-left: 1px dashed #E3E3E3; }
+  .flight-info table tbody {
+    float: right;
+    width: 100%;
+    height: auto;
+    border-radius: 0 0 3px 3px;
+    background-color: #fbf9f3;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2); }
+  .flight-info table tr {
+    float: right;
+    width: 100%;
+    height: auto;
+    height: 30px;
+    line-height: 30px;
+    border-bottom: 1px solid #e6e5e0; }
+  .flight-info table td {
+    float: right;
+    width: 25%;
+    font-size: 1.2rem;
+    border-right: 1px solid #e6e5e0;
+    text-align: center; }
+    .flight-info table td:first-child {
+      text-align: right;
+      padding: 0 10px;
+      border-right: 0; }
+
+.flight-info .best-price {
+  border: 1px solid #dcdbd5;
+  padding: 10px; }
+
+.airline-filter,
+.panel-body > * {
   display: flex;
   justify-content: space-between;
   padding: 5px 0;
   border-bottom: 1px dashed #b8b8b8;
   cursor: pointer;
   transition: all .1s ease; }
-  .airline-filter:hover, .panel-body > *:hover {
+  .airline-filter:hover,
+  .panel-body > *:hover {
     background: #1d1d1d;
     border-radius: 5px;
     color: #fff;
     padding: 5px;
     transform: scale(1.06); }
-  .airline-filter img, .panel-body > * img {
+  .airline-filter img,
+  .panel-body > * img {
     width: 24px;
     height: 24px;
     margin: 0 5px; }
-  .airline-filter .price, .panel-body > * .price {
+  .airline-filter .price,
+  .panel-body > * .price {
     margin-right: auto; }
+
+.refund-policies {
+  display: flex;
+  justify-content: space-around; }
+  .refund-policies .policy {
+    border-radius: 5px;
+    border: 1px solid #ff6d00;
+    margin: 5px;
+    text-align: center;
+    padding: 10px;
+    background: #fbf9f3;
+    cursor: pointer; }
+    .refund-policies .policy .title {
+      border-bottom: 1px solid #ff6d00;
+      margin-bottom: 10px;
+      width: 100%;
+      padding-bottom: 10px; }
+    .refund-policies .policy .percent {
+      color: #ff6d00; }
 
 /* The container */
 .checkbox {

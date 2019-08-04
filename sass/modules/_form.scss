@@ -38,15 +38,27 @@ select{
     outline: none;
     border:2px solid transparent;
     // background:transparent;
-    padding:10px;
+    padding:2px 15px;
     border-radius: $border-radius;
     font-family: inherit;
     width: 100%;
     cursor: pointer;
+    margin-top: 5px;
 }
 .btn-blue{
     background:$light_blue;
     color:#fff;
+}
+.btn-yellow{
+    color:#ffa700;
+    border:1px solid #ffa700;
+    background: #fff4df;
+
+    &:hover{
+        color:#fff;
+        border-color:#ffa700;
+        background-color: #ffa700;
+    }
 }
 input[type="button"],.button{
     margin-right: 10px;
