@@ -9,13 +9,16 @@
 //هواپیمایی ای که تو صفحه اول بالای صفحه روی منو ها میفته
 .airplane img {
     width: 750px;
+    max-width: 80%;
     height: auto;
     text-align: center;
+    display: block;
     position: relative;
     top: -20px;
+    margin:0 auto;
     // left: 50%;
-    transform: translateX(-50%);
-    animation:airplane 2.5s .05s ease-in-out backwards ;
+    // transform: translateX(-50%);
+    animation:airplane 4.5s .05s ease-in-out backwards ;
 }
 
 
@@ -27,6 +30,7 @@
     margin-right: auto;
     margin-left: auto;
     display:flex;
+    flex-wrap: wrap;
 }
 
 ul.menu {
@@ -40,7 +44,7 @@ ul.menu {
     // border:1px solid blue;
     display: flex;
 
-    padding: 0 5px;
+    padding: 0 4px;
     border-left: 1px solid $light_gray;
     cursor: pointer;
     transition: all .5s ease;
@@ -88,3 +92,5 @@ ul.menu {
     padding-top: 5px;
     
 }
+
+

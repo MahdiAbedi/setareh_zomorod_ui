@@ -113,7 +113,8 @@ main {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 10px 0; }
+  padding: 10px 0;
+  text-align: center; }
 
 .make_your_tour {
   width: 100%;
@@ -124,7 +125,8 @@ main {
 
 .flex {
   display: flex;
-  justify-content: space-around; }
+  justify-content: space-around;
+  flex-wrap: wrap; }
 
 .flex-between {
   display: flex;
@@ -133,10 +135,10 @@ main {
 .fcolumn {
   display: flex;
   flex-direction: column;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center; }
   .fcolumn .blog_slide {
-    width: 90%;
     height: 50%;
     padding: 5px 0; }
 
@@ -160,19 +162,22 @@ main {
 
 .airplane img {
   width: 750px;
+  max-width: 80%;
   height: auto;
   text-align: center;
+  display: block;
   position: relative;
   top: -20px;
-  transform: translateX(-50%);
-  animation: airplane 2.5s .05s ease-in-out backwards; }
+  margin: 0 auto;
+  animation: airplane 4.5s .05s ease-in-out backwards; }
 
 .topmenu-container {
   height: 90%;
   width: 80%;
   margin-right: auto;
   margin-left: auto;
-  display: flex; }
+  display: flex;
+  flex-wrap: wrap; }
 
 ul.menu {
   display: flex;
@@ -181,7 +186,7 @@ ul.menu {
 
 .menu-item {
   display: flex;
-  padding: 0 5px;
+  padding: 0 4px;
   border-left: 1px solid #b8b8b8;
   cursor: pointer;
   transition: all .5s ease; }
@@ -254,9 +259,10 @@ ul.menu {
   display: flex;
   flex-direction: column;
   justify-items: center;
-  align-items: center; }
+  align-items: center;
+  margin-bottom: 5px; }
   .home_icon img {
-    width: 70%;
+    max-width: 70%;
     text-align: center;
     height: auto;
     margin-bottom: 15px; }
@@ -269,8 +275,6 @@ ul.menu {
   height: 300px; }
 
 .tours {
-  display: flex;
-  flex-direction: row;
   margin-top: 20px;
   justify-content: space-around; }
 
@@ -316,10 +320,11 @@ ul.menu {
 
 .slider {
   background: url(/img/bg2.jpg) no-repeat center;
-  background-size: cover;
+  background-size: cover !important;
   width: 100%;
   height: 100vh;
-  position: relative; }
+  position: relative;
+  overflow: hidden; }
 
 .search-container {
   position: absolute;
@@ -433,6 +438,10 @@ select {
   background: #1EBAFF;
   color: #fff; }
 
+.btn-green {
+  background: MediumSeaGreen;
+  color: #fff; }
+
 .btn-yellow {
   color: #ffa700;
   border: 1px solid #ffa700;
@@ -496,7 +505,7 @@ input[type="button"], .button {
   text-indent: -100%;
   opacity: 1; }
 
-@keyframes airplane {
+@keyframes airplane-old {
   0% {
     transform: translateX(-100%) scale(0.1); }
   5% {
@@ -540,6 +549,12 @@ input[type="button"], .button {
   100% {
     transform: translateX(-50%) scale(1); } }
 
+@keyframes airplane {
+  0% {
+    transform: translateX(-80%) scale(0.1); }
+  100% {
+    transform: scale(1); } }
+
 footer {
   width: 100%;
   min-height: 400px;
@@ -547,21 +562,19 @@ footer {
   background-size: cover;
   color: #fff;
   position: relative;
-  text-align: justify;
-  float: left; }
+  text-align: justify; }
   footer ul {
     list-style: disc;
     padding-right: 15px; }
   footer a {
     color: #fff; }
     footer a:hover {
-      color: orange; }
+      color: #ffb700; }
   footer .footer {
     width: 80%;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 40px;
     display: flex;
     justify-content: space-evenly;
     align-items: center; }
@@ -610,7 +623,7 @@ footer {
     padding-left: 5px;
     padding-right: 5px;
     font-size: 16px;
-    color: #006C50; }
+    color: MediumSeaGreen; }
   .result-panel .results {
     width: 75%;
     padding-top: 5px; }
@@ -697,9 +710,9 @@ footer {
   .ticket .price {
     color: #0ebb79; }
   .ticket:hover {
-    border: 2px solid #1EBAFF;
+    border: 2px solid MediumSeaGreen;
     transform: scale(1.02);
-    box-shadow: 0 0 5px 10px rgba(30, 186, 255, 0.1); }
+    box-shadow: 0 0 5px 10px rgba(60, 179, 113, 0.1); }
   .ticket + .detail {
     background: #fbf9f3; }
     .ticket + .detail ul {
@@ -782,7 +795,7 @@ footer {
   transition: all .1s ease; }
   .airline-filter:hover,
   .panel-body > *:hover {
-    background: #1d1d1d;
+    background: MediumSeaGreen;
     border-radius: 5px;
     color: #fff;
     padding: 5px;
@@ -815,60 +828,126 @@ footer {
     .refund-policies .policy .percent {
       color: #ff6d00; }
 
-/* The container */
-.checkbox {
-  position: relative;
-  margin-bottom: 12px;
+input[type=checkbox] + label {
+  display: block;
+  margin: 0.2em;
   cursor: pointer;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  display: flex;
-  justify-content: space-between; }
+  padding: 0.2em; }
 
-/* Hide the browser's default checkbox */
-.checkbox input {
-  position: absolute;
-  opacity: 0;
-  cursor: pointer;
-  height: 0;
-  width: 0; }
-
-/* Create a custom checkbox */
-.checkmark {
-  height: 20px;
-  width: 20px;
-  border-radius: 4px;
-  background-color: transparent;
-  border: 1px solid #b8b8b8; }
-
-/* On mouse-over, add a grey background color */
-.checkbox:hover input ~ .checkmark {
-  background-color: #ccc; }
-
-/* When the checkbox is checked, add a blue background */
-.checkbox input:checked ~ .checkmark {
-  background-color: #2196F3; }
-
-/* Create the checkmark/indicator (hidden when not checked) */
-.checkmark:after {
-  content: "";
-  position: absolute;
+input[type=checkbox] {
   display: none; }
 
-/* Show the checkmark when checked */
-.checkbox input:checked ~ .checkmark:after {
-  display: block; }
+input[type=checkbox] + label:before {
+  content: "\2714";
+  border: 0.1em solid #000;
+  border-radius: 0.2em;
+  display: inline-block;
+  width: 1.5em;
+  height: 1.5em;
+  padding-right: 0.2em;
+  padding-bottom: 0.3em;
+  margin-left: 0.5em;
+  vertical-align: bottom;
+  color: transparent;
+  transition: .2s; }
 
-/* Style the checkmark/indicator */
-.checkbox .checkmark:after {
+input[type=checkbox] + label:active:before {
+  transform: scale(0); }
+
+input[type=checkbox]:checked + label:before {
+  background-color: MediumSeaGreen;
+  border-color: MediumSeaGreen;
+  color: #fff; }
+
+input[type=checkbox]:disabled + label:before {
+  transform: scale(1);
+  border-color: #aaa; }
+
+input[type=checkbox]:checked:disabled + label:before {
+  transform: scale(1);
+  background-color: #bfb;
+  border-color: #bfb; }
+
+[type="radio"]:checked,
+[type="radio"]:not(:checked) {
+  position: absolute;
+  right: -9999px; }
+
+[type="radio"]:checked + label,
+[type="radio"]:not(:checked) + label {
+  position: relative;
+  padding-right: 35px;
+  cursor: pointer;
+  line-height: 20px;
+  display: inline-block;
+  color: #fff; }
+
+[type="radio"]:checked + label:before,
+[type="radio"]:not(:checked) + label:before {
+  content: '';
+  position: absolute;
+  right: 10px;
+  top: 0;
+  width: 18px;
+  height: 18px;
+  border: 1px solid #ddd;
+  border-radius: 100%;
+  background: transparent; }
+
+[type="radio"]:checked + label:after,
+[type="radio"]:not(:checked) + label:after {
+  content: '';
+  width: 12px;
+  height: 12px;
+  background: #0ebb79;
+  position: absolute;
+  top: 3px;
   right: 13px;
-  top: 50%;
-  width: 5px;
-  height: 10px;
-  border: solid white;
-  border-width: 0 3px 3px 0;
-  -webkit-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-  transform: rotate(45deg); }
+  text-align: center;
+  border-radius: 100%;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease; }
+
+[type="radio"]:not(:checked) + label:after {
+  opacity: 0;
+  -webkit-transform: scale(0);
+  transform: scale(0); }
+
+[type="radio"]:checked + label:after {
+  opacity: 1;
+  -webkit-transform: scale(1);
+  transform: scale(1); }
+
+/* start of desktop styles */
+@media screen and (max-width: 767px) {
+  ul.right-menu {
+    display: none; }
+  ul.left-menu {
+    width: 100vh; }
+  .slider {
+    background: url(/img/mobile/outline-airplane-bg-mobile.jpg) no-repeat center;
+    height: 60vh; }
+  .home_icon, .blog_slide {
+    width: 100%; }
+  .tour {
+    width: 100%;
+    margin-bottom: 10px; }
+  footer {
+    background: black;
+    background-size: cover; }
+  .footer1, .footer2, .footer3 {
+    flex-basis: 100%; }
+  .footer2, .footer_links {
+    display: none; }
+  .footer3 {
+    margin-bottom: 30px; }
+  footer a {
+    color: #ffb700; }
+  .mojavezha a {
+    margin: 3px; }
+    .mojavezha a img {
+      width: 75px;
+      height: 75px; } }
+
+@media screen and (max-width: 479px) {
+  /* start of phone styles */ }

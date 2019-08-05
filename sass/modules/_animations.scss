@@ -1,4 +1,4 @@
-@keyframes airplane{
+@keyframes airplane-old{
     0% {transform: translateX(-100%) scale(.1);}
     5% {transform: translateX(-97%) scale(.05);}
     10% {transform: translateX(-95%) scale(.1);}
@@ -20,4 +20,9 @@
     90% {transform: translateX(-55%) scale(.9);}
     95% {transform: translateX(-52%) scale(.95);}
     100% {transform: translateX(-50%) scale(1);}
+}
+
+@keyframes airplane{
+    0% {transform: translateX(-80%) scale(.1);}
+    100% {transform:scale(1);}
 }
