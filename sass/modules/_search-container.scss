@@ -35,6 +35,7 @@
     justify-content: center;
     align-items: center;
     cursor: pointer;
+    margin: 2px;
 }
 
 .icon_container{
@@ -63,10 +64,9 @@
         }
     }
     img{
-        overflow: hidden;
         transition: all 1s ease;
-        width:auto;
-        height: 40px;
+        width:90%;
+        height: 90%;
     }
 }
 .search_icon_border{
@@ -74,6 +74,7 @@
     border-radius: 50%;
 
 }
+
 .form{
     // border:1px skyblue solid;
     width:100%;
