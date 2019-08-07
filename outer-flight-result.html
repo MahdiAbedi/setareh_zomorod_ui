@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="author" content="MahdiAbedi220@yahoo.com">
+    <link rel="stylesheet" href="css/style.css">
+    <title>نتایج جستجوی بلیط</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.css">
+</head>
+
+<body>
+    <!-- منوی بالا -->
+    <div class="topmenu">
+
+        <nav class="topmenu-container">
+            <ul class="menu right-menu">
+                <li class="menu-item active">
+                    <img src="/img/Home.png" alt="منوی">
+                    <a href="#">خانه</a>
+                </li>
+                <li class="menu-item">
+                    <img src="/img/airplane-icon.png" alt="منوی">
+                    <a href="#">بلیط هواپیما</a>
+                </li>
+                <li class="menu-item">
+                    <img src="/img/hotel.png" alt="منوی">
+                    <a href="#">رزو هتل</a>
+                </li>
+                <li class="menu-item">
+                    <img src="/img/tour.png" alt="منوی">
+                    <a href="#">تور مسافرتی</a>
+                </li>
+                <li class="menu-item">
+                    <img src="/img/visa.png" alt="منوی">
+                    <a href="#">ویزا</a>
+                </li>
+                <li class="menu-item">
+                    <img src="/img/bime.png" alt="منوی">
+                    <a href="#">بیمه</a>
+                </li>
+                <li class="menu-item">
+                    <img src="/img/blog.png" alt="منوی">
+                    <a href="#">مجله گردشگری</a>
+                </li>
+                <li class="menu-item other">
+                    <a href="#">...</a>
+                </li>
+
+
+            </ul>
+
+            <ul class="menu left-menu">
+
+                <li class="menu-item">
+                    <img src="/img/search.png" alt="منوی">
+                </li>
+                <li class="menu-item">
+                    <img src="/img/login.png" alt="منوی">
+                </li>
+                <li class="menu-item">
+                    <a href="tel:02172407">021-72407</a>
+                    <img src="/img/tel.png" class="tel" alt="منوی">
+                </li>
+
+                <li class="menu-item logo">
+                    <img src="/img/logo.png" alt="منوی">
+
+                </li>
+
+            </ul>
+        </nav>
+
+
+    </div>
+    <!-- مسیر هوایی -->
+    <div class="path-title">
+        <div class="flex container">
+            <div class="path-title1">
+                <p>بلیط هواپیما تهران به اهواز</p>
+            </div>
+
+            <div class="path-change">
+                <a href="#" class="btn btn-blue">تغییر جستجو</a>
+            </div>
+
+            <div class="path-date">
+                <span>رفت:سه شنبه 8 مرداد</span>
+                <span>برگشت:پنج شنبه 10 مرداد</span>
+            </div>
+
+        </div>
+    </div>
+
+    <main>
+
+        <!-- بخش نمایش نتایج جستجو -->
+        <section class="result-panel container">
+            <!-- فیلترها -->
+            <aside class="filters">
+                <section class="flex">
+                    <button class="reset">لغو فیلترها</button>
+                    <p>نتایج جستجو <span>16</span></p>
+                </section>
+                <!-- زمان پرواز -->
+                <section class="panel">
+                    <header class="panel-title flex-between">
+                        <span>زمان پرواز</span>
+                        <a href="#"><i class="fas fa-chevron-down"></i></a>
+                    </header>
+                    <div class="panel-body">
+
+                        <!-- <label class="checkbox" for="check1">
+                            <input type="checkbox" name="check1" id="check1">
+                            <span class="checkmark"></span>
+                            <p for="check1">از ساعت 6:00 تا 10:00</p>
+                        </label> -->
+
+                        <div>
+                            <input type="checkbox" name="check1" id="check1">
+                            <label for="check1">از ساعت 6:00 تا 10:00</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" name="check1" id="check1">
+                            <label for="check1">از ساعت 6:00 تا 10:00</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" name="check1" id="check1">
+                            <label for="check1">از ساعت 6:00 تا 10:00</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" name="check1" id="check1">
+                            <label for="check1">از ساعت 6:00 تا 10:00</label>
+                        </div>
+                    </div>
+
+                </section>
+                <!-- قیمت -->
+                <section class="panel">
+                    <header class="panel-title flex-between">
+                        <p>قیمت <span>(هزار تومان)</span></p>
+                        <a href="#"><i class="fas fa-chevron-down"></i></a>
+                    </header>
+                    <div class="panel-body">
+                        <div>
+                            <input type="checkbox" name="check1" id="check1">
+                            <label for="check1">کمتر از 300</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" name="check1" id="check1">
+                            <label for="check1">300 تا 400</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" name="check1" id="check1">
+                            <label for="check1">400 تا 500</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" name="check1" id="check1">
+                            <label for="check1">بی از 500</label>
+                        </div>
+
+                    </div>
+
+                </section>
+                <!-- نوع فروش -->
+                <section class="panel">
+                    <header class="panel-title flex-between">
+                        <span>نوع فروش</span>
+                        <a href="#"><i class="fas fa-chevron-down"></i></a>
+                    </header>
+                    <div class="panel-body">
+                        <div>
+                            <input type="checkbox" name="check1" id="check1">
+                            <label for="check1">سیستمی</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" name="check1" id="check1">
+                            <label for="check1">چارتر</label>
+                        </div>
+
+                    </div>
+
+                </section>
+                <!-- کلاس پروازی -->
+                <section class="panel">
+                    <header class="panel-title flex-between">
+                        <span>کلاس پروازی</span>
+                        <a href="#"><i class="fas fa-chevron-down"></i></a>
+                    </header>
+                    <div class="panel-body">
+                        <div>
+                            <input type="checkbox" name="check1" id="check1">
+                            <label for="check1">Economy</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" name="check1" id="check1">
+                            <label for="check1">Bussiness</label>
+                        </div>
+
+                    </div>
+
+                </section>
+                <!-- شرکتهای هواپیمایی -->
+                <section class="panel">
+                    <header class="panel-title flex-between">
+                        <span>شرکتهای هواپیمایی</span>
+                        <a href="#"><i class="fas fa-chevron-down"></i></a>
+                    </header>
+                    <div class="panel-body">
+                        <div class="airline-filter">
+                            <input type="checkbox" name="check1" id="check1">
+                            <img src="/img/airlines-logo/pooya.png" alt="">
+                            <label for="check1">پویا</label>
+                            <p class="price"><span>200,000,000</span>تومان</p>
+                        </div>
+                        <div class="airline-filter">
+                            <input type="checkbox" name="check1" id="check1">
+                            <img src="/img/airlines-logo/aseman.png" alt="">
+                            <label for="check1">آسمان</label>
+                            <p class="price"><span>200,000,000</span>تومان</p>
+                        </div>
+                        <div class="airline-filter">
+                            <input type="checkbox" name="check1" id="check1">
+                            <img src="/img/airlines-logo/ata.png" alt="">
+                            <label for="check1">آتا</label>
+                            <p class="price"><span>200,000,000</span>تومان</p>
+                        </div>
+                        <div class="airline-filter">
+                            <input type="checkbox" name="check1" id="check1">
+                            <img src="/img/airlines-logo/iran-air-tour.png" alt="">
+                            <label for="check1">ایران ایر تور</label>
+                            <p class="price"><span>200,000,000</span>تومان</p>
+                        </div>
+                        <div class="airline-filter">
+                            <input type="checkbox" name="check1" id="check1">
+                            <img src="/img/airlines-logo/iran-air.png" alt="">
+                            <label for="check1">ایران ایر</label>
+                            <p class="price"><span>200,000,000</span>تومان</p>
+                        </div>
+                        <div class="airline-filter">
+                            <input type="checkbox" name="check1" id="check1">
+                            <img src="/img/airlines-logo/kaspian.png" alt="">
+                            <label for="check1">کاسپین</label>
+                            <p class="price"><span>200,000,000</span>تومان</p>
+                        </div>
+                        <div class="airline-filter">
+                            <input type="checkbox" name="check1" id="check1">
+                            <img src="/img/airlines-logo/mahan.png" alt="">
+                            <label for="check1">ماهان ایر</label>
+                            <p class="price"><span>200,000,000</span>تومان</p>
+                        </div>
+
+
+                    </div>
+
+                </section>
+            </aside>
+
+            <!-- نتایج -->
+            <section class="results ">
+                <!-- قسمت مرتبط سازی نتایج بر اساس قیمت و.. و نمایش تاریخ -->
+                <section class="sorting flex">
+                    <section class="sort">
+                        <ul class="flex">
+                            <li><a href="#"><i class="fas fa-sort-amount-up-alt"></i>ساعت پرواز</a></li>
+                            <li><a href="#"><i class="fas fa-sort-amount-up-alt"></i>ظرفیت</a></li>
+                            <li><a href="#"><i class="fas fa-sort-amount-down-alt"></i>قیمت</a></li>
+                        </ul>
+                    </section>
+                    <section class="date">
+                        <ul class="flex">
+                            <li><a href="#"><i class="fas fa-angle-right"></i>روز قبل</a></li>
+                            <li class="current-date"><a href="#">98/05/08</a></li>
+                            <li><a href="#">روز بعد<i class="fas fa-angle-left"></i></a></li>
+                        </ul>
+                    </section>
+                </section>
+                <!-- بخش نمایش تیکت ها -->
+                <section class="tickets">
+                    <!-- یک تیکت تک -->
+                     <div class="ticket-container">
+                        <section class="ticket flex-between">
+                            <div class="airlinelogo fcolumn">
+                                <img src="/img/airlines-logo/taban.png" alt="هواپیمایی آسمان">
+                                <p>شماره پرواز:<span>1200</span></p>
+                            </div>
+                            <p class="airline-type">M82</p>
+                            <div class="flight-time fcolumn">
+                                <p class="divider"><i class="far fa-clock"></i> ساعت پرواز : 06:40</p>
+                                <p> <i class="far fa-clock"></i>مدت پرواز:1 ساعت و 15 دقیق</p>
+                            </div>
+                            <p class="seat-type">اکنومی Y</p>
+                            <div class="avalibility"><i class="fas fa-user-check"></i> 2 نفر</div>
+                            <div class="ticket-price fcolumn">
+                                <span class="orange-color">قیمت بزرگسال</span>
+                                <p class="price">6,080,000 <span>ریال</span></p>
+                            </div>
+                            <div class="btns fcolumn">
+                                <button class="btn btn-green">انتخاب</button>
+                                <button class="btn btn-yellow">مشاهده جزییات</button>
+                            </div>
+
+                        </section>
+                        <section class="detail" style="display: block">
+                            <ul>
+                                <li>اطلاعات پرواز</li>
+                                <li>قوانین استرداد</li>
+                            </ul>
+                            <section class="flight-info flex">
+                                <div class="table">
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <th>مسافران</th>
+                                                <th class="numeric">مبلغ</th>
+                                                <th class="numeric">تعداد نفرات</th>
+                                                <th class="numeric">جمع</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>بزرگسالان</td>
+                                                <td data-title="مبلغ" class="numeric">۶,۰۳۷,۰۰۰ ریال</td>
+                                                <td data-title="تعداد نفرات" class="numeric">۱ نفر</td>
+                                                <td data-title="جمع کل" class="numeric">۶,۰۳۷,۰۰۰ ریال</td>
+                                            </tr>
+                                            <tr>
+                                                <td>کودک</td>
+                                                <td data-title="مبلغ" class="numeric">۰ ریال</td>
+                                                <td data-title="تعداد نفرات" class="numeric">۰ نفر</td>
+                                                <td data-title="جمع کل" class="numeric">۰ ریال</td>
+                                            </tr>
+                                            <tr>
+                                                <td>نوزاد</td>
+                                                <td data-title="مبلغ" class="numeric">۰ ریال</td>
+                                                <td data-title="تعداد نفرات" class="numeric">۰ نفر</td>
+                                                <td data-title="جمع کل" class="numeric">۰ ریال</td>
+                                            </tr>
+                                            <tr>
+                                                <td>عوارض فرودگاهی</td>
+                                                <td data-title="" class="numeric">۴۴۳,۰۰۰ ریال</td>
+                                            </tr>
+                                            <tr>
+                                                <td>تخفیف</td>
+                                                <td data-title="" class="numeric">۰ ریال</td>
+                                            </tr>
+                                            <tr>
+                                                <td>جمع کل بهای بلیط</td>
+                                                <td data-title="" class="numeric">۶,۴۸۰,۰۰۰ ریال</td>
+                                            </tr>
+
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="fcolumn best-price">
+                                    <img src="/img/price-garanty.png" alt="">
+                                    <button class="btn btn-blue">انتخاب</button>
+                                    <button class="btn btn-yellow">قوانین استرداد</button>
+                                </div>
+
+                            </section>
+                            <section class="refund-policies flex-between">
+                                <div class="policy">
+                                    <p class="title">از زمان صدور بلیط تا 12:00 ظهر 3 روز قبل از پرواز</p>
+                                    <p class="percent">30% -</p>
+                                </div>
+                                <div class="policy">
+                                    <p class="title">از زمان صدور بلیط تا 12:00 ظهر 3 روز قبل از پرواز</p>
+                                    <p class="percent">30% -</p>
+                                </div>
+                                <div class="policy">
+                                    <p class="title">از زمان صدور بلیط تا 12:00 ظهر 3 روز قبل از پرواز</p>
+                                    <p class="percent">30% -</p>
+                                </div>
+                                <div class="policy">
+                                    <p class="title">از زمان صدور بلیط تا 12:00 ظهر 3 روز قبل از پرواز</p>
+                                    <p class="percent">30% -</p>
+                                </div>
+                                <div class="policy">
+                                    <p class="title">از زمان صدور بلیط تا 12:00 ظهر 3 روز قبل از پرواز</p>
+                                    <p class="percent">30% -</p>
+                                </div>
+                                
+                            </section>
+                        </section>
+                    </div> 
+                    <!-- یک تیکت تک -->
+                    <div class="ticket-container">
+                        <section class="ticket flex-between">
+                            <div class="airlinelogo fcolumn">
+                                <img src="/img/airlines-logo/aseman.png" alt="هواپیمایی آسمان">
+                                <p>شماره پرواز:<span>1200</span></p>
+                            </div>
+                            <p class="airline-type">M82</p>
+                            <div class="flight-time fcolumn">
+                                <p class="divider"><i class="far fa-clock"></i> ساعت پرواز : 06:40</p>
+                                <p> <i class="far fa-clock"></i>مدت پرواز:1 ساعت و 15 دقیق</p>
+                            </div>
+                            <p class="seat-type">اکنومی Y</p>
+                            <div class="avalibility"><i class="fas fa-user-check"></i> 2 نفر</div>
+                            <div class="ticket-price fcolumn">
+                                <span class="orange-color">قیمت بزرگسال</span>
+                                <p class="price">6,080,000 <span>ریال</span></p>
+                            </div>
+                            <div class="btns fcolumn">
+                                <button class="btn btn-blue">انتخاب</button>
+                                <button class="btn btn-yellow">مشاهده جزییات</button>
+                            </div>
+
+                        </section>
+
+                    </div>
+                    <!-- یک تیکت تک -->
+                    <div class="ticket-container">
+                        <section class="ticket flex-between">
+                            <div class="airlinelogo fcolumn">
+                                <img src="/img/airlines-logo/ata.png" alt="هواپیمایی آسمان">
+                                <p>شماره پرواز:<span>1200</span></p>
+                            </div>
+                            <p class="airline-type">M82</p>
+                            <div class="flight-time fcolumn">
+                                <p class="divider"><i class="far fa-clock"></i> ساعت پرواز : 06:40</p>
+                                <p> <i class="far fa-clock"></i>مدت پرواز:1 ساعت و 15 دقیق</p>
+                            </div>
+                            <p class="seat-type">اکنومی Y</p>
+                            <div class="avalibility"><i class="fas fa-user-check"></i> 2 نفر</div>
+                            <div class="ticket-price fcolumn">
+                                <span class="orange-color">قیمت بزرگسال</span>
+                                <p class="price">6,080,000 <span>ریال</span></p>
+                            </div>
+                            <div class="btns fcolumn">
+                                <button class="btn btn-blue">انتخاب</button>
+                                <button class="btn btn-yellow">مشاهده جزییات</button>
+                            </div>
+
+                        </section>
+
+                    </div>
+                    <!-- یک تیکت تک -->
+                    <div class="ticket-container">
+                        <section class="ticket flex-between">
+                            <div class="airlinelogo fcolumn">
+                                <img src="/img/airlines-logo/atrak.png" alt="هواپیمایی آسمان">
+                                <p>شماره پرواز:<span>1200</span></p>
+                            </div>
+                            <p class="airline-type">M82</p>
+                            <div class="flight-time fcolumn">
+                                <p class="divider"><i class="far fa-clock"></i> ساعت پرواز : 06:40</p>
+                                <p> <i class="far fa-clock"></i>مدت پرواز:1 ساعت و 15 دقیق</p>
+                            </div>
+                            <p class="seat-type">اکنومی Y</p>
+                            <div class="avalibility"><i class="fas fa-user-check"></i> 2 نفر</div>
+                            <div class="ticket-price fcolumn">
+                                <span class="orange-color">قیمت بزرگسال</span>
+                                <p class="price">6,080,000 <span>ریال</span></p>
+                            </div>
+                            <div class="btns fcolumn">
+                                <button class="btn btn-blue">انتخاب</button>
+                                <button class="btn btn-yellow">مشاهده جزییات</button>
+                            </div>
+
+                        </section>
+
+                    </div>
+                    <!-- یک تیکت تک -->
+                    <div class="ticket-container">
+                        <section class="ticket flex-between">
+                            <div class="airlinelogo fcolumn">
+                                <img src="/img/airlines-logo/iran-air-tour.png" alt="هواپیمایی آسمان">
+                                <p>شماره پرواز:<span>1200</span></p>
+                            </div>
+                            <p class="airline-type">M82</p>
+                            <div class="flight-time fcolumn">
+                                <p class="divider"><i class="far fa-clock"></i> ساعت پرواز : 06:40</p>
+                                <p> <i class="far fa-clock"></i>مدت پرواز:1 ساعت و 15 دقیق</p>
+                            </div>
+                            <p class="seat-type">اکنومی Y</p>
+                            <div class="avalibility"><i class="fas fa-user-check"></i> 2 نفر</div>
+                            <div class="ticket-price fcolumn">
+                                <span class="orange-color">قیمت بزرگسال</span>
+                                <p class="price">6,080,000 <span>ریال</span></p>
+                            </div>
+                            <div class="btns fcolumn">
+                                <button class="btn btn-blue">انتخاب</button>
+                                <button class="btn btn-yellow">مشاهده جزییات</button>
+                            </div>
+
+                        </section>
+
+                    </div>
+                    <!-- یک تیکت تک -->
+                    <div class="ticket-container">
+                        <section class="ticket flex-between">
+                            <div class="airlinelogo fcolumn">
+                                <img src="/img/airlines-logo/iran-air.png" alt="هواپیمایی آسمان">
+                                <p>شماره پرواز:<span>1200</span></p>
+                            </div>
+                            <p class="airline-type">M82</p>
+                            <div class="flight-time fcolumn">
+                                <p class="divider"><i class="far fa-clock"></i> ساعت پرواز : 06:40</p>
+                                <p> <i class="far fa-clock"></i>مدت پرواز:1 ساعت و 15 دقیق</p>
+                            </div>
+                            <p class="seat-type">اکنومی Y</p>
+                            <div class="avalibility"><i class="fas fa-user-check"></i> 2 نفر</div>
+                            <div class="ticket-price fcolumn">
+                                <span class="orange-color">قیمت بزرگسال</span>
+                                <p class="price">6,080,000 <span>ریال</span></p>
+                            </div>
+                            <div class="btns fcolumn">
+                                <button class="btn btn-blue">انتخاب</button>
+                                <button class="btn btn-yellow">مشاهده جزییات</button>
+                            </div>
+
+                        </section>
+
+                    </div>
+                    <!-- یک تیکت تک -->
+                    <div class="ticket-container">
+                        <section class="ticket flex-between">
+                            <div class="airlinelogo fcolumn">
+                                <img src="/img/airlines-logo/kaspian.png" alt="هواپیمایی آسمان">
+                                <p>شماره پرواز:<span>1200</span></p>
+                            </div>
+                            <p class="airline-type">M82</p>
+                            <div class="flight-time fcolumn">
+                                <p class="divider"><i class="far fa-clock"></i> ساعت پرواز : 06:40</p>
+                                <p> <i class="far fa-clock"></i>مدت پرواز:1 ساعت و 15 دقیق</p>
+                            </div>
+                            <p class="seat-type">اکنومی Y</p>
+                            <div class="avalibility"><i class="fas fa-user-check"></i> 2 نفر</div>
+                            <div class="ticket-price fcolumn">
+                                <span class="orange-color">قیمت بزرگسال</span>
+                                <p class="price">6,080,000 <span>ریال</span></p>
+                            </div>
+                            <div class="btns fcolumn">
+                                <button class="btn btn-blue">انتخاب</button>
+                                <button class="btn btn-yellow">مشاهده جزییات</button>
+                            </div>
+
+                        </section>
+
+                    </div>
+                    <!-- یک تیکت تک -->
+                    <div class="ticket-container">
+                        <section class="ticket flex-between">
+                            <div class="airlinelogo fcolumn">
+                                <img src="/img/airlines-logo/kish.png" alt="هواپیمایی آسمان">
+                                <p>شماره پرواز:<span>1200</span></p>
+                            </div>
+                            <p class="airline-type">M82</p>
+                            <div class="flight-time fcolumn">
+                                <p class="divider"><i class="far fa-clock"></i> ساعت پرواز : 06:40</p>
+                                <p> <i class="far fa-clock"></i>مدت پرواز:1 ساعت و 15 دقیق</p>
+                            </div>
+                            <p class="seat-type">اکنومی Y</p>
+                            <div class="avalibility"><i class="fas fa-user-check"></i> 2 نفر</div>
+                            <div class="ticket-price fcolumn">
+                                <span class="orange-color">قیمت بزرگسال</span>
+                                <p class="price">6,080,000 <span>ریال</span></p>
+                            </div>
+                            <div class="btns fcolumn">
+                                <button class="btn btn-blue">انتخاب</button>
+                                <button class="btn btn-yellow">مشاهده جزییات</button>
+                            </div>
+
+                        </section>
+
+                    </div>
+
+                </section>
+            </section>
+
+
+        </section>
+    </main>
+
+
+
+
+    <!-- منوی پایین -->
+    <footer>
+        <div class="footer flex">
+            <div class="footer1">
+                <div class="about">
+                    <h3>درباره ستاره زمرد</h3>
+                    <p>شرکت خدمات مسافرتی ستاره زمرد مفتخر است به پشتوانه ی مجموعه هلدینگ خود در اعزام محصل و دانشجو به
+                        کشورهای مالزی، سنگاپور، اتریش، آلمان، سوئیس، سوئد، روسیه و کانادا، ارائه دهنده ی بهترین خدمات به
+                        همکاران (B2B)و مسافران (B2C) با گارانتی قیمت و بصورت کاملا رقابتی می باشد.شرکت خدمات مسافرتی
+                        ستاره زمرد مفتخر است به پشتوانه ی مجموعه هلدینگ خود در اعزام محصل و دانشجو به کشورهای مالزی،
+                    </p>
+                </div>
+                <div class="address">
+                    <p>تهران،پاسداران،خیابان گل نبی،خیابان ناطق نوری پ34</p>
+                    <p>شماره تماس 24 ساعته: <a href="tel:02172407">72407-021</a></p>
+                </div>
+            </div>
+            <div class="footer2">
+                <div class="footer_links">
+                    <h3>لینک های مرتبط</h3>
+                    <ul>
+                        <li><a href="">بلیط هواپیما</a></li>
+                        <li><a href="">رزرو هتل</a></li>
+                        <li><a href="">تور مسافرتی</a></li>
+                        <li><a href="">ویزا</a></li>
+                        <li><a href="">بیمه</a></li>
+                        <li><a href="">مجله گردشگری</a></li>
+                        <li><a href="">درباره ما</a></li>
+                        <li><a href="">تماس با ما</a></li>
+                        <li><a href="">قوانین و مقررات</a></li>
+                        <li><a href="">پشتی</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer3">
+                <div class="footer_links">
+                    <h3>لینک های مرتبط</h3>
+                    <ul>
+                        <li><a href="">بلیط هواپیما</a></li>
+                        <li><a href="">رزرو هتل</a></li>
+                        <li><a href="">تور مسافرتی</a></li>
+                        <li><a href="">ویزا</a></li>
+                        <li><a href="">بیمه</a></li>
+                        <li><a href="">مجله گردشگری</a></li>
+                    </ul>
+                </div>
+
+                <div class="mojavezha">
+                    <a href="#"><img src="/img/logos/namad1.png" alt=""></a>
+                    <a href="#"><img src="/img/logos/namad2.png" alt=""></a>
+                    <a href="#"><img src="/img/logos/namad3.png" alt=""></a>
+                    <a href="#"><img src="/img/logos/namad4.png" alt=""></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+</body>
+
+</html>
