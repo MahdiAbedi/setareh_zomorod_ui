@@ -225,6 +225,11 @@ main{
     color: $light-orange;
 }
 
+
+.rotate-right{
+    transform: rotateY(-150deg)
+}
+
 @import 'modules/menu';
 @import 'pages/home';
 @import 'modules/tours';
@@ -233,7 +238,9 @@ main{
 @import 'modules/animations';
 @import 'modules/footer';
 
-@import 'pages/ticket_result';
+// @import 'pages/ticket_result';
 @import 'modules/checkbox';
 @import 'modules/redio-botton';
+@import 'pages/outer_flight_result';
+@import 'modules/order_steps';
 @import 'mixins/responsive';
