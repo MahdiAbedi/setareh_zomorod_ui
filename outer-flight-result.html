@@ -333,11 +333,12 @@
                     <!-- یک تیکت تک -->
                     <div class="ticket-container">
                         <section class="single-ticket flex-between">
+                            
                             <div class="legs">
                                 <!-- لگ رفت و برگشت -->
                                 <!-- لگ رفت -->
                                 <div class="first-leg leg flex-between">
-                                    <div class="logoes">
+                                    <div class="logoes ">
                                         <img src="/img/airlines-logo/aseman.png" alt="">
                                         <img src="/img/airlines-logo/ata.png" alt="">
                                     </div>
@@ -388,19 +389,185 @@
                                 
                                 
                             </div>
-                            <div class="ticket-choose fcolumn">
+                            <div class="ticket-choose">
                                 <p>8 صندلی باقی مانده</p>
                                 <p class="price">4,880,000 <span>ریال</span></p>
                                 <button class="btn btn-green">انتخاب بلیط</button>
                             </div>
                         </section>
 
-                        <section class="ticket-detail" style="display: none">
-                             اطلاعات پرواز
+                        <section class="ticket-detail">
+                            <!-- عناوین  -->
+                            <div class="detail-border"></div>
+                            <div class="detail-titles flex">
+                                    <button class="btn btn-green">قوانین استرداد</button>
+                                    <button class="btn btn-green">قوانین ویزا</button>
+
+
+                                <ul class="flex">
+                                    <li>1 نفر بزرگسال :<small>5/200/000</small>ریال</li>
+                                    <li>1 نفر کودک :<small>5/200/000</small>ریال</li>
+                                    <li>1 نفر نوزاد :<small>5/200/000</small>ریال</li>
+                                    <li>جمع مبلغ:<small>13/200/000</small>ریال</li>
+                                    
+                                </ul>
+                            </div>
+
+                            <!-- جزییات بلیط رفت و برگشت -->
+
+                            <div class="legs-detail flex">
+                                <!-- لگ رفت -->
+                                <div class="leg-detail">
+                                   <h3>پرواز رفت</h3>
+                                   <p>طول سفر:<span>21h 55m</span></p>
+                                   <p class="green went-time"><i class="fas fa-calendar-day"></i> تاریخ حرکت: <small>شنبه،6مهر 1398(2019/09/28)</small></p>
+
+                                   <!-- جزییات هر مسیر -->
+                                   <div class="detail-card">
+                                       <div class="row">
+                                           <strong>06:30</strong>
+                                           <strong>Tehran <small>(Imam Khomeini Intl)</small></strong>
+                                       </div>
+                                       <div class="row">
+                                           <img src="/img/airlines-logo/aseman.png" alt="">
+                                           <div class="description">
+                                               <small>شماره پرواز:1185 / ظرفیت: 9 نفر</small>
+                                               <small>کلاس:Economy-H</small>
+                                               <small>طول پرواز:3h 25m</small>
+                                               <small>هواپیما: Airbus Industrie A321</small>
+                                           </div>
+                                       </div>
+                                       <div class="row">
+                                            <strong>08:30</strong>
+                                            <strong>Istanbul <small>(Istanbul Airport)</small></strong>
+                                        </div>
+                                   </div>
+                                   <div class="stop-detail">
+                                       <small>جابجایی در Istanbul / طول توقف: 2H 15m</small>
+                                   </div>
+                                   <!-- جزییات هر مسیر -->
+                                   <div class="detail-card">
+                                       <div class="row">
+                                           <strong>06:30</strong>
+                                           <strong>Tehran <small>(Imam Khomeini Intl)</small></strong>
+                                       </div>
+                                       <div class="row">
+                                           <img src="/img/airlines-logo/aseman.png" alt="">
+                                           <div class="description">
+                                               <small>شماره پرواز:1185 / ظرفیت: 9 نفر</small>
+                                               <small>کلاس:Economy-H</small>
+                                               <small>طول پرواز:3h 25m</small>
+                                               <small>هواپیما: Airbus Industrie A321</small>
+                                           </div>
+                                       </div>
+                                       <div class="row">
+                                            <strong>08:30</strong>
+                                            <strong>Istanbul <small>(Istanbul Airport)</small></strong>
+                                        </div>
+                                   </div>
+                                   <div class="stop-detail">
+                                       <small>جابجایی در Istanbul / طول توقف: 2H 15m</small>
+                                   </div>
+                                    <!-- جزییات هر مسیر -->
+                                    <div class="detail-card">
+                                            <div class="row">
+                                                <strong>06:30</strong>
+                                                <strong>Tehran <small>(Imam Khomeini Intl)</small></strong>
+                                            </div>
+                                            <div class="row">
+                                                <img src="/img/airlines-logo/kaspian.png" alt="">
+                                                <div class="description">
+                                                    <small>شماره پرواز:1185 / ظرفیت: 9 نفر</small>
+                                                    <small>کلاس:Economy-H</small>
+                                                    <small>طول پرواز:3h 25m</small>
+                                                    <small>هواپیما: Airbus Industrie A321</small>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                 <strong>08:30</strong>
+                                                 <strong>Istanbul <small>(Istanbul Airport)</small></strong>
+                                             </div>
+                                        </div>
+                                </div>
+
+                                <!-- لگ برگشت -->
+                                <div class="leg-detail">
+                                        <h3>پرواز برگشت</h3>
+                                        <p>طول سفر:<span>21h 55m</span></p>
+                                        <p class="green went-time"><i class="fas fa-calendar-day"></i> تاریخ حرکت: <small>شنبه،6مهر 1398(2019/09/28)</small></p>
+     
+                                        <!-- جزییات هر مسیر -->
+                                        <div class="detail-card">
+                                            <div class="row">
+                                                <strong>06:30</strong>
+                                                <strong>Tehran <small>(Imam Khomeini Intl)</small></strong>
+                                            </div>
+                                            <div class="row">
+                                                <img src="/img/airlines-logo/aseman.png" alt="">
+                                                <div class="description">
+                                                    <small>شماره پرواز:1185 / ظرفیت: 9 نفر</small>
+                                                    <small>کلاس:Economy-H</small>
+                                                    <small>طول پرواز:3h 25m</small>
+                                                    <small>هواپیما: Airbus Industrie A321</small>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                 <strong>08:30</strong>
+                                                 <strong>Istanbul <small>(Istanbul Airport)</small></strong>
+                                             </div>
+                                        </div>
+                                        <div class="stop-detail">
+                                            <small>جابجایی در Istanbul / طول توقف: 2H 15m</small>
+                                        </div>
+                                        <!-- جزییات هر مسیر -->
+                                        <div class="detail-card">
+                                            <div class="row">
+                                                <strong>06:30</strong>
+                                                <strong>Tehran <small>(Imam Khomeini Intl)</small></strong>
+                                            </div>
+                                            <div class="row">
+                                                <img src="/img/airlines-logo/ata.png" alt="">
+                                                <div class="description">
+                                                    <small>شماره پرواز:1185 / ظرفیت: 9 نفر</small>
+                                                    <small>کلاس:Economy-H</small>
+                                                    <small>طول پرواز:3h 25m</small>
+                                                    <small>هواپیما: Airbus Industrie A321</small>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                 <strong>08:30</strong>
+                                                 <strong>Istanbul <small>(Istanbul Airport)</small></strong>
+                                             </div>
+                                        </div>
+                                        <div class="stop-detail">
+                                            <small>جابجایی در Istanbul / طول توقف: 2H 15m</small>
+                                        </div>
+                                         <!-- جزییات هر مسیر -->
+                                         <div class="detail-card">
+                                                 <div class="row">
+                                                     <strong>06:30</strong>
+                                                     <strong>Tehran <small>(Imam Khomeini Intl)</small></strong>
+                                                 </div>
+                                                 <div class="row">
+                                                     <img src="/img/airlines-logo/kaspian.png" alt="">
+                                                     <div class="description">
+                                                         <small>شماره پرواز:1185 / ظرفیت: 9 نفر</small>
+                                                         <small>کلاس:Economy-H</small>
+                                                         <small>طول پرواز:3h 25m</small>
+                                                         <small>هواپیما: Airbus Industrie A321</small>
+                                                     </div>
+                                                 </div>
+                                                 <div class="row">
+                                                      <strong>08:30</strong>
+                                                      <strong>Istanbul <small>(Istanbul Airport)</small></strong>
+                                                  </div>
+                                             </div>
+                                     </div>
+                            </div>
                         </section>
                         <div class="more-info flex-between">
                             <span>Economy-H</span>
-                            <span><i class="fas fa-arrow-circle-down"></i> مشاهده جزییات پرواز </span>
+                            <span><i class="fas fa-arrow-circle-up"></i> پنهان کردن جزئیات </span>
                             <span></span>
                         </div>
 
@@ -408,13 +575,14 @@
                     <!-- یک تیکت تک -->
                     <div class="ticket-container">
                         <section class="single-ticket flex-between">
+                            
                             <div class="legs">
                                 <!-- لگ رفت و برگشت -->
                                 <!-- لگ رفت -->
                                 <div class="first-leg leg flex-between">
-                                    <div class="logoes">
-                                        <img src="/img/airlines-logo/aseman.png" alt="">
-                                        <img src="/img/airlines-logo/ata.png" alt="">
+                                    <div class="logoes ">
+                                        <img src="/img/airlines-logo/iran-air.png" alt="">
+                                        <img src="/img/airlines-logo/atrak.png" alt="">
                                     </div>
                                     <p class="destination">05:20 Tehran <span>1398/7/25</span></p>
 
@@ -438,8 +606,8 @@
                                 <!-- لگ برگشت -->
                                 <div class="second-leg leg flex-between">
                                     <div class="logoes">
-                                        <img src="/img/airlines-logo/aseman.png" alt="">
-                                        <img src="/img/airlines-logo/ata.png" alt="">
+                                        <img src="/img/airlines-logo/meraj.png" alt="">
+                                        <img src="/img/airlines-logo/kaspian.png" alt="">
                                     </div>
                                     <p class="destination">05:20 Tehran <span>1398/7/25</span></p>
 
@@ -463,7 +631,7 @@
                                 
                                 
                             </div>
-                            <div class="ticket-choose fcolumn">
+                            <div class="ticket-choose">
                                 <p>8 صندلی باقی مانده</p>
                                 <p class="price">4,880,000 <span>ریال</span></p>
                                 <button class="btn btn-green">انتخاب بلیط</button>
@@ -480,231 +648,7 @@
                         </div>
 
                     </div>
-                    <!-- یک تیکت تک -->
-                    <div class="ticket-container">
-                        <section class="single-ticket flex-between">
-                            <div class="legs">
-                                <!-- لگ رفت و برگشت -->
-                                <!-- لگ رفت -->
-                                <div class="first-leg leg flex-between">
-                                    <div class="logoes">
-                                        <img src="/img/airlines-logo/aseman.png" alt="">
-                                        <img src="/img/airlines-logo/ata.png" alt="">
-                                    </div>
-                                    <p class="destination">05:20 Tehran <span>1398/7/25</span></p>
-
-                                    <div class="path">
-                                        <span>طول سفر:25 ساعت</span>
-                                        <ul class="path flex-between">
-                                            <li>
-                                                <i class="fa fa-plane rotate-right"></i>
-                                            </li>
-                                            <li>
-                                                <i class="circle"></i>
-                                            </li>
-                                        </ul>
-                                        <span>2 توقف:FRA,SEA</span>
-                                    </div>
-
-
-                                    <p class="destination">06:20 Vancouver <span>1398/7/25</span></p>
-
-                                </div>
-                                <!-- لگ برگشت -->
-                                <div class="second-leg leg flex-between">
-                                    <div class="logoes">
-                                        <img src="/img/airlines-logo/aseman.png" alt="">
-                                        <img src="/img/airlines-logo/ata.png" alt="">
-                                    </div>
-                                    <p class="destination">05:20 Tehran <span>1398/7/25</span></p>
-
-                                    <div class="path">
-                                        <span>طول سفر:25 ساعت</span>
-                                        <ul class="path flex-between">
-                                            <li>
-                                                <i class="circle"></i>
-                                            </li>
-                                            <li>
-                                                <i class="fa fa-plane"></i>
-                                            </li>
-                                        </ul>
-                                        <span>2 توقف:FRA,SEA</span>
-                                    </div>
-
-
-                                    <p class="destination">06:20 Vancouver <span>1398/7/25</span></p>
-
-                                </div>
-                                
-                                
-                            </div>
-                            <div class="ticket-choose fcolumn">
-                                <p>8 صندلی باقی مانده</p>
-                                <p class="price">4,880,000 <span>ریال</span></p>
-                                <button class="btn btn-green">انتخاب بلیط</button>
-                            </div>
-                        </section>
-
-                        <section class="ticket-detail" style="display: none">
-                             اطلاعات پرواز
-                        </section>
-                        <div class="more-info flex-between">
-                            <span>Economy-H</span>
-                            <span><i class="fas fa-arrow-circle-down"></i> مشاهده جزییات پرواز </span>
-                            <span></span>
-                        </div>
-
-                    </div>
-                    <!-- یک تیکت تک -->
-                    <div class="ticket-container">
-                        <section class="single-ticket flex-between">
-                            <div class="legs">
-                                <!-- لگ رفت و برگشت -->
-                                <!-- لگ رفت -->
-                                <div class="first-leg leg flex-between">
-                                    <div class="logoes">
-                                        <img src="/img/airlines-logo/aseman.png" alt="">
-                                        <img src="/img/airlines-logo/ata.png" alt="">
-                                    </div>
-                                    <p class="destination">05:20 Tehran <span>1398/7/25</span></p>
-
-                                    <div class="path">
-                                        <span>طول سفر:25 ساعت</span>
-                                        <ul class="path flex-between">
-                                            <li>
-                                                <i class="fa fa-plane rotate-right"></i>
-                                            </li>
-                                            <li>
-                                                <i class="circle"></i>
-                                            </li>
-                                        </ul>
-                                        <span>2 توقف:FRA,SEA</span>
-                                    </div>
-
-
-                                    <p class="destination">06:20 Vancouver <span>1398/7/25</span></p>
-
-                                </div>
-                                <!-- لگ برگشت -->
-                                <div class="second-leg leg flex-between">
-                                    <div class="logoes">
-                                        <img src="/img/airlines-logo/aseman.png" alt="">
-                                        <img src="/img/airlines-logo/ata.png" alt="">
-                                    </div>
-                                    <p class="destination">05:20 Tehran <span>1398/7/25</span></p>
-
-                                    <div class="path">
-                                        <span>طول سفر:25 ساعت</span>
-                                        <ul class="path flex-between">
-                                            <li>
-                                                <i class="circle"></i>
-                                            </li>
-                                            <li>
-                                                <i class="fa fa-plane"></i>
-                                            </li>
-                                        </ul>
-                                        <span>2 توقف:FRA,SEA</span>
-                                    </div>
-
-
-                                    <p class="destination">06:20 Vancouver <span>1398/7/25</span></p>
-
-                                </div>
-                                
-                                
-                            </div>
-                            <div class="ticket-choose fcolumn">
-                                <p>8 صندلی باقی مانده</p>
-                                <p class="price">4,880,000 <span>ریال</span></p>
-                                <button class="btn btn-green">انتخاب بلیط</button>
-                            </div>
-                        </section>
-
-                        <section class="ticket-detail" style="display: none">
-                             اطلاعات پرواز
-                        </section>
-                        <div class="more-info flex-between">
-                            <span>Economy-H</span>
-                            <span><i class="fas fa-arrow-circle-down"></i> مشاهده جزییات پرواز </span>
-                            <span></span>
-                        </div>
-
-                    </div>
-                    <!-- یک تیکت تک -->
-                    <div class="ticket-container">
-                        <section class="single-ticket flex-between">
-                            <div class="legs">
-                                <!-- لگ رفت و برگشت -->
-                                <!-- لگ رفت -->
-                                <div class="first-leg leg flex-between">
-                                    <div class="logoes">
-                                        <img src="/img/airlines-logo/aseman.png" alt="">
-                                        <img src="/img/airlines-logo/ata.png" alt="">
-                                    </div>
-                                    <p class="destination">05:20 Tehran <span>1398/7/25</span></p>
-
-                                    <div class="path">
-                                        <span>طول سفر:25 ساعت</span>
-                                        <ul class="path flex-between">
-                                            <li>
-                                                <i class="fa fa-plane rotate-right"></i>
-                                            </li>
-                                            <li>
-                                                <i class="circle"></i>
-                                            </li>
-                                        </ul>
-                                        <span>2 توقف:FRA,SEA</span>
-                                    </div>
-
-
-                                    <p class="destination">06:20 Vancouver <span>1398/7/25</span></p>
-
-                                </div>
-                                <!-- لگ برگشت -->
-                                <div class="second-leg leg flex-between">
-                                    <div class="logoes">
-                                        <img src="/img/airlines-logo/aseman.png" alt="">
-                                        <img src="/img/airlines-logo/ata.png" alt="">
-                                    </div>
-                                    <p class="destination">05:20 Tehran <span>1398/7/25</span></p>
-
-                                    <div class="path">
-                                        <span>طول سفر:25 ساعت</span>
-                                        <ul class="path flex-between">
-                                            <li>
-                                                <i class="circle"></i>
-                                            </li>
-                                            <li>
-                                                <i class="fa fa-plane"></i>
-                                            </li>
-                                        </ul>
-                                        <span>2 توقف:FRA,SEA</span>
-                                    </div>
-
-
-                                    <p class="destination">06:20 Vancouver <span>1398/7/25</span></p>
-
-                                </div>
-                                
-                                
-                            </div>
-                            <div class="ticket-choose fcolumn">
-                                <p>8 صندلی باقی مانده</p>
-                                <p class="price">4,880,000 <span>ریال</span></p>
-                                <button class="btn btn-green">انتخاب بلیط</button>
-                            </div>
-                        </section>
-
-                        <section class="ticket-detail" style="display: none">
-                             اطلاعات پرواز
-                        </section>
-                        <div class="more-info flex-between">
-                            <span>Economy-H</span>
-                            <span><i class="fas fa-arrow-circle-down"></i> مشاهده جزییات پرواز </span>
-                            <span></span>
-                        </div>
-
-                    </div>
+                    
 
                 </section>
             </section>

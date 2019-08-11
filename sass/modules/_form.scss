@@ -30,7 +30,7 @@ select{
 
 ::placeholder,select{
     font-family: "iranyekanwebregular", "robotolight", sans-serif !important;
-    font-size: 14px;
+    font-size: 1.2rem;
     // padding-right: 15px;
 }
 
@@ -69,11 +69,11 @@ input[type="button"],.button{
     margin-right: 10px;
     width:168px;
     font-family: inherit;
-    background:linear-gradient(70deg,#006d51,#006d51 85%,#013a32 85%,#036e60);
+    background:linear-gradient(70deg,#006d51,#006d51 75%,#013a32 75%,#036e60);
     outline:none;
     border:#ffb700;
-    color:#fff;
-    font-size: 15px;
+    color:#fff !important;
+    // font-size: 15px;
     height: 38px;
     border-radius: 10px;
     cursor: pointer;

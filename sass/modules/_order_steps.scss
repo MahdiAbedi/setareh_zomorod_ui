@@ -37,12 +37,18 @@
         justify-content: center;
         align-items: center;
 
+        i{
+            font-size: 20px;
+        }
 
         &:first-child{
             text-align: right;
             margin-right: -20px;
             color:#006c50;
-            font-size: 20px;
+            
+            i{
+                background:#fff;
+            }
          }
         &:last-child{
             text-align: left;
@@ -63,10 +69,10 @@
 
     }
 
-    //انتخاب پرواز
+    //آیکون هواپیما در مرحله انتخاب پرواز
     .choose-plane {
         color: green;
-        font-size: 20px;
+        font-size: 16px;
         transform: rotateY(150deg);
     }
 }

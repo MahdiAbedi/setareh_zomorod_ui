@@ -1,0 +1,31 @@
+/* start of desktop styles */
+
+@media screen and (max-width: 991px) {
+    .test{color:#fff;}
+}
+
+@media screen and (max-width: 767px) {
+
+    .top-search {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 479px) {
+    .order-steps,aside.filters{
+        display: none !important;
+    }
+
+    .leg-detail{
+        width:100% !important;
+    }
+
+    .single-ticket{
+        .legs{
+            width:100%;
+        }
+       
+    }
+
+    
+}
