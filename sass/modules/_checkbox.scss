@@ -1,8 +1,9 @@
 input[type=checkbox] + label {
-  display: block;
+  // display: block;
   margin: 0.2em;
   cursor: pointer;
   padding: 0.2em;
+  width: 100%;
 }
 
 input[type=checkbox] {

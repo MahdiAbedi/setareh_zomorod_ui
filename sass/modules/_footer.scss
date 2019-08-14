@@ -2,7 +2,7 @@ footer{
     width:100%;
     min-height:400px;
     // border:1px solid orange;
-    background:url(../img/footer-bg.jpg) no-repeat center;
+    background:url("../img/footer-bg.jpg") no-repeat center;
     background-size: cover;
     color:#fff;
     position: relative;
@@ -20,7 +20,8 @@ footer{
         }
     }
     .footer{
-        width:80%;
+        width: 80%;
+        max-width: 1050px;
         margin-right:auto;
         margin-left:auto;
         margin-top: 40px;

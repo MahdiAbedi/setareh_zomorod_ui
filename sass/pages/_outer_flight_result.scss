@@ -1,7 +1,7 @@
 .top-search {
     color: #fff;
     padding: 15px 0px;
-    background: url(/img/bgs/top-search-bg.jpg);
+    background: url("../img/bgs/top-search-bg.jpg");
 
     form {
         width: 75%
@@ -139,15 +139,15 @@
 // فیلتر انتخاب ایرلاینها و ...
 .airline-filter,
 .panel-body>* {
-    display: flex;
-    justify-content: space-between;
+    // display: flex;
+    // justify-content: space-between;
     padding: 5px 0;
-    border-bottom: 1px dashed $light_gray;
+    // border-bottom: 1px dashed $light_gray;
     cursor: pointer;
     transition: all .1s ease;
 
     &:hover {
-        background: $medium_green;
+        background: $font_green;
         border-radius: $border_radius;
         color: #fff;
         padding: 5px;
@@ -169,7 +169,7 @@
 
 
 .single-ticket {
-
+    position: relative;
     cursor: grabbing;
     // font-size: 13px;
     border: 2px solid transparent;
@@ -196,8 +196,11 @@
 
         .leg {
             margin: 5px;
-            border-bottom: 1px solid #efefef;
             padding: 10px;
+
+            &:not(:last-child){
+                border-bottom: 1px solid #efefef;
+            }
 
             &>* {
                 margin: auto;
@@ -325,6 +328,7 @@ ul.path {
 // ticket detail
 
 .more-info {
+
     background: $font_green;
     padding: 10px 5px;
     color: #fff;
@@ -444,4 +448,149 @@ ul.path {
         display: block;
         right:-13px;
     }
+}
+
+
+
+// قسمت پیشنهاد پرواز با بهترین قیمت 
+
+.best-price{
+    .ticket_type{
+        background: $medium_orange;
+    }
+    & >.more-info{
+        background:$medium_orange;
+    }
+    & i{
+        color:$medium_orange;
+        border-color:$medium_orange !important;
+    }
+
+}
+
+
+.checkbox-spanner.selected::before{
+    background-color: $font_green;
+    border:none;
+}
+.checkbox-spanner{
+    position: relative;
+    float:left;
+    &::before{
+        content: "";
+        position: absolute;
+        
+        float:left;
+        width: 6px;
+        height: 20px;
+        
+        background-color: $lighter_gray ;
+        border:1px solid $light_gray;
+        border-radius: 20px;
+    }
+}
+
+
+.ticket_type {
+    position: absolute;
+    top: 25px;
+    left: 100%;
+    margin-left: -9px;
+    border-radius: 3px 3px 0 0;
+    overflow: hidden;
+    vertical-align: top;
+    // background: transparent;
+    background: $font_green;
+    border: solid hsla(0,0%,82.4%,.6);
+    border-width: 1px 1px 0;
+    color: #fff;
+
+    width: 70px;
+    height: 18px;
+    transform: translateX(-50%) translateY(50%) rotate(-90deg);
+    font-size: 10px;
+    text-align: center;
+    line-height: 16px;
+}
+
+/* start of desktop styles */
+
+@media screen and (max-width: 991px) {
+    .test{color:#fff;}
+}
+
+@media screen and (max-width: 767px) {
+
+    .top-search {
+        display: none;
+    }
+
+    .order-steps,aside.filters{
+        display: none !important;
+    }
+
+    .leg-detail{
+        width:100% !important;
+    }
+
+    .single-ticket{
+        .legs{
+            width:100%;
+
+            .leg{
+                flex-direction: row;
+                margin:0;
+                padding:10px 1px;
+                border-bottom: 1px solid #efefef;
+
+                .logoes{
+                    padding-right:1px;
+                }
+
+                ul{
+                    padding:5px;
+                }
+
+                li{
+                    display: none;
+                }
+            }
+        }
+
+        
+       
+    }
+
+    .ticket-detail{
+        .detail-titles{
+            align-items: center;
+        }
+
+        .buttons{
+            margin-bottom: 5px;
+            
+        }
+
+        ul{
+            width:100%;
+            flex-direction: row;
+            justify-content:space-between;
+
+            li{
+                padding:10px;
+                border:1px solid $border_gray;
+                width:50%;
+            }
+        }
+    }
+
+    .more-info{
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@media screen and (max-width: 479px) {
+    
+    
 }

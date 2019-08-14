@@ -36,23 +36,28 @@ select{
 
 .btn{
     outline: none;
-    border:2px solid transparent;
+    // border:2px solid transparent;
+    border:none;
     // background:transparent;
     padding:2px 15px;
     border-radius: $border-radius;
     font-family: inherit;
     width: 100%;
     cursor: pointer;
-    margin-top: 5px;
+    // margin-top: 5px;
+    height: 38px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all .5s ease;
+    color:#fff;
+    margin:0 5px 0 0;
 }
 .btn-blue{
     background:$light_blue;
-    color:#fff;
 }
 
 .btn-green{
     background: $medium_green;
-    color:#fff;
 }
 .btn-yellow{
     color:#ffa700;
@@ -65,23 +70,38 @@ select{
         background-color: #ffa700;
     }
 }
-input[type="button"],.button{
-    margin-right: 10px;
-    width:168px;
-    font-family: inherit;
-    background:linear-gradient(70deg,#006d51,#006d51 75%,#013a32 75%,#036e60);
-    outline:none;
-    border:#ffb700;
-    color:#fff !important;
-    // font-size: 15px;
-    height: 38px;
-    border-radius: 10px;
-    cursor: pointer;
-    transition: all .5s ease;
-    &:hover{
-        background:#dfa105;
-        // background:linear-gradient(70deg,#006d51,#006d51 55%,#013a32 55%,#036e60);
 
+//دکمه سبز رنگ طرح ستاره زمرد
+
+.btn-zgreen{
+    background:linear-gradient(70deg,#006d51,#006d51 75%,#013a32 75%,#036e60);
+    // font-size: 15px;
+
+    &:hover{
+        // background:#dfa105;
+        background:linear-gradient(70deg,#006d51,#006d51 55%,#013a32 55%,#036e60);
+    }
+}
+//دکمه نارنجی رنگ طرح ستاره زمرد
+
+.btn-zorange{
+    background:linear-gradient(70deg,$light_orange,$light_orange 75%,$medium_orange 75%,$medium_orange);
+    // font-size: 15px;
+
+    &:hover{
+        // background:#dfa105;
+        background:linear-gradient(70deg,$light_orange,$light_orange 55%,$medium_orange 55%,$medium_orange);
+    }
+}
+//دکمه خاکستری رنگ طرح ستاره زمرد
+.btn-zgray{
+    background:linear-gradient(70deg,#d8d8d8,#d8d8d8 75%,#c9c9c9 75%,#c9c9c9);
+    // font-size: 15px;
+    color:#000;
+
+    &:hover{
+        // background:#dfa105;
+        background:linear-gradient(70deg,#d8d8d8,#d8d8d8 55%,#c9c9c9 55%,#c9c9c9);
     }
 }
 
