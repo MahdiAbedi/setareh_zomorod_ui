@@ -23,9 +23,15 @@
 
         }
 
-        .travelers-info{
-            background: linear-gradient(to left,green ,green 20%,orange 20% ,orange 50%,black);
-            
+        &.travelers-info{
+            &::before{
+                background: linear-gradient(to left,green ,green 40%,#a5a5a5 40%,#a5a5a5);
+            }
+        }
+        &.confirm-info{
+            &::before{
+                background: linear-gradient(to left,green ,green 65%,#a5a5a5 65%,#a5a5a5);
+            }
         }
 
     

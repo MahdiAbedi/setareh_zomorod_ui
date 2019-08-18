@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="author" content="MahdiAbedi220@yahoo.com">
+    <link rel="stylesheet" href="css/style.css">
+    <title>تایید اطلاعات مسافر</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.css">
+</head>
+
+<body>
+    <!-- منوی بالا -->
+    <div class="topmenu">
+
+        <nav class="topmenu-container container">
+            <ul class="menu right-menu">
+                <li class="menu-item active">
+                    <img src="img/Home.png" alt="منوی">
+                    <a href="#">خانه</a>
+                </li>
+                <li class="menu-item">
+                    <img src="img/airplane-icon.png" alt="منوی">
+                    <a href="#">بلیط هواپیما</a>
+                </li>
+                <li class="menu-item">
+                    <img src="img/hotel.png" alt="منوی">
+                    <a href="#">رزو هتل</a>
+                </li>
+                <li class="menu-item">
+                    <img src="img/tour.png" alt="منوی">
+                    <a href="#">تور مسافرتی</a>
+                </li>
+                <li class="menu-item">
+                    <img src="img/visa.png" alt="منوی">
+                    <a href="#">ویزا</a>
+                </li>
+                <li class="menu-item">
+                    <img src="img/bime.png" alt="منوی">
+                    <a href="#">بیمه</a>
+                </li>
+                <li class="menu-item">
+                    <img src="img/blog.png" alt="منوی">
+                    <a href="#">مجله گردشگری</a>
+                </li>
+                <li class="menu-item other">
+                    <a href="#">...</a>
+                </li>
+
+
+            </ul>
+
+            <ul class="menu left-menu">
+
+                <li class="menu-item">
+                    <img src="img/search.png" alt="منوی">
+                </li>
+                <li class="menu-item">
+                    <img src="img/login.png" alt="منوی">
+                </li>
+                <li class="menu-item">
+                    <a href="tel:02172407">021-72407</a>
+                    <img src="img/tel.png" class="tel" alt="منوی">
+                </li>
+
+                <li class="menu-item logo">
+                    <img src="img/logo.png" alt="منوی">
+
+                </li>
+
+            </ul>
+        </nav>
+
+
+    </div>
+
+
+    <main>
+        <!-- نمایش مراحل انتخاب و خرید -->
+        <div class="order-steps container">
+            <ul class="flex-between confirm-info">
+                <li>
+                    <span>جستجو</span>
+                    <!-- <i class="fa fa-check circle"></i> -->
+                    <i class="far fa-check-circle circle"></i>
+                </li>
+                <li>
+                    <span>انتخاب پرواز</span>
+                    <i class="far fa-check-circle circle green"></i>
+                </li>
+                <li>
+                    <span>اطلاعات مسافران</span>
+                    <i class="far fa-check-circle circle green"></i>
+
+                </li>
+                <li>
+                    <span>تائید اطلاعات</span>
+                    <i class="fa fa-plane choose-plane"></i>
+                </li>
+                <li>
+                    <span>پرداخت</span>
+                    <i class="circle"></i>
+                </li>
+                <li>
+                    <span>صدور بلیط</span>
+                    <i class="circle"></i>
+                </li>
+            </ul>
+        </div>
+
+        <div class="container">
+            <!-- اطلاعیه و هشدار بالای صفحه -->
+            <div class="notices">
+                <p><i class="fas fa-chevron-circle-left green"></i>لطفا اطلاعات وارد شده را کنترل کرده و پس از اطمینان
+                    از درستی آنها،برای پرداخت هزینه اقدام نمایید.</p>
+                <div class="flex-between">
+                    <p><i class="fas fa-chevron-circle-left green"></i>توجه فرمایید:در صورتی که اطلاعات زیر را اشتباه
+                        وارد نموده اید و یا نیاز به تغییر آن دارید،میتوانید از دکمه بازگشت استفاده کنید.</p>
+                    <a href="#" class="btn btn-zgreen">بازگشت</a>
+                </div>
+            </div>
+
+            <!-- پنل -->
+            <!-- اطلاعات بلیط -->
+            <div class="panel">
+                <div class="title">اطلاعات بلیط</div>
+                <div class="body  ticket-info-confirm">
+
+
+                    <div class="half">
+                        <h3 class="green"><span>&#11044 </span>بلیط رفت</h3>
+
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>شرکت هواپیمایی</th>
+                                    <th>قشم ایر</th>
+
+                                </tr>
+                            </thead>
+                            <tr>
+                                <td>مبدا</td>
+                                <td>تهران</td>
+
+                            </tr>
+                            <tr>
+                                <td>مقصد</td>
+                                <td>اصفهان</td>
+                            </tr>
+                            <tr>
+                                <td>تاریخ و ساعت پرواز</td>
+                                <td>سه شنبه 22 مرداد-06:10</td>
+                            </tr>
+                            <tr>
+                                <td>شماره پرواز</td>
+                                <td>QB 1280</td>
+                            </tr>
+                            <tr>
+                                <td>کلاس پروازی</td>
+                                <td>اکونومی</td>
+                            </tr>
+                            <tr>
+                                <td>مقدار بار مجاز</td>
+                                <td>20 کیلو گرم</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="half">
+                        <h3 class="green"><span>&#11044 </span>بلیط برگشت</h3>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>شرکت هواپیمایی</th>
+                                    <th>قشم ایر</th>
+
+                                </tr>
+                            </thead>
+                            <tr>
+                                <td>مبدا</td>
+                                <td>تهران</td>
+
+                            </tr>
+                            <tr>
+                                <td>مقصد</td>
+                                <td>اصفهان</td>
+                            </tr>
+                            <tr>
+                                <td>تاریخ و ساعت پرواز</td>
+                                <td>سه شنبه 22 مرداد-06:10</td>
+                            </tr>
+                            <tr>
+                                <td>شماره پرواز</td>
+                                <td>QB 1280</td>
+                            </tr>
+                            <tr>
+                                <td>کلاس پروازی</td>
+                                <td>اکونومی</td>
+                            </tr>
+                            <tr>
+                                <td>مقدار بار مجاز</td>
+                                <td>20 کیلو گرم</td>
+                            </tr>
+                        </table>
+                    </div>
+
+
+                </div>
+            </div>
+
+            <!-- درخواست دهنده -->
+            <div class="panel">
+                <div class="title">درخواست دهنده</div>
+                <div class="body">
+
+                    <table class="gray-title">
+                        <thead>
+                            <tr>
+                                <th>نام کاربری</th>
+                                <th>ایمیل</th>
+                                <th>شماره موبایل</th>
+                                <th>موجودی حساب</th>
+
+                            </tr>
+                        </thead>
+                        <tr>
+                            <td>-</td>
+                            <td>MahdiAbedi220@Yahoo.com</td>
+                            <td>09395187902</td>
+                            <td>1000000 <span>ریال</span></td>
+
+                        </tr>
+
+                    </table>
+                </div>
+            </div>
+
+            <!-- مشخصات مسافران -->
+            <div class="panel">
+                <div class="title">مشخصات مسافران </div>
+                <div class="body">
+                    
+                    <div class="passenger-info">
+                            <h3 class="green"><span>&#11044 </span>بزرگسال</h3>
+                            <table class="gray-title">
+                                    <thead>
+                                        <tr>
+                                            <th>نام و نام خانوادگی</th>
+                                            <th>نام و نام خانوادگی (لاتین)</th>
+                                            <th>جنسیت</th>
+                                            <th>کد ملی</th>
+                                            <th>تاریخ تولد</th>
+                                            <th>قیمت</th>
+                                            <th>عملیات</th>
+            
+                                        </tr>
+                                    </thead>
+                                    <tr>
+                                        <td>حسین قاسمی</td>
+                                        <td>hossein ghassemi</td>
+                                        <td>مرد</td>
+                                        <td>0016183455</td>
+                                        <td>1365/1/1</td>
+                                        <td>12,244,000 <span>ریال</span></td>
+                                        <td>ویرایش</td>
+
+                                    </tr>
+            
+                            </table>
+                            <h3 class="green"><span>&#11044 </span>کودک</h3>
+                            <table class="gray-title">
+                                    <thead>
+                                        <tr>
+                                            <th>نام و نام خانوادگی</th>
+                                            <th>نام و نام خانوادگی (لاتین)</th>
+                                            <th>جنسیت</th>
+                                            <th>کد ملی</th>
+                                            <th>تاریخ تولد</th>
+                                            <th>قیمت</th>
+                                            <th>عملیات</th>
+            
+                                        </tr>
+                                    </thead>
+                                    <tr>
+                                        <td>حسین قاسمی</td>
+                                        <td>hossein ghassemi</td>
+                                        <td>مرد</td>
+                                        <td>0016183455</td>
+                                        <td>1365/1/1</td>
+                                        <td>12,244,000 <span>ریال</span></td>
+                                        <td>ویرایش</td>
+
+                                    </tr>
+            
+                            </table>
+                    </div>
+                </div>
+            </div>
+
+            <!-- کد تخفیف -->
+            <div class="panel">
+                <div class="title">کد تخفیف</div>
+                <div class="body flex-between">
+                    
+                    <p>لطفا جهت اعمال تخفیف روی بلیط،کد تخفیف خود را وارد کنید و دکمه <<بررسی و اعمال کد>>  برای بزنید</p>
+                    <div class="flex coupon">
+                        <input type="text" name="" id="coupon">
+                        <a href="#" class="btn btn-zgreen">بررسی و اعمال کد</a>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="pay">
+                <a href="#" class="btn btn-transparent">مبلغ قابل پرداخت:22,488,000 <span>ریال</span></a>
+                <a href="#" class="btn btn-zgreen">پرداخت آنلاین</a>
+            </div>
+
+        </div>
+
+
+
+    </main>
+
+
+
+
+    <!-- منوی پایین -->
+    <footer>
+        <div class="footer flex container">
+            <div class="footer1">
+                <div class="about">
+                    <h3>درباره ستاره زمرد</h3>
+                    <p>شرکت خدمات مسافرتی ستاره زمرد مفتخر است به پشتوانه ی مجموعه هلدینگ خود در اعزام محصل و دانشجو به
+                        کشورهای مالزی، سنگاپور، اتریش، آلمان، سوئیس، سوئد، روسیه و کانادا، ارائه دهنده ی بهترین خدمات به
+                        همکاران (B2B)و مسافران (B2C) با گارانتی قیمت و بصورت کاملا رقابتی می باشد.شرکت خدمات مسافرتی
+                        ستاره زمرد مفتخر است به پشتوانه ی مجموعه هلدینگ خود در اعزام محصل و دانشجو به کشورهای مالزی،
+                    </p>
+                </div>
+                <div class="address">
+                    <p>تهران،پاسداران،خیابان گل نبی،خیابان ناطق نوری پ34</p>
+                    <p>شماره تماس 24 ساعته: <a href="tel:02172407">72407-021</a></p>
+                </div>
+            </div>
+            <div class="footer2">
+                <div class="footer_links">
+                    <h3>لینک های مرتبط</h3>
+                    <ul>
+                        <li><a href="">بلیط هواپیما</a></li>
+                        <li><a href="">رزرو هتل</a></li>
+                        <li><a href="">تور مسافرتی</a></li>
+                        <li><a href="">ویزا</a></li>
+                        <li><a href="">بیمه</a></li>
+                        <li><a href="">مجله گردشگری</a></li>
+                        <li><a href="">درباره ما</a></li>
+                        <li><a href="">تماس با ما</a></li>
+                        <li><a href="">قوانین و مقررات</a></li>
+                        <li><a href="">پشتی</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer3">
+                <div class="footer_links">
+                    <h3>لینک های مرتبط</h3>
+                    <ul>
+                        <li><a href="">بلیط هواپیما</a></li>
+                        <li><a href="">رزرو هتل</a></li>
+                        <li><a href="">تور مسافرتی</a></li>
+                        <li><a href="">ویزا</a></li>
+                        <li><a href="">بیمه</a></li>
+                        <li><a href="">مجله گردشگری</a></li>
+                    </ul>
+                </div>
+
+                <div class="mojavezha">
+                    <a href="#"><img src="img/logos/namad1.png" alt=""></a>
+                    <a href="#"><img src="img/logos/namad2.png" alt=""></a>
+                    <a href="#"><img src="img/logos/namad3.png" alt=""></a>
+                    <a href="#"><img src="img/logos/namad4.png" alt=""></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+</body>
+
+</html>

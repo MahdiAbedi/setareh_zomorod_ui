@@ -100,9 +100,9 @@
     }
 
     ul.left-menu {
-        width: 100vh;
+        // width: 100vh;
         // margin: 0 auto;
-        // float:left;
+        float:left;
     }
 
     .slider {
@@ -123,6 +123,7 @@
     footer {
         background: black;
         background-size: cover;
+        padding:10px;
         // min-height: 200px;
     }
 

@@ -146,7 +146,7 @@ main {
     padding: 5px 0; }
 
 .container {
-  width: 80%;
+  width: 1050px;
   max-width: 1050px;
   margin: 0 auto; }
 
@@ -167,6 +167,10 @@ main {
 .bmargin {
   margin-bottom: 10px; }
 
+.half {
+  width: 50%;
+  margin: 5px; }
+
 .topmenu {
   width: 100%;
   height: 48px;
@@ -186,8 +190,6 @@ main {
 
 .topmenu-container {
   height: 90%;
-  width: 80%;
-  max-width: 1050px;
   margin-right: auto;
   margin-left: auto;
   display: flex;
@@ -412,10 +414,9 @@ form.search {
 
 input[type="text"] {
   outline: none;
-  border: none;
-  height: inherit;
+  border: 1px solid #dcdbd5;
+  height: 38px;
   width: 100%;
-  border-left: 1px #ccc solid;
   padding-right: 15px; }
 
 input[type="radio"] {
@@ -428,9 +429,9 @@ label {
 
 select {
   width: 100%;
-  border: none;
+  border: 1px solid #dcdbd5;
   outline: none;
-  height: inherit; }
+  height: 38px; }
 
 ::placeholder, select {
   font-family: "iranyekanwebregular", "robotolight", sans-serif !important;
@@ -439,12 +440,11 @@ select {
 .btn {
   outline: none;
   border: none;
-  padding: 2px 15px;
+  text-align: center;
+  padding: 10px 10px;
   border-radius: 5px;
   font-family: inherit;
-  width: 100%;
   cursor: pointer;
-  height: 38px;
   border-radius: 10px;
   cursor: pointer;
   transition: all .5s ease;
@@ -455,7 +455,15 @@ select {
   background: #1EBAFF; }
 
 .btn-green {
-  background: MediumSeaGreen; }
+  background: #006C50; }
+
+.btn-transparent {
+  border: 1px solid #dcdbd5;
+  background: transparent;
+  color: #4E4E4E; }
+  .btn-transparent:hover {
+    background: gray;
+    color: white; }
 
 .btn-yellow {
   color: #ffa700;
@@ -520,6 +528,30 @@ select {
   text-indent: -100%;
   opacity: 1; }
 
+.fields {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: start; }
+  .fields .field {
+    display: flex;
+    flex-direction: column;
+    width: 24%;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    margin-left: 10px; }
+    .fields .field label {
+      margin-bottom: 3px; }
+    .fields .field input[type="text"] {
+      border-radius: 5px; }
+    .fields .field select {
+      border-radius: 5px; }
+
+/* start of desktop styles */
+@media screen and (max-width: 479px) {
+  .fields .field {
+    width: 100%; } }
+
 @keyframes airplane-old {
   0% {
     transform: translateX(-100%) scale(0.1); }
@@ -572,7 +604,7 @@ select {
 
 footer {
   width: 100%;
-  min-height: 400px;
+  padding-bottom: 40px;
   background: url("../img/footer-bg.jpg") no-repeat center;
   background-size: cover;
   color: #fff;
@@ -586,13 +618,11 @@ footer {
     footer a:hover {
       color: #f37021; }
   footer .footer {
-    width: 80%;
-    max-width: 1050px;
     margin-right: auto;
     margin-left: auto;
     margin-top: 40px;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center; }
   footer h3 {
     margin-bottom: 10px; }
@@ -647,8 +677,8 @@ input[type=checkbox] + label:active:before {
   transform: scale(0); }
 
 input[type=checkbox]:checked + label:before {
-  background-color: MediumSeaGreen;
-  border-color: MediumSeaGreen;
+  background-color: #006C50;
+  border-color: #006C50;
   color: #fff; }
 
 input[type=checkbox]:disabled + label:before {
@@ -1080,8 +1110,10 @@ ul.path {
       width: 100%;
       z-index: 0;
       margin-top: -1px; }
-    .order-steps ul .travelers-info {
-      background: linear-gradient(to left, green, green 20%, orange 20%, orange 50%, black); }
+    .order-steps ul.travelers-info::before {
+      background: linear-gradient(to left, green, green 40%, #a5a5a5 40%, #a5a5a5); }
+    .order-steps ul.confirm-info::before {
+      background: linear-gradient(to left, green, green 65%, #a5a5a5 65%, #a5a5a5); }
   .order-steps li {
     display: flex;
     flex-direction: column;
@@ -1164,7 +1196,7 @@ ul.path {
   ul.right-menu {
     display: none; }
   ul.left-menu {
-    width: 100vh; }
+    float: left; }
   .slider {
     background: url(/img/mobile/outline-airplane-bg-mobile.jpg) no-repeat center; }
   .home_icon,
@@ -1175,7 +1207,8 @@ ul.path {
     margin-bottom: 10px; }
   footer {
     background: black;
-    background-size: cover; }
+    background-size: cover;
+    padding: 10px; }
   .footer1,
   .footer2,
   .footer3 {
@@ -1249,27 +1282,27 @@ ul.path {
 
 .ticket-detail table {
   border-collapse: collapse;
-  border-top: 1px solid black;
-  border-bottom: 1px solid black;
+  border-top: 1px solid #acacac;
+  border-bottom: 1px solid #acacac;
   text-align: center; }
   .ticket-detail table td {
     padding: 2px 0; }
     .ticket-detail table td:not(:last-child) {
-      border-left: 1px solid black; }
+      border-left: 1px solid #acacac; }
   .ticket-detail table tr {
-    border-bottom: 1px solid black; }
+    border-bottom: 1px solid #acacac; }
 
 .flight-detail,
 .cancelation-rules,
 .ticket-price {
   width: 60%;
   margin: 5px;
-  border: 1px solid black;
+  border: 1px solid #acacac;
   border-radius: 5px; }
   .flight-detail .row:not(:last-child),
   .cancelation-rules .row:not(:last-child),
   .ticket-price .row:not(:last-child) {
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid #acacac;
     padding: 2px 5px; }
 
 .cancelation-rules {
@@ -1281,7 +1314,7 @@ ul.path {
     font-size: 25px; }
   .ticket-preview .back-ticket,
   .ticket-preview .went-ticket {
-    border: 1px solid #dcdbd5;
+    border: 1px solid #acacac;
     width: 50%;
     margin: 5px;
     border-radius: 5px; }
@@ -1319,9 +1352,229 @@ ul.path {
     flex-basis: 100%;
     padding: 10px;
     margin: 10px;
-    border-top: 1px solid #dcdbd5; }
+    border-top: 1px solid #acacac; }
   .ticket-preview {
     flex-direction: column; }
     .ticket-preview .back-ticket,
     .ticket-preview .went-ticket {
       width: 100%; } }
+
+.btn-container {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  display: flex;
+  width: 60%;
+  text-align: center;
+  justify-content: space-between; }
+  .btn-container .info {
+    padding-top: 8px;
+    border-radius: 5px; }
+
+.add-btn {
+  display: flex;
+  border-radius: 5px;
+  border: 1px solid #dcdbd5;
+  justify-content: center; }
+  .add-btn .title {
+    background: #fff;
+    padding: 5px 20px;
+    border-radius: inherit;
+    color: inherit; }
+  .add-btn .action {
+    background: #006C50;
+    padding: 5px 10px;
+    color: #fff;
+    font-size: 16px;
+    border-top-left-radius: inherit;
+    border-bottom-left-radius: inherit; }
+
+.contact-info {
+  display: flex;
+  background: #fff;
+  border: 1px solid #dcdbd5;
+  border-radius: 5px;
+  justify-content: space-around;
+  padding: 10px 0;
+  align-items: center;
+  margin-bottom: 10px; }
+  .contact-info input {
+    width: 25%;
+    border-radius: 5px; }
+  .contact-info .info {
+    text-align: center;
+    padding: 10px; }
+    .contact-info .info i {
+      padding-left: 5px; }
+
+.continue-btn {
+  float: left;
+  margin-bottom: 10px;
+  text-align: center; }
+
+/* start of desktop styles */
+@media screen and (max-width: 479px) {
+  .btn-container {
+    width: 100%;
+    flex-wrap: wrap; }
+    .btn-container .info {
+      width: 100%;
+      margin-bottom: 10px; }
+    .btn-container .add-btn {
+      margin-right: 2px; }
+  .contact-info {
+    flex-direction: column; }
+    .contact-info input {
+      width: 95%;
+      border-radius: 5px;
+      margin-top: 10px; }
+    .contact-info .info {
+      text-align: center;
+      padding: 10px;
+      width: 95%; }
+      .contact-info .info i {
+        padding-left: 5px; }
+  .continue-btn {
+    float: none;
+    width: 50%;
+    margin: 0 auto;
+    margin-bottom: 10px; } }
+
+.tabs {
+  margin: 20px 0; }
+  .tabs .tabs-title {
+    display: flex;
+    justify-content: space-between;
+    background: #fff;
+    border: 1px #dcdbd5 solid;
+    border-radius: 5px;
+    width: 33%; }
+    .tabs .tabs-title i {
+      font-size: 20px; }
+    .tabs .tabs-title .tab-title {
+      padding: 10px 5px; }
+      .tabs .tabs-title .tab-title:not(:last-child) {
+        border-left: 1px solid #dcdbd5; }
+  .tabs .tab-desctiption {
+    background: #fff;
+    border-radius: 5px;
+    border-top-right-radius: 0px;
+    border: 1px solid #dcdbd5;
+    padding: 10px;
+    margin-top: -3px; }
+
+/* start of desktop styles */
+@media screen and (max-width: 479px) {
+  .tabs .tabs-title {
+    width: 100%; } }
+
+.notices {
+  background: #fff;
+  padding: 15px 10px;
+  border: 1px solid #dcdbd5;
+  border-radius: 5px;
+  margin-bottom: 10px; }
+  .notices i {
+    margin-left: 5px; }
+  .notices p {
+    margin-bottom: 10px; }
+
+.ticket-info-confirm {
+  display: flex; }
+  .ticket-info-confirm h3 {
+    margin-bottom: 10px; }
+  .ticket-info-confirm td:nth-child(even), .ticket-info-confirm th:nth-child(even) {
+    text-align: left; }
+
+.passenger-info h3 {
+  margin: 5px 0; }
+
+.coupon input {
+  width: 50%;
+  border-radius: 5px; }
+
+.pay {
+  margin: 30px 0;
+  float: left; }
+
+/* start of desktop styles */
+@media screen and (max-width: 479px) {
+  .ticket-info-confirm {
+    flex-direction: column; }
+  .coupon input {
+    width: 100%;
+    margin: 10px 0; }
+  .pay {
+    margin-left: 15px; } }
+
+.panel {
+  border: 1px solid #dcdbd5;
+  border-radius: 5px;
+  margin-bottom: 10px; }
+  .panel .title {
+    padding: 10px 10px;
+    background: #006C50;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    color: #fff; }
+  .panel .body {
+    padding: 15px 10px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    background: #fff; }
+
+table {
+  border-collapse: separate;
+  border: solid #acacac 1px;
+  border-radius: 6px;
+  -moz-border-radius: 6px;
+  width: 100%; }
+
+td,
+th {
+  border-right: solid #acacac 1px;
+  border-top: solid #acacac 1px;
+  padding: 5px; }
+
+th {
+  border-top: none; }
+
+td:first-child,
+th:first-child {
+  border-right: none; }
+
+.gray-title {
+  text-align: center;
+  color: #747474;
+  border-collapse: collapse; }
+  .gray-title th {
+    background: #e6e6e6;
+    padding: 5px; }
+
+/* start of desktop styles */
+@media screen and (max-width: 479px) {
+  /* Force table to not be like tables anymore */
+  table,
+  thead,
+  tbody,
+  th,
+  td,
+  tr {
+    display: block; }
+  /* Hide table headers (but not display: none;, for accessibility) */
+  thead tr {
+    position: absolute;
+    top: -9999px;
+    left: -9999px; }
+  tr {
+    border: 1px solid #ccc; }
+  td {
+    /* Behave  like a "row" */
+    border: none;
+    border-bottom: 1px solid #eee;
+    position: relative;
+    padding-left: 50%; } }
+
+/* start of desktop styles */
+@media screen and (max-width: 479px) {
+  .half {
+    width: 100%; } }

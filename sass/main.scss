@@ -209,7 +209,8 @@ main{
 }
 
 .container {
-    width: 80%;
+    // width: 80%;
+    width:1050px;
     max-width: 1050px;
     // min-width: 1000px;
     // position: absolute;
@@ -242,6 +243,11 @@ main{
     margin-bottom: 10px;
 }
 
+.half{
+    width: 50%;
+    // border:1px solid black;
+    margin:5px;
+}
 
 // .organe{
 //     color: $medium_orange !important;
@@ -263,3 +269,26 @@ main{
 // @import 'responsives/outer_flight';
 @import 'pages/inner_flight_result';
 @import 'pages/passengers-info';
+@import 'modules/tabs';
+@import 'pages/confirm_info';
+@import 'modules/panel';
+@import 'modules/table';
+
+
+
+
+/* start of desktop styles */
+
+@media screen and (max-width: 991px) {
+
+}
+
+@media screen and (max-width: 767px) {
+
+}
+
+@media screen and (max-width: 479px) {
+    .half{
+        width:100%;
+    }
+}
