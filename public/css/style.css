@@ -413,6 +413,7 @@ form.search {
   display: flex; }
 
 input[type="text"] {
+  background: white;
   outline: none;
   border: 1px solid #dcdbd5;
   height: 38px;
@@ -1573,6 +1574,28 @@ th:first-child {
     border-bottom: 1px solid #eee;
     position: relative;
     padding-left: 50%; } }
+
+.select2 {
+  width: 100% !important; }
+
+.select2-selection {
+  height: 38px !important; }
+
+.select2-selection__rendered {
+  line-height: 35px !important; }
+
+.DatePicker {
+  position: relative; }
+  .DatePicker button {
+    position: absolute;
+    top: 15%;
+    left: 3px;
+    border: 1px solid #b8b8b8;
+    background: transparent;
+    outline: none;
+    padding: 2px;
+    color: #b8b8b8;
+    font-size: 14px; }
 
 /* start of desktop styles */
 @media screen and (max-width: 479px) {

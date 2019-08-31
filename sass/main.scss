@@ -273,8 +273,23 @@ main{
 @import 'pages/confirm_info';
 @import 'modules/panel';
 @import 'modules/table';
+@import 'modules/select2';
 
+.DatePicker{
+    position: relative;
 
+    button{
+        position: absolute;
+        top:15%;
+        left:3px;
+        border:1px solid $light_gray;
+        background: transparent;
+        outline: none;
+        padding:2px;
+        color:$light_gray;
+        font-size: 14px;
+    }
+}
 
 
 /* start of desktop styles */
