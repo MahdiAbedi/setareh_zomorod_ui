@@ -14,15 +14,18 @@ class DateSelector extends React.Component {
   }
   render() {
     return <div className="DatePicker">
+      
             <DatePicker
+              timePicker={false}
               value={this.state.value}
+          
               isGregorian={this.state.isGregorian}
               onChange={value => this.setState({ value })}
             />
             <br />
-            <button onClick={() => this.setState({ isGregorian: !this.state.isGregorian })}>
+            <a onClick={() => this.setState({ isGregorian: !this.state.isGregorian })} className="button">
               {this.state.isGregorian?'FA':'EN'}
-            </button>
+            </a>
           </div>
   }
 }

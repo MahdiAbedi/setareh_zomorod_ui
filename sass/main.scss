@@ -278,16 +278,18 @@ main{
 .DatePicker{
     position: relative;
 
-    button{
+    .button{
         position: absolute;
         top:15%;
         left:3px;
         border:1px solid $light_gray;
         background: transparent;
         outline: none;
-        padding:2px;
-        color:$light_gray;
-        font-size: 14px;
+        padding:2px 4px;
+        color:$dark_gray;
+        font-size: 12px;
+        cursor: pointer;
+        border-radius: 3px;
     }
 }
 

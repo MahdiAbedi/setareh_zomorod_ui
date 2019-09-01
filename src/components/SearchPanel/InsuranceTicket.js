@@ -1,17 +1,18 @@
 import React from 'react';
 import DateSelector from '../DateSelector';
 
-class InlineTicket extends React.Component{
+class InsuranceTicket extends React.Component{
     render(){
         return (
-        <div className="form" id="InlineTicket">
+        <div className="form" id="InsuranceTicket">
             {/* <!-- فیلترهای پروازها --> */}
             <div className="filters" >
-                <input type="radio" value="value1" id="group3" name="group3" checked/>
+                <input type="radio" value="value1" id="group1" name="group1" checked/>
                 <label for="group1">یک طرفه</label>
-                <input type="radio" value="value2" id="group4" name="group4"/>
+                <input type="radio" value="value2" id="group2" name="group1"/>
                 <label for="group2">رفت و برگشت</label>
-               
+                <input type="radio" value="value2" id="group3" name="group1"/>
+                <label for="group3">چند مسیره</label>
             </div>
             {/* <!-- فیلدهای جستجو --> */}
             <form  className="search">
@@ -73,4 +74,4 @@ class InlineTicket extends React.Component{
 }
 
 
-export default InlineTicket;
+export default InsuranceTicket;
