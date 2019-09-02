@@ -10,6 +10,8 @@
     <title>آژانس هواپیمایی ستاره زمرد</title>
 
     <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.10/css/select2.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
 
 
 </head>
@@ -23,31 +25,31 @@
             <nav class="topmenu-container container">
                 <ul class="menu right-menu">
                     <li class="menu-item active">
-                        <!-- <img src="img/Home.png" alt="منوی"> -->
+                        <img src="img/icons/home.png" alt="منوی">
                         <a href="#">خانه</a>
                     </li>
                     <li class="menu-item">
-                        <img src="img/airplane-icon.png" alt="منوی">
+                        <img src="img/icons/airplane-icon-colored.png" alt="منوی">
                         <a href="#">بلیط هواپیما</a>
                     </li>
                     <li class="menu-item">
-                        <img src="img/hotel.png" alt="منوی">
+                        <img src="img/icons/hotel.png" alt="منوی">
                         <a href="#">رزو هتل</a>
                     </li>
                     <li class="menu-item">
-                        <img src="img/tour.png" alt="منوی">
+                        <img src="img/icons/tour.png" alt="منوی">
                         <a href="#">تور مسافرتی</a>
                     </li>
                     <li class="menu-item">
-                        <img src="img/visa.png" alt="منوی">
+                        <img src="img/icons/visa.png" alt="منوی">
                         <a href="#">ویزا</a>
                     </li>
                     <li class="menu-item">
-                        <img src="img/bime.png" alt="منوی">
+                        <img src="img/icons/bime.png" alt="منوی">
                         <a href="#">بیمه</a>
                     </li>
                     <li class="menu-item">
-                        <img src="img/blog.png" alt="منوی">
+                        <img src="img/icons/blog.png" alt="منوی">
                         <a href="#">مجله گردشگری</a>
                     </li>
                     <li class="menu-item other">
@@ -60,14 +62,14 @@
                 <ul class="menu left-menu">
 
                     <li class="menu-item">
-                        <img src="img/search.png" alt="منوی">
+                        <img src="img/icons/search.png" alt="منوی">
                     </li>
                     <li class="menu-item">
-                        <img src="img/login.png" alt="منوی">
+                        <img src="img/icons/login.png" alt="منوی">
                     </li>
                     <li class="menu-item">
                         <a href="tel:02172407">021-72407</a>
-                        <img src="img/tel.png" class="tel" alt="منوی">
+                        <img src="img/icons/tel.png" class="tel" alt="منوی">
                     </li>
 
                     <li class="menu-item logo">
@@ -91,7 +93,7 @@
                 <!-- {/* پرواز خارجی */} -->
                 <div class="search_icon" onclick="showSearchPanel('OutLineTicket')">
                     <div class="icon_container">
-                        <img class="outline-flight" src="img/outline-flight-white.png" alt="" />
+                        <img class="outline-flight" src="img/icons/outline-flight.png" alt="" />
                     </div>
                     <h4 class="out-flight-title"><span>پرواز خارجی</span></h4>
 
@@ -99,35 +101,35 @@
                
                 <div class="search_icon" onclick="showSearchPanel('InlineTicket')">
                     <div class="icon_container">
-                        <img src="img/inline-flight-white.png" alt="" />
+                        <img src="img/icons/inline-flight.png" alt="" />
                     </div>
                     <h4 class="inner-flight-title"><span>پرواز داخلی</span></h4>
                 </div>
                 <!-- {/* قطار */} -->
                 <div class="search_icon" onclick="showSearchPanel('TrainTicket')">
                     <div class="icon_container">
-                        <img src="img/train-white.png" alt="" />
+                        <img src="img/icons/train.png" alt="" />
                     </div>
                     <h4>قطار</h4>
                 </div>
                 <!-- {/* هتل */} -->
                 <div class="search_icon" onclick="showSearchPanel('HotelTicket')">
                     <div class="icon_container">
-                        <img src="img/hotel-white.png" alt=""/>
+                        <img src="img/icons/hotel.png" alt=""/>
                     </div>
                     <h4>هتل</h4>
                 </div>
                 <!-- {/* تور */} -->
                 <div class="search_icon" onclick="showSearchPanel('TourTicket')">
                     <div class="icon_container">
-                        <img src="img/tour-white.png" alt=""/>
+                        <img src="img/icons/tour.png" alt=""/>
                     </div>
                     <h4>تور</h4>
                 </div>
                 <!-- {/* بیمه */} -->
                 <div class="search_icon" onclick="showSearchPanel('InsuranceTicket')">
                     <div class="icon_container">
-                        <img src="img/bime-white.png" alt=""/>
+                        <img src="img/icons/bime.png" alt=""/>
                     </div>
                     <h4>بیمه</h4>
                 </div>
@@ -157,7 +159,7 @@
             <h3 class="title">آژانس مسافرت هوایی و گردگشری ستاره زمرد</h3>
             <p>مجری مستقیم تورهای:سوئیس ، بالی، کوالالامپور،سنگاپور،چین،گرجستان،مالدیو،روسیه و مالزی</p>
             <!-- tours -->
-            <div class="tours flex">
+            <div class="tours flex owl-carousel owl-theme">
                 <!-- tour -->
                 <div class="tour">
                     <img src="img/tours/img-8.jpg" alt="">
@@ -179,6 +181,30 @@
                     <p>7 شب و 8 روز -هتل 5 ستاره</p>
                     <p class="price">7,730,000 تومان</p>
                 </div>
+                <!-- tour -->
+                <div class="tour">
+                    <img src="img/tours/img-8.jpg" alt="">
+                    <h2>تور بلغارستان "وارنا"</h2>
+                    <p>7 شب و 8 روز -هتل 5 ستاره</p>
+                    <p class="price">7,730,000 تومان</p>
+                </div>
+                <!-- tour -->
+                <div class="tour">
+                    <img src="img/tours/img-6.jpg" alt="">
+                    <h2>تور سوئیس</h2>
+                    <p>7 شب و 8 روز -هتل 5 ستاره</p>
+                    <p class="price">7,730,000 تومان</p>
+                </div>
+                <!-- tour -->
+                <div class="tour">
+                    <img src="img/tours/img-3.jpg" alt="">
+                    <h2>تور فرانسه</h2>
+                    <p>7 شب و 8 روز -هتل 5 ستاره</p>
+                    <p class="price">7,730,000 تومان</p>
+                </div>
+           
+               
+               
 
             </div>
             <!-- قسمت خبرنامه و دکمه تورهای بیشتر -->
@@ -280,6 +306,11 @@
 <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 <!-- select2 -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.10/js/select2.min.js"></script>
+
+<!-- Owl Slider -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
 <!-- custom.js -->
 <script src="/js/custom.js"></script>
+
 </html>

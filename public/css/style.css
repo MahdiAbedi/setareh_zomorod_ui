@@ -294,7 +294,7 @@ ul.menu {
 .tour {
   display: flex;
   flex-direction: column;
-  width: 30%;
+  width: 100%;
   justify-content: center;
   align-items: center;
   background-color: #EEEEEE;
@@ -369,7 +369,7 @@ ul.menu {
 
 .icon_container {
   border-radius: 50%;
-  background: #217d65;
+  background: rgba(255, 255, 255, 0.9);
   padding: 20px;
   display: flex;
   justify-content: center;
@@ -377,17 +377,17 @@ ul.menu {
   margin-bottom: 5px; }
   .icon_container:hover {
     background: transparent;
-    border: 1px solid #fff;
+    border: 1px solid #000;
     border-spacing: 20px;
-    background-color: rgba(255, 255, 255, 0.4);
+    background-color: white;
     backdrop-filter: blur(5px);
     transition: all .5s ease; }
     .icon_container:hover img {
       transform: scale(1.2); }
   .icon_container img {
     transition: all 1s ease;
-    width: 90%;
-    height: 90%; }
+    width: 40px;
+    height: 40px; }
 
 .search_icon_border {
   border: 1px solid black;
@@ -1586,6 +1586,10 @@ th:first-child {
 
 .DatePicker {
   position: relative; }
+  .DatePicker.disabled input {
+    background: rgba(0, 0, 0, 0.5);
+    color: #b8b8b8;
+    cursor: not-allowed; }
   .DatePicker .button {
     position: absolute;
     top: 15%;
@@ -1598,6 +1602,11 @@ th:first-child {
     font-size: 12px;
     cursor: pointer;
     border-radius: 3px; }
+
+.owl-stage {
+  display: flex; }
+  .owl-stage .owl-item .active {
+    width: 100% !important; }
 
 /* start of desktop styles */
 @media screen and (max-width: 479px) {

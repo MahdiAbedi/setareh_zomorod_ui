@@ -9,16 +9,17 @@ class DateSelector extends React.Component {
     super(props);
     this.state = {
       value: moment(),
-      isGregorian:false
+      isGregorian:false,
     };
   }
   render() {
-    return <div className="DatePicker">
+    return <div className={"DatePicker " + (this.props.disabled ? 'disabled' : '')}>
       
             <DatePicker
               timePicker={false}
               value={this.state.value}
-          
+              disabled={this.props.disabled}
+              placeholder='heel'
               isGregorian={this.state.isGregorian}
               onChange={value => this.setState({ value })}
             />

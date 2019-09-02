@@ -63,3 +63,36 @@ function Toggle(tagId) {
 
         document.getElementById(tagId).style.display="block";
     }
+
+
+    $('.tours').owlCarousel({
+        // rtl:true,
+        // center:true,
+        loop:true,
+        margin:10,
+        nav:true,
+        items:4,
+        // autoWidth:true,
+        // stagePadding: 30,
+    
+        animateOut: 'slideOutDown',
+        animateIn: 'flipInX',
+        smartSpeed:450,
+        // autoplay:true,
+    
+        responsive:{
+            0:{
+                items:1,
+                nav:true
+            },
+            600:{
+                items:3,
+                nav:false
+            },
+            1000:{
+                items:4,
+                nav:true,
+                loop:false
+            }
+        }
+    })

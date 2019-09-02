@@ -2,16 +2,29 @@ import React from 'react';
 import DateSelector from '../DateSelector';
 
 class OutLineTicket extends React.Component{
+
+    constructor(props){
+        super(props);
+        this.state={toWay:true}
+    }
+
+    showReturnDate = (e)=>{
+        this.setState({toWay:true});
+    }
+
+    hideReturnDate = ()=>{
+        this.setState({toWay:false});
+    }
     render(){
         return (
-        <div className="form" id="OutLineTicket">
+        <div className="form" id="OutLineTicket"  style={{display:'none'}}>
             {/* <!-- فیلترهای پروازها --> */}
             <div className="filters" >
-                <input type="radio" value="value1" id="group1" name="group1" checked/>
-                <label for="group1">یک طرفه</label>
-                <input type="radio" value="value2" id="group2" name="group1"/>
-                <label for="group2">رفت و برگشت</label>
-                <input type="radio" value="value2" id="group3" name="group1"/>
+                <input type="radio" value="oneWay" id="oneWay" name="outline-ticket" onClick={this.showReturnDate} checked={this.state.toWay}/>
+                <label for="oneWay">یک طرفه</label>
+                <input type="radio" value="toWay" id="toWay" name="outline-ticket"  onClick={this.hideReturnDate} checked={!this.state.toWay}/>
+                <label for="toWay">رفت و برگشت</label>
+                <input type="radio" value="value2" id="group3" name="outline-ticket"/>
                 <label for="group3">چند مسیره</label>
             </div>
             {/* <!-- فیلدهای جستجو --> */}
@@ -54,7 +67,7 @@ class OutLineTicket extends React.Component{
                     <DateSelector />
                 </div>
                 <div className="group">
-                <DateSelector />
+                <DateSelector disabled={this.state.toWay} />
                 </div>
                 <div className="group">
                     <select name="mosafer" className="left-border" id="mosafer">

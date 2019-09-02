@@ -4,7 +4,7 @@ import DateSelector from '../DateSelector';
 class HotelTicket extends React.Component{
     render(){
         return (
-        <div className="form" id="HotelTicket">
+        <div className="form" id="HotelTicket" style={{display:'none'}}>
             {/* <!-- فیلترهای پروازها --> */}
             <div className="filters" >
                 <input type="radio" value="value1" id="group1" name="group1" checked/>

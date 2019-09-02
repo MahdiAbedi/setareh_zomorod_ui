@@ -278,6 +278,16 @@ main{
 .DatePicker{
     position: relative;
 
+    &.disabled{
+       input{
+           background: rgba(black, .5);
+           color:$light_gray;
+           cursor: not-allowed;
+         
+       }
+       
+    }
+
     .button{
         position: absolute;
         top:15%;
@@ -292,8 +302,17 @@ main{
         border-radius: 3px;
     }
 }
+.owl-stage{
+    display: flex;
 
+    .owl-item{
+        
 
+        .active{
+            width:100% !important;
+        }
+    }
+}
 /* start of desktop styles */
 
 @media screen and (max-width: 991px) {
