@@ -354,7 +354,6 @@ ul.menu {
   color: #fff; }
 
 .search_icons {
-  overflow: hidden;
   display: flex;
   width: 60%;
   justify-content: space-around; }
@@ -375,14 +374,15 @@ ul.menu {
   justify-content: center;
   align-items: center;
   margin-bottom: 5px; }
-  .icon_container:hover {
+  .icon_container:hover, .icon_container.active {
     background: transparent;
-    border: 1px solid #000;
+    border: 1px solid #fff;
     border-spacing: 20px;
     background-color: white;
     backdrop-filter: blur(5px);
-    transition: all .5s ease; }
-    .icon_container:hover img {
+    transition: all .5s ease;
+    box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.7), 0 0 0 5px #e6e6e6; }
+    .icon_container:hover img, .icon_container.active img {
       transform: scale(1.2); }
   .icon_container img {
     transition: all 1s ease;
@@ -408,6 +408,9 @@ ul.menu {
   .SearchPanel .icon-transfer img {
     width: 100%;
     height: auto; }
+  .SearchPanel .btn {
+    width: 95%;
+    margin-left: 10px; }
 
 form.search {
   display: flex; }
@@ -1583,6 +1586,76 @@ th:first-child {
 
 .select2-selection__rendered {
   line-height: 35px !important; }
+
+.login-container {
+  display: none;
+  position: relative;
+  border: 3px solid transparent !important;
+  background: white;
+  border-radius: 5px;
+  padding: 10px;
+  position: fixed;
+  top: 50px;
+  width: 250px;
+  z-index: 10; }
+  .login-container::before {
+    position: absolute;
+    content: '';
+    right: 30px;
+    top: -25px;
+    border: 12px solid transparent;
+    border-bottom-color: #fff; }
+  .login-container .btn {
+    width: 100%;
+    margin: 5px 0 !important; }
+  .login-container input {
+    margin-bottom: 7px; }
+  .login-container .panel {
+    background: #F5F5F5;
+    padding: 15px 10px;
+    text-align: center; }
+    .login-container .panel hr {
+      margin: 10px 0px; }
+    .login-container .panel a {
+      color: green; }
+    .login-container .panel .btn {
+      margin-top: 7px; }
+  .login-container input {
+    border-radius: 5px; }
+
+.passengers_count_container {
+  margin-top: 10px;
+  color: black;
+  position: relative;
+  border: 3px solid transparent !important;
+  background: white;
+  border-radius: 5px;
+  padding: 10px; }
+  .passengers_count_container::before {
+    position: absolute;
+    content: '';
+    right: 30px;
+    top: -25px;
+    border: 12px solid transparent;
+    border-bottom-color: #fff; }
+
+.passengers_count {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
+
+.plus-btn {
+  width: 30px;
+  height: 30px;
+  padding: 5px;
+  margin: 5px;
+  font-size: 1.1em;
+  text-align: center;
+  border: 1px solid orange;
+  color: orange;
+  border-radius: 50%;
+  cursor: pointer;
+  background-color: transparent; }
 
 .DatePicker {
   position: relative; }

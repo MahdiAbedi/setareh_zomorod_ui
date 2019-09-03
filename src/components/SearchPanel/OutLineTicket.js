@@ -1,5 +1,6 @@
 import React from 'react';
 import DateSelector from '../DateSelector';
+import PassengerCount from './PassengerCount';
 
 class OutLineTicket extends React.Component{
 
@@ -17,7 +18,7 @@ class OutLineTicket extends React.Component{
     }
     render(){
         return (
-        <div className="form" id="OutLineTicket"  style={{display:'none'}}>
+        <div className="form" id="OutLineTicket">
             {/* <!-- فیلترهای پروازها --> */}
             <div className="filters" >
                 <input type="radio" value="oneWay" id="oneWay" name="outline-ticket" onClick={this.showReturnDate} checked={this.state.toWay}/>
@@ -69,10 +70,10 @@ class OutLineTicket extends React.Component{
                 <div className="group">
                 <DateSelector disabled={this.state.toWay} />
                 </div>
+                
                 <div className="group">
-                    <select name="mosafer" className="left-border" id="mosafer">
-                        <option value="1">1 نفر</option>
-                    </select>
+                    <PassengerCount />
+                   
                 </div>
                 <div className="group">
                     <input type="button" className="btn btn-zgreen" value="جستجو"/>

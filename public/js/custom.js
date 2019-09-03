@@ -1,7 +1,11 @@
 $(document).ready(function () {
     $('.select2').select2();
 
-    showSearchPanel("OutLineTicket");
+    // showSearchPanel("OutLineTicket");
+
+
+
+    console.log('%c Designed By MahdiAbedi220@yahoo.com tel:09395187902 ', 'background: #222; color: #bada55');
 });
 
 //برای نمایش یا مخفی کردن پنل جستجو
@@ -16,6 +20,17 @@ function Toggle(tagId) {
 
 //برای نمایش پنل جستجو هنگامی که روی یکی از دکمه ها کلیک میکنیم
     function showSearchPanel(tagId){
+
+        // مشخص کردن بخش انتخاب شده
+        $( ".icon_container.active" ).removeClass( "active" );
+        // tagIcon="#"+tagId+"-Icon";
+        tagIcon=`#${tagId}-Icon`;
+        // alert(tagIcon);
+        $(tagIcon).addClass("active");
+
+
+
+
         //غیر فعال کردن تصویر هواپیمای در حال پرواز
         document.getElementById('slider-img').style.display="none";
         switch (tagId) {
@@ -64,35 +79,46 @@ function Toggle(tagId) {
         document.getElementById(tagId).style.display="block";
     }
 
-
+    // اسلایدشو تورها در صفحه اول سایت
     $('.tours').owlCarousel({
-        // rtl:true,
+        rtl:true,
         // center:true,
         loop:true,
         margin:10,
-        nav:true,
+        nav:false,
         items:4,
         // autoWidth:true,
         // stagePadding: 30,
     
-        animateOut: 'slideOutDown',
-        animateIn: 'flipInX',
+        // animateOut: 'slideOutDown',
+        // animateIn: 'flipInX',
         smartSpeed:450,
-        // autoplay:true,
+        autoplay:true,
     
         responsive:{
             0:{
                 items:1,
-                nav:true
+                dots:true
+                
             },
             600:{
                 items:3,
-                nav:false
             },
             1000:{
                 items:4,
-                nav:true,
-                loop:false
             }
         }
     })
+
+
+
+    // کلیک کردن روی دکمه ورود به سایت login
+    $("#login").click(function() {  
+        // alert('hello');
+        $(".login-container").toggle("slow");
+        
+      });
+    //   when click on site close the login panel 
+    // $('body').click(function(){
+    //     $(".login-container").hide();
+    // })
