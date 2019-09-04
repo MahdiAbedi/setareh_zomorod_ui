@@ -1,4 +1,5 @@
 import React from 'react';
+import { NONAME } from 'dns';
 
 class PassengerCount extends React.Component{
     constructor(props){
@@ -6,7 +7,8 @@ class PassengerCount extends React.Component{
         this.state={
             adult:1,
             child:0,
-            infant:0
+            infant:0,
+            display:0
         };
     }
 
@@ -17,33 +19,34 @@ class PassengerCount extends React.Component{
             <span>
 
             
-            <input type="text"  className="left-border" id="mosafer" placeholder="تعداد مسافر"/>
+            <input type="text"  className="left-border" id="mosafer" placeholder="تعداد مسافر" value={this.state.child + this.state.adult + this.state.infant +" مسافر "} contenteditable="false" onClick={()=>{this.setState({display:!this.state.display})}}/>
 
-            <div className="passengers_count_container">
-            <div className="passengers_count">
-                <label>بزرگسال</label>
-                <span className="count">
-                    <button className="plus-btn" onClick={this.setState({adult:this.state.adult + 1})}>+</button>
-                    <span>{this.state.adult}</span>
-                    <button className="plus-btn">-</button>
-                </span>
-            </div>
-            <div className="passengers_count">
-                <label>کودک</label>
-                <span className="count">
-                    <button className="plus-btn">+</button>
-                    <span>{this.state.child}</span>
-                    <button className="plus-btn">-</button>
-                </span>
-            </div>
-            <div className="passengers_count">
-                <label>نوزاد</label>
-                <span className="count">
-                    <button className="plus-btn">+</button>
-                    <span>{this.state.infant}</span>
-                    <button className="plus-btn">-</button>
-                </span>
-            </div>
+            <div className="passengers_count_container" style={{display:(this.state.display ? 'block' :'none')}}>
+                <div className="passengers_count">
+                    <label>بزرگسال</label>
+                    <span className="count">
+                        <button type="button" className="plus-btn" onClick={()=>this.setState({adult:this.state.adult + 1})}>+</button>
+                        <span>{this.state.adult}</span>
+                        <button type="button" className="plus-btn" onClick={()=>this.setState({adult:(this.state.adult>0)? this.state.adult - 1 : this.state.adult})}>-</button>
+                    </span>
+                </div>
+                <div className="passengers_count">
+                    <label>کودک</label>
+                    <span className="count">
+                        <button type="button" className="plus-btn" onClick={()=>this.setState({child:this.state.child + 1})}>+</button>
+                        <span>{this.state.child}</span>
+                        <button type="button" className="plus-btn" onClick={()=>this.setState({child:(this.state.child>0)? this.state.child - 1 : this.state.child})}>-</button>
+
+                    </span>
+                </div>
+                <div className="passengers_count">
+                    <label>نوزاد</label>
+                    <span className="count">
+                        <button type="button" className="plus-btn" onClick={()=>this.setState({infant:this.state.infant + 1})}>+</button>
+                        <span>{this.state.infant}</span>
+                        <button type="button" className="plus-btn" onClick={()=>this.setState({infant:(this.state.infant>0)? this.state.infant - 1 : this.state.infant})}>-</button>
+                    </span>
+                </div>
         </div>
 
         </span>

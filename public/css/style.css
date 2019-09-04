@@ -235,6 +235,61 @@ ul.menu {
   height: 40px;
   padding-top: 5px; }
 
+.hamberger-menu {
+  cursor: pointer;
+  display: none;
+  margin-right: 5px;
+  padding: 5px; }
+
+.bar1, .bar2, .bar3 {
+  width: 35px;
+  height: 5px;
+  background-color: #333;
+  margin: 6px 0;
+  transition: 0.4s; }
+
+/* Rotate first bar */
+.change .bar1 {
+  -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+  transform: rotate(-45deg) translate(-9px, 6px); }
+
+/* Fade out the second bar */
+.change .bar2 {
+  opacity: 0; }
+
+/* Rotate last bar */
+.change .bar3 {
+  -webkit-transform: rotate(45deg) translate(-8px, -8px);
+  transform: rotate(45deg) translate(-8px, -8px); }
+
+/* start of desktop styles */
+@media screen and (max-width: 991px) {
+  .hamberger-menu {
+    display: none; } }
+
+@media screen and (max-width: 767px) {
+  .hamberger-menu {
+    display: block; }
+  ul.right-menu {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    background: white;
+    top: 0px;
+    right: 10px;
+    width: 100%;
+    z-index: 10; }
+    ul.right-menu.hide {
+      display: none; }
+    ul.right-menu li {
+      display: block;
+      background: white;
+      width: 50%;
+      padding: 10px;
+      border-bottom: 1px dashed black; }
+  ul.left-menu {
+    float: left; } }
+
 .blog_slide {
   cursor: pointer;
   width: 33%;
@@ -414,6 +469,9 @@ ul.menu {
 
 form.search {
   display: flex; }
+
+input {
+  font-family: inherit; }
 
 input[type="text"] {
   background: white;
@@ -1197,10 +1255,6 @@ ul.path {
     margin-right: auto;
     margin-left: auto;
     width: 100%; }
-  ul.right-menu {
-    display: none; }
-  ul.left-menu {
-    float: left; }
   .slider {
     background: url(/img/mobile/outline-airplane-bg-mobile.jpg) no-repeat center; }
   .home_icon,

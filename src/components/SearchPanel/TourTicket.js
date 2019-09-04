@@ -1,5 +1,6 @@
 import React from 'react';
 import DateSelector from '../DateSelector';
+import PassengerCount from './PassengerCount';
 
 class TourTicket extends React.Component{
     render(){
@@ -57,9 +58,7 @@ class TourTicket extends React.Component{
                 <DateSelector />
                 </div>
                 <div className="group">
-                    <select name="mosafer" className="left-border" id="mosafer">
-                        <option value="1">1 نفر</option>
-                    </select>
+                    <PassengerCount />
                 </div>
                 <div className="group">
                     <input type="button" className="btn btn-zgreen" value="جستجو"/>

@@ -118,7 +118,25 @@ function Toggle(tagId) {
         $(".login-container").toggle("slow");
         
       });
+
+    // $('#mosafer').click(function(){
+    //     $(".passengers_count_container").toggle("slow");
+    // });
+
+
     //   when click on site close the login panel 
-    // $('body').click(function(){
+    // $('.slider').click(function(e){
+    //     e.stopPropagation();
     //     $(".login-container").hide();
+    //     $(".passengers_count_container").hide();
+     
+    //     alert('hello');
     // })
+
+    function hamburgerMenu(x){
+        x.classList.toggle("change");
+
+        var element =document.getElementById('hamburger-menu');
+        element.classList.toggle("hide");
+        
+    }

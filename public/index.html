@@ -23,7 +23,14 @@
         <div class="topmenu">
 
             <nav class="topmenu-container container">
-                <ul class="menu right-menu">
+                <!-- منوی همبرگر در حالت موبایل  -->
+                <div class="hamberger-menu" onclick="hamburgerMenu(this)">
+                    <div class="bar1"></div>
+                    <div class="bar2"></div>
+                    <div class="bar3"></div>
+                </div>
+
+                <ul class="menu right-menu hide" id="hamburger-menu">
                     <li class="menu-item active">
                         <img src="img/icons/home.png" alt="منوی">
                         <a href="#">خانه</a>
