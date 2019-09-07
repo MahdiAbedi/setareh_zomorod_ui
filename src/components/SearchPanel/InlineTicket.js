@@ -1,6 +1,7 @@
 import React from 'react';
 import DateSelector from '../DateSelector';
 import PassengerCount from './PassengerCount';
+import IranAirlines from './IranAirports';
 
 class InlineTicket extends React.Component{
     render(){
@@ -17,38 +18,13 @@ class InlineTicket extends React.Component{
             {/* <!-- فیلدهای جستجو --> */}
             <form  className="search">
                 <div className="group margin-right">
-                    <select className="right-border select2">
-                        <option >مبداء</option>
-                        <option value="">تهران</option>
-                        <option value="">شیراز</option>
-                        <option value="">تهران</option>
-                        <option value="">شیراز</option>
-                        <option value="">تهران</option>
-                        <option value="">شیراز</option>
-                        <option value="">تهران</option>
-                        <option value="">شیراز</option>
-                        <option value="">تهران</option>
-                        <option value="">شیراز</option>
-
-                    </select>
+                    <IranAirlines className="right-border select2" Placeholder="فرودگاه مبدا" name="inline-origin"/>
                     <button className="round-btn"><i className="icon-transfer"><img src="img/change-way.png"
                                 alt=""/></i></button>
                 </div>
                 <div className="group">
-                <select className="left-border select2">
-                    <option>مقصد</option>
-                        <option value="">تهران</option>
-                        <option value="">شیراز</option>
-                        <option value="">تهران</option>
-                        <option value="">شیراز</option>
-                        <option value="">تهران</option>
-                        <option value="">شیراز</option>
-                        <option value="">تهران</option>
-                        <option value="">شیراز</option>
-                        <option value="">تهران</option>
-                        <option value="">شیراز</option>
+                <IranAirlines className="left-border select2" Placeholder="فرودگاه مقصد" name="inline-destination"/>
 
-                    </select>
                 </div>
                 <div className="group margin-right">
                     <DateSelector />
