@@ -4,7 +4,7 @@ form.search{
 input{
     font-family: inherit;
 }
-input[type="text"]{
+input[type="text"],input[type="password"],input[type='email']{
     background: white;
     // border-radius: 5px;
     outline: none;
@@ -13,6 +13,7 @@ input[type="text"]{
     width:100%;
     // border-left: 1px #ccc solid;    
     padding-right: 15px;
+    
 }
 
 input[type="radio"]{
@@ -62,6 +63,7 @@ select{
 
 .btn-green{
     background: $font-green;
+    color:#fff !important;
 }
 .btn-transparent{
     border:1px solid $border-gray;

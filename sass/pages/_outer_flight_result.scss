@@ -230,6 +230,7 @@
             padding: 7px;
             background: #fff;
             transition: all .2s ease;
+            margin-right: -20px;
 
             &:hover {
                 transform: scale(1.1);
@@ -238,7 +239,7 @@
             }
 
             &:first-child {
-                margin-left: -20px;
+                margin-right: -3px;
             }
         }
 
