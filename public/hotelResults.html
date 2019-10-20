@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="author" content="MahdiAbedi220@yahoo.com">
+    <link rel="stylesheet" href="css/style.css">
+    <title>رزو هتل خارجی</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.css">
+</head>
+
+<body>
+    <main>
+        <!-- نمایش مراحل انتخاب و خرید -->
+        <div class="order-steps container">
+            <ul class="flex-between">
+                <li>
+                    <span>جستجو</span>
+                    <!-- <i class="fa fa-check circle"></i> -->
+                    <i class="far fa-check-circle circle"></i>
+                </li>
+                <li>
+                    <span>انتخاب هتل</span>
+                    <i class="fa fa-hotel choose-plane"></i>
+                </li>
+                <li>
+                    <span>اطلاعات مسافران</span>
+                    <i class="circle"></i>
+                </li>
+                <li>
+                    <span>تائید اطلاعات</span>
+                    <i class="circle"></i>
+                </li>
+                <li>
+                    <span>پرداخت</span>
+                    <i class="circle"></i>
+                </li>
+                <li>
+                    <span>صدور واچر</span>
+                    <i class="circle"></i>
+                </li>
+            </ul>
+        </div>
+        <!-- بخش نمایش نتایج جستجو -->
+        <section class="result-panel container">
+            <!-- فیلترها -->
+            <aside class="filters">
+                <section class="flex">
+                    <button class="reset">لغو فیلترها</button>
+                    <p>نتایج جستجو <span>16</span></p>
+                </section>
+                <!-- جستجوی هتل -->
+                <section class="panel">
+                    <header class="panel-title flex-between">
+                        <span>جستجوی هتل</span>
+                        <a href="#"><i class="fas fa-chevron-down"></i></a>
+                    </header>
+                    <div class="panel-body">
+                        <input type="text" placeholder="جستجو بر اساس نام هتل" class="border"/>
+                    </div>
+
+                </section>
+                <!-- درجه هتل -->
+                <section class="panel">
+                    <header class="panel-title flex-between">
+                        <span>درجه هتل</span>
+                        <a href="#"><i class="fas fa-chevron-down"></i></a>
+                    </header>
+                    <div class="panel-body">
+
+                        <div>
+                            <input type="checkbox" name="check1" id="check1">
+                            <label for="check1">
+                                    <i class="fa fa-star green"></i>
+                                    <i class="fa fa-star green"></i>
+                                    <i class="fa fa-star green"></i>
+                                    <i class="fa fa-star green"></i>
+                                    <i class="fa fa-star green"></i>
+                            </label>
+                        </div>
+                        <div>
+                            <input type="checkbox" name="check1" id="check1">
+                            <label for="check1">
+                                    <i class="fa fa-star green"></i>
+                                    <i class="fa fa-star green"></i>
+                                    <i class="fa fa-star green"></i>
+                                    <i class="fa fa-star green"></i>
+                                    <i class="far fa-star green"></i>
+                            </label>
+                        </div>
+                        <div>
+                            <input type="checkbox" name="check1" id="check1">
+                            <label for="check1">
+                                    <i class="fa fa-star green"></i>
+                                    <i class="fa fa-star green"></i>
+                                    <i class="fa fa-star green"></i>
+                                    <i class="far fa-star green"></i>
+                                    <i class="far fa-star green"></i>
+                            </label>
+                        </div>
+                        <div>
+                            <input type="checkbox" name="check1" id="check1">
+                            <label for="check1">
+                                    <i class="fa fa-star green"></i>
+                                    <i class="fa fa-star green"></i>
+                                    
+                                    <i class="far fa-star green"></i>
+                                    <i class="far fa-star green"></i>
+                                    <i class="far fa-star green"></i>
+                            </label>
+                        </div>
+                        <div>
+                            <input type="checkbox" name="check1" id="check1">
+                            <label for="check1">
+                                    <i class="fa fa-star green"></i>
+                                    <i class="far fa-star green"></i>
+                                    <i class="far fa-star green"></i>
+                                    <i class="far fa-star green"></i>
+                                    <i class="far fa-star green"></i>
+                            </label>
+                        </div>
+                        <div>
+                            <input type="checkbox" name="check1" id="check1">
+                            <label for="check1">رتبه بندی نشده</label>
+                        </div>
+                    </div>
+
+                </section>
+
+                <!-- رنج قیمتی هتل -->
+                <section class="panel">
+                    <header class="panel-title flex-between">
+                        <span>رنج قیمتی هتل (قیمت به ریال)</span>
+                        <a href="#"><i class="fas fa-chevron-down"></i></a>
+                    </header>
+                    <div class="panel-body">
+                        <div>
+                            <input type="checkbox" name="check1" id="systemi">
+                            <label for="systemi">0 تا 5,000,000</label>
+                            <span class="checkbox-spanner selected"></span>
+                        </div>
+                        <div>
+                            <input type="checkbox" name="check1" id="charter">
+                            <label for="charter">5,000,000 تا 10,000,000</label>
+                            <span class="checkbox-spanner"></span>
+                        </div>
+                        <div>
+                            <input type="checkbox" name="check1" id="systemi">
+                            <label for="systemi">10,000,000 تا 15,000,000</label>
+                            <span class="checkbox-spanner selected"></span>
+                        </div>
+                        <div>
+                            <input type="checkbox" name="check1" id="charter">
+                            <label for="charter">15,000,000 تا 20,000,000</label>
+                            <span class="checkbox-spanner"></span>
+                        </div>
+                        <div>
+                            <input type="checkbox" name="check1" id="systemi">
+                            <label for="systemi">20,000,000 به بالا</label>
+                            <span class="checkbox-spanner selected"></span>
+                        </div>
+                    </div>
+
+                </section>
+                <!-- نوع مکان اقامتی -->
+                <section class="panel">
+                    <header class="panel-title flex-between">
+                        <span>نوع مکان اقامتی</span>
+                        <a href="#"><i class="fas fa-chevron-down"></i></a>
+                    </header>
+                    <div class="panel-body">
+                        <div>
+                            <input type="checkbox" name="check1" id="systemi">
+                            <label for="systemi">هتل</label>
+                            <span class="checkbox-spanner selected"></span>
+                        </div>
+                        <div>
+                            <input type="checkbox" name="check1" id="charter">
+                            <label for="charter">بوتیک هتل</label>
+                            <span class="checkbox-spanner"></span>
+                        </div>
+                        <div>
+                            <input type="checkbox" name="check1" id="systemi">
+                            <label for="systemi">ریزورت هتل</label>
+                            <span class="checkbox-spanner selected"></span>
+                        </div>
+                        <div>
+                            <input type="checkbox" name="check1" id="charter">
+                            <label for="charter">هتل آپارتمان</label>
+                            <span class="checkbox-spanner"></span>
+                        </div>
+                        
+                    </div>
+
+                </section>
+              
+            </aside>
+
+            <!-- نتایج -->
+            <section class="results ">
+                <!-- قسمت مرتبط سازی نتایج بر اساس قیمت و.. و نمایش تاریخ -->
+                <section class="sorting flex">
+                    <section class="sort">
+                        <ul class="flex">
+                            <li><a href="#"><i class="fas fa-sort-amount-up-alt"></i>ساعت پرواز</a></li>
+                            <li><a href="#"><i class="fas fa-sort-amount-up-alt"></i>ظرفیت</a></li>
+                            <li><a href="#"><i class="fas fa-sort-amount-down-alt"></i>قیمت</a></li>
+                            <li><a href="#"><i class="fas fa-sort-amount-down-alt"></i>ارزانترین نرخ های بلیط در بازه 7
+                                    روزه</a></li>
+                        </ul>
+                    </section>
+                    <section class="date">
+                        <ul class="flex">
+                            <li><a href="#"><i class="fas fa-angle-right"></i>روز قبل</a></li>
+                            <li class="current-date"><a href="#">98/05/08</a></li>
+                            <li><a href="#">روز بعد<i class="fas fa-angle-left"></i></a></li>
+                        </ul>
+                    </section>
+                </section>
+                <!-- بخش نمایش تیکت ها -->
+                <section class="tickets">
+                    <!-- یک تیکت تک -->
+                    <div class="ticket-container">
+                        <section class="single-ticket flex-between">
+                            <div class="ticket_type">چارتر</div>
+                            <div class="legs">
+                                <!-- لگ رفت و برگشت -->
+                                <!-- لگ رفت -->
+                                <div class="first-leg leg flex-between">
+                                    <div class="logoes ">
+                                        <img src="img/airlines-logo/iran-air.png" alt="">
+                                        <img src="img/airlines-logo/atrak.png" alt="">
+                                    </div>
+                                    <p class="destination">05:20 Tehran <span>1398/7/25</span></p>
+
+                                    <div class="path">
+                                        <span>طول سفر:25 ساعت</span>
+                                        <ul class="path flex-between">
+                                            <li>
+                                                <i class="fa fa-plane rotate-right"></i>
+                                            </li>
+                                            <li>
+                                                <i class="circle"></i>
+                                            </li>
+                                        </ul>
+                                        <span>2 توقف:FRA,SEA</span>
+                                    </div>
+
+
+                                    <p class="destination">06:20 Vancouver <span>1398/7/25</span></p>
+
+                                </div>
+                            </div>
+                            <div class="ticket-choose">
+                                <p>8 صندلی باقی مانده</p>
+                                <p class="price">4,880,000 <span>ریال</span></p>
+                                <button class="btn btn-zgreen">انتخاب بلیط</button>
+                            </div>
+                        </section>
+
+                        <section class="ticket-detail" style="display: none">
+                            اطلاعات پرواز
+                        </section>
+                        <div class="more-info flex-between">
+                            <span>Economy-H</span>
+                            <span><i class="fas fa-arrow-circle-down"></i> مشاهده جزییات پرواز </span>
+                            <span></span>
+                        </div>
+
+                    </div>
+
+
+                </section>
+            </section>
+
+
+        </section>
+    </main>
+</body>
+
+</html>

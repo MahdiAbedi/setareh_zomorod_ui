@@ -278,7 +278,11 @@ main{
 @import 'modules/passenger-count';
 @import 'modules/register';
 @import 'modules/alert';
+@import 'pages/hotels_results';
 
+.border{
+    border-radius: $border-radius;
+}
 .DatePicker{
     position: relative;
 
