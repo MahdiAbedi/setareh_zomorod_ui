@@ -1,6 +1,8 @@
 .hotels{
     // border:1px solid black;
     color:#4d4d4d;
+    font-family: IRANSansWebFaNum,'b Homa','tahoma';
+    font-size: 14px;
 
     &-container{
         box-shadow: 0 1px 2px 1px rgba(0, 0, 0, 0.1);
@@ -9,6 +11,10 @@
         border-radius:$border_radius;
         margin-top: 20px;
         display: flex;
+
+        &:last-child{
+            margin-bottom: 15px;
+        }
 
         .hotels-image{
    
@@ -54,15 +60,16 @@
         }
     }
 
-    .hotels_detail{
-        background: $font_green;
-        text-align: center;
-        color:#fff;
-        padding:7.5px;
-        border-bottom-left-radius: $border_radius;
-    }
-}
 
+}
+.hotels_detail{
+    background: $font_green;
+    text-align: center;
+    color:#fff !important;
+    padding:7.5px;
+    border-bottom-left-radius: $border_radius;
+
+}
 
 
 /* start of desktop styles */

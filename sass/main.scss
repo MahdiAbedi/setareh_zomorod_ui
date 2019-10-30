@@ -346,7 +346,17 @@ main{
 @import 'modules/alert';
 @import 'pages/hotels_results';
 @import 'pages/hotel_detail';
+@import 'modules/rounded_table';
+@import 'modules/tab';
 
+.column{
+    display: flex;
+    flex-direction: column;
+}
+.money{
+    font-family: IRANSansWebFaNum,'b Homa','tahoma';
+    font-size: 18px;
+}
 .border{
     border-radius: $border-radius;
 }
@@ -387,6 +397,10 @@ main{
             width:100% !important;
         }
     }
+}
+
+strong{
+    color:$font_green;
 }
 /* start of desktop styles */
 

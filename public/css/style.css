@@ -244,7 +244,8 @@ ul.menu {
 
 .menu-item {
   display: flex;
-  padding: 0 4px;
+  font-size: 15px;
+  padding: 0 10px;
   border-left: 1px solid #b8b8b8;
   cursor: pointer;
   transition: all .5s ease; }
@@ -1811,13 +1812,17 @@ th:first-child {
   margin: 5px 0px; }
 
 .hotels {
-  color: #4d4d4d; }
+  color: #4d4d4d;
+  font-family: IRANSansWebFaNum,'b Homa','tahoma';
+  font-size: 14px; }
   .hotels-container {
     box-shadow: 0 1px 2px 1px rgba(0, 0, 0, 0.1);
     background: #fff;
     border-radius: 5px;
     margin-top: 20px;
     display: flex; }
+    .hotels-container:last-child {
+      margin-bottom: 15px; }
     .hotels-container .hotels-image img {
       display: block;
       width: 300px;
@@ -1844,12 +1849,13 @@ th:first-child {
       text-align: left; }
     .hotels .hotels_preview_top .green {
       color: #006C50; }
-  .hotels .hotels_detail {
-    background: #006C50;
-    text-align: center;
-    color: #fff;
-    padding: 7.5px;
-    border-bottom-left-radius: 5px; }
+
+.hotels_detail {
+  background: #006C50;
+  text-align: center;
+  color: #fff !important;
+  padding: 7.5px;
+  border-bottom-left-radius: 5px; }
 
 /* start of desktop styles */
 @media screen and (max-width: 767px) {
@@ -1859,6 +1865,126 @@ th:first-child {
       width: 100%;
       margin-right: auto;
       margin-left: auto; } }
+
+.hotel_container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between; }
+  .hotel_container td {
+    font-size: 12px; }
+
+.hotel_summery {
+  background: #fff;
+  padding: 15px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  width: 39%; }
+  .hotel_summery .map_container img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover; }
+  .hotel_summery .hotels_detail {
+    border-bottom-right-radius: 4px; }
+
+.gallery {
+  margin-left: 5px;
+  display: flex;
+  flex-direction: column;
+  width: 61%; }
+  .gallery img {
+    padding: 2px;
+    border-radius: 5px;
+    cursor: pointer; }
+  .gallery .gallery_first_row {
+    display: flex; }
+    .gallery .gallery_first_row img {
+      object-fit: cover; }
+  .gallery .gallery_second_row img {
+    width: 20%;
+    height: 130px;
+    object-fit: cover; }
+
+.hotel_detail_filters {
+  background: #006C50;
+  padding: 10px 15%;
+  display: flex;
+  justify-content: center;
+  border-radius: 5px;
+  align-items: center;
+  margin-bottom: 10px; }
+
+.rooms {
+  display: flex;
+  flex-direction: row; }
+  .rooms .rounded_table {
+    width: 50%; }
+  .rooms .factor {
+    width: 50%; }
+
+table.rounded_table {
+  border-collapse: separate;
+  border: solid #acacac 1px;
+  border-radius: 6px;
+  -moz-border-radius: 6px;
+  margin: 10px 0; }
+  table.rounded_table th, table.rounded_table td {
+    text-align: center; }
+  table.rounded_table th {
+    background-color: #e6e6e6;
+    border-top: none;
+    color: #474747; }
+  table.rounded_table td:first-child, table.rounded_table th:first-child {
+    border-left: none; }
+
+/* Style the tab */
+.tab {
+  overflow: hidden;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  /* Change background color of buttons on hover */
+  /* Create an active/current tablink class */ }
+  .tab button {
+    background-color: inherit;
+    float: right;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+    font-size: 14px;
+    font-family: inherit; }
+  .tab button:hover {
+    background-color: #ddd; }
+  .tab button.active {
+    background-color: #fff; }
+
+/* Style the tab content */
+.tabcontent {
+  display: none;
+  padding: 20px 20px;
+  border: 1px solid #ccc;
+  border-top: none;
+  background: #fff;
+  line-height: 2.7;
+  font-size: 15px;
+  text-align: justify;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px; }
+
+.tab_continer {
+  margin-bottom: 10px; }
+
+.column {
+  display: flex;
+  flex-direction: column; }
+
+.money {
+  font-family: IRANSansWebFaNum,'b Homa','tahoma';
+  font-size: 18px; }
 
 .border {
   border-radius: 5px; }
@@ -1886,6 +2012,9 @@ th:first-child {
   display: flex; }
   .owl-stage .owl-item .active {
     width: 100% !important; }
+
+strong {
+  color: #006C50; }
 
 /* start of desktop styles */
 @media screen and (max-width: 479px) {
