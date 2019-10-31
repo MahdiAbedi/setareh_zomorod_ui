@@ -72,11 +72,77 @@
 .rooms{
     display: flex;
     flex-direction: row;
+    border:1px solid $table-border-gray;
+    padding:-10px 0;
+    border-radius: 10px;
+    margin-bottom: 10px;
 
     .rounded_table{
         width:50%;
+        margin-top: 0;
     }
     .factor{
         width:50%;
+        padding:10px;
+        margin-top: 0;
+        border-radius: 10px;
+        
+        .rounded_table{width:100%}
+
+        .factor_detail{
+            padding:10px 0px;
+        }
+
+        .title{
+            background:$font_green;
+            border-radius: $border_radius;
+            color:#fff;
+            text-align: center;
+            padding:7px 0px;
+        }
     }
+}
+
+
+
+
+/* start of desktop styles */
+
+@media screen and (max-width: 991px) {
+
+}
+
+@media screen and (max-width: 767px) {
+
+
+    .hotel_container{
+        flex-direction: column;
+    }
+    .hotel_summery,.gallery{width:100%}
+
+    .gallery .gallery_second_row{
+      display: none;
+    }
+
+    .rooms{
+        flex-direction: column;
+
+        .rounded_table,.factor{
+            width:100%;
+        }
+        .factor_detail{
+            flex-direction: row;
+        }
+
+        .rounded_table td{
+            display: flex;
+            flex-direction: column;
+            padding-left: 10px;
+        }
+    }
+
+}
+
+@media screen and (max-width: 479px) {
+
 }

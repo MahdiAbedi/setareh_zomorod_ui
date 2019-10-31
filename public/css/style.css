@@ -549,12 +549,13 @@ select {
   padding: 10px 10px;
   border-radius: 5px;
   font-family: inherit;
-  cursor: pointer;
   border-radius: 10px;
   cursor: pointer;
   transition: all .5s ease;
   color: #fff;
-  margin: 0 5px 0 0; }
+  margin: 0 5px 0 0;
+  display: inline-block;
+  line-height: 1.42857143; }
 
 .btn-blue {
   background: #1EBAFF; }
@@ -1917,11 +1918,48 @@ th:first-child {
 
 .rooms {
   display: flex;
-  flex-direction: row; }
+  flex-direction: row;
+  border: 1px solid #acacac;
+  padding: -10px 0;
+  border-radius: 10px;
+  margin-bottom: 10px; }
   .rooms .rounded_table {
-    width: 50%; }
+    width: 50%;
+    margin-top: 0; }
   .rooms .factor {
-    width: 50%; }
+    width: 50%;
+    padding: 10px;
+    margin-top: 0;
+    border-radius: 10px; }
+    .rooms .factor .rounded_table {
+      width: 100%; }
+    .rooms .factor .factor_detail {
+      padding: 10px 0px; }
+    .rooms .factor .title {
+      background: #006C50;
+      border-radius: 5px;
+      color: #fff;
+      text-align: center;
+      padding: 7px 0px; }
+
+/* start of desktop styles */
+@media screen and (max-width: 767px) {
+  .hotel_container {
+    flex-direction: column; }
+  .hotel_summery, .gallery {
+    width: 100%; }
+  .gallery .gallery_second_row {
+    display: none; }
+  .rooms {
+    flex-direction: column; }
+    .rooms .rounded_table, .rooms .factor {
+      width: 100%; }
+    .rooms .factor_detail {
+      flex-direction: row; }
+    .rooms .rounded_table td {
+      display: flex;
+      flex-direction: column;
+      padding-left: 10px; } }
 
 table.rounded_table {
   border-collapse: separate;

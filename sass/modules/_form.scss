@@ -48,7 +48,6 @@ select{
     border-radius: $border-radius;
     font-family: inherit;
     // width: 100%;
-    cursor: pointer;
     // margin-top: 5px;
     // height: 38px;
     border-radius: 10px;
@@ -56,6 +55,8 @@ select{
     transition: all .5s ease;
     color:#fff;
     margin:0 5px 0 0;
+    display: inline-block;
+    line-height: 1.42857143;
 }
 .btn-blue{
     background:$light_blue;
@@ -196,7 +197,6 @@ select{
         }
     }
 }
-
 
 /* start of desktop styles */
 
