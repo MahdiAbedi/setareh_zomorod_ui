@@ -198,6 +198,14 @@ select{
     }
 }
 
+input[type="number"]{
+    border-radius: 10px;
+    // outline: none;
+    // text-indent: 5px;
+    text-align: center;
+    // border: none;
+}
+
 /* start of desktop styles */
 
 @media screen and (max-width: 991px) {

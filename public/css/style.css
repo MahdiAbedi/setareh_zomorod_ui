@@ -654,6 +654,10 @@ select {
     .fields .field select {
       border-radius: 5px; }
 
+input[type="number"] {
+  border-radius: 10px;
+  text-align: center; }
+
 /* start of desktop styles */
 @media screen and (max-width: 479px) {
   .fields .field {
@@ -1906,6 +1910,14 @@ th:first-child {
     width: 20%;
     height: 130px;
     object-fit: cover; }
+    .gallery .gallery_second_row img:last-child {
+      background-color: rgba(0, 0, 0, 0.5);
+      color: #fff;
+      position: relative;
+      visibility: visible; }
+      .gallery .gallery_second_row img:last-child ::after {
+        content: '+22';
+        background: red; }
 
 .hotel_detail_filters {
   background: #006C50;

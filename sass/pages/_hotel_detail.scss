@@ -53,8 +53,29 @@
             width:20%;
             height: 130px;
             object-fit: cover;
+
+            &:last-child{
+                background-color: rgba(0,0,0,.5);
+                color: #fff;
+                position: relative;
+                // top: 4px;
+                // left: 4px;
+                // right: 4px;
+                // bottom: 4px;
+                visibility: visible;
+                ::after{
+                    content: '+22';
+                    background: red;
+                }
+            }
         }
+
+       
     }
+
+
+
+    
 }
 
 
