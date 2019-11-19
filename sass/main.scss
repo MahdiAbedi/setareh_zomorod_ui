@@ -348,12 +348,13 @@ main{
 @import 'pages/hotel_detail';
 @import 'modules/rounded_table';
 @import 'modules/tab';
+@import 'modules/profileMenu';
 
 .column{
     display: flex;
     flex-direction: column;
 }
-.money{
+.money,.price{
     font-family: IRANSansWebFaNum,'b Homa','tahoma';
     font-size: 18px;
 }
@@ -404,6 +405,26 @@ strong{
 }
 /* start of desktop styles */
 
+
+ul.hotel_refund_roles{
+    border:initial;
+    li{
+        font-size: 14px;
+        line-height: 2.7;
+        i{
+            margin-left: 5px;
+            color:red;
+        }
+    }
+}
+
+.rooms {
+    .ticket-container{
+        width:100%;
+        margin:10px;
+    }
+}
+
 @media screen and (max-width: 991px) {
 
 }
@@ -417,3 +438,4 @@ strong{
         width:100%;
     }
 }
+

@@ -160,190 +160,191 @@
             </div>
 
             <!-- مشخصات اتاقها و فاکتور -->
-            <div class="rooms">
-                <table class="rounded_table">
-                    <thead>
-                        <tr>
-                            <th>نام و مشخصات اتاق</th>
-                            <th>تعداد تخت</th>
-                            <th>انتخاب تعداد اتاق</th>
-                            <th>قیمت برای 3 شب</th>
-                        </tr>
-                    </thead>
-                    <tr>
-                        <td>
-                            <p>Standard Twin Room</p>
-                            <p class="green">Twin beds 2</p>
-                            <p>صبحانه رایگان</p>
-                        </td>
-                        <td>
-                            <input type="number" name="roomCount" id="" min="1" max="10" value="1">
-                        </td>
-                        <td>
-                            <input type="number" name="roomCount" id="" min="1" max="10" value="1">
-                        </td>
-                        <td name=money>74,880,00 ریال</td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <p>Standard Twin Room</p>
-                            <p class="green">Twin beds 2</p>
-                            <p>صبحانه رایگان</p>
-                        </td>
-                        <td>
-                            <input type="number" name="roomCount" id="" min="1" max="10" value="1">
-                        </td>
-                        <td>
-                            <input type="number" name="roomCount" id="" min="1" max="10" value="1">
-                        </td>
-                        <td name=money>74,880,00 ریال</td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <p>Standard Twin Room</p>
-                            <p class="green">Twin beds 2</p>
-                            <p>صبحانه رایگان</p>
-                        </td>
-                        <td>
-                            <input type="number" name="roomCount" id="" min="1" max="10" value="1">
-                        </td>
-                        <td>
-                            <input type="number" name="roomCount" id="" min="1" max="10" value="1">
-                        </td>
-                        <td name=money>74,880,00 ریال</td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <p>Standard Twin Room</p>
-                            <p class="green">Twin beds 2</p>
-                            <p>صبحانه رایگان</p>
-                        </td>
-                        <td>
-                            <input type="number" name="roomCount" id="" min="1" max="10" value="1">
-                        </td>
-                        <td>
-                            <input type="number" name="roomCount" id="" min="1" max="10" value="1">
-                        </td>
-                        <td name=money>74,880,00 ریال</td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <p>Standard Twin Room</p>
-                            <p class="green">Twin beds 2</p>
-                            <p>صبحانه رایگان</p>
-                        </td>
-                        <td>
-                            <input type="number" name="roomCount" id="" min="1" max="10" value="1">
-                        </td>
-                        <td>
-                            <input type="number" name="roomCount" id="" min="1" max="10" value="1">
-                        </td>
-                        <td name=money>74,880,00 ریال</td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <p>Standard Twin Room</p>
-                            <p class="green">Twin beds 2</p>
-                            <p>صبحانه رایگان</p>
-                        </td>
-                        <td>
-                            <input type="number" name="roomCount" id="" min="1" max="10" value="1">
-                        </td>
-                        <td>
-                            <input type="number" name="roomCount" id="" min="1" max="10" value="1">
-                        </td>
-                        <td name=money>74,880,00 ریال</td>
-                    </tr>
+            <div class="rooms flex">
+                <!-- یک تیکت تک -->
+                <div class="ticket-container">
+                    <section class="single-ticket flex-between">
+                        <div class="ticket_type">بدون استرداد</div>
+                        <div class="legs">
+                            <!-- لگ رفت و برگشت -->
+                            <!-- لگ رفت -->
+                            <div class="first-leg leg flex-between">
+                                
+                                <p class="destination">Mixed Dormitory Room 10 Beds Basement Floor Ages 18 39
+                                </p>
 
-                </table>
+                                <div class="path">
+                                    <span>بدون وعده غذایی</span>
+                                    <ul class="path flex-between">
+                                        <li>
+                                            <i class="fa fa-hotel rotate-right"></i>
+                                        </li>
+                                        <li>
+                                            <i class="circle"></i>
+                                        </li>
+                                    </ul>
+                                    <span><i class="fa fa-users green"></i> 2 بزرگسال   <i class="green fa fa-child"></i>0 کودک</span>
+                                </div>
 
-                <div class="factor column">
-                    <p class="title">فاکتور</p>
-                    <div class="factor_detail flex">
-                        <span>
-                            <p class="green">مقصد:</p>
-                            <p>دبی امارات متحده عربی</p>
-                        </span>
-                        <span>
-                            <p>Deluxe City Hotel</p>
-                            <span class="stars">
-                                <i class="fa fa-star green"></i>
-                                <i class="fa fa-star green"></i>
-                                <i class="fa fa-star green"></i>
-                                <i class="far fa-star green"></i>
-                                <i class="far fa-star green"></i>
-                            </span>
-                        </span>
-                        <span>
-                            <p class="green">74,880,000 تومان</p>
-                            <a href="#" class="btn btn-zgreen">پرداخت</a>
-                        </span>
+
+                                <p class="destination"><p>8 اتاق باقی مانده</p>
+                               </p>
+
+                            </div>
+                            
+
+
+                        </div>
+                        <div class="ticket-choose">
+                            <p class="price">4,880,000 <span>ریال</span></p>
+                            <button class="btn btn-zgreen">رزرو اتاق</button>
+                        </div>
+                    </section>
+
+                    <section class="ticket-detail">
+                        <!-- عناوین  -->
+                        <div class="detail-border"></div>
+                        
+                           
+                            <ul class="hotel_refund_roles">
+                                <li><i class="red far fa-times-circle"></i>در صورت کنسل کردن واچر هتل، مبلغ 2,000,000 ریال کارمزد خدمات از مبلغ کل کسر میگردد</li>
+                                <li><i class="red far fa-times-circle"></i>از ساعت 00:29 تاریخ 1398/08/22 غیر قابل استرداد خواهد بود</li>
+
+
+                            </ul>
+                       
+
+                        
+                    </section>
+                    <div class="more-info flex-between">
+                        <span></span>
+                        <span><i class="fas fa-arrow-circle-up"></i> قوانین کنسلی </span>
+                        <span></span>
                     </div>
 
-                    <table class="rounded_table">
-                        
-                        <tr>
-                            <td>
-                                Standard Twin Room
-                            </td>
-                            <td>
-                                2 بزرگسال
-                            </td>
-                            <td>
-                                1 اتاق
-                            </td>
-                            <td name=money>74,880,00 ریال</td>
-                        </tr>
-                        <tr>
-                            <td>
-                                Standard Twin Room
-                            </td>
-                            <td>
-                                2 بزرگسال
-                            </td>
-                            <td>
-                                1 اتاق
-                            </td>
-                            <td name=money>74,880,00 ریال</td>
-                        </tr>
-                        <tr class="green">
-                            <td>
-                                جمع مبلغ
-                            </td>
-                            <td>
-                               
-                            </td>
-                            <td>
+                </div>
+                <!-- یک تیکت تک -->
+                <div class="ticket-container">
+                    <section class="single-ticket flex-between">
+                        <div class="ticket_type">بدون استرداد</div>
+                        <div class="legs">
+                            <!-- لگ رفت و برگشت -->
+                            <!-- لگ رفت -->
+                            <div class="first-leg leg flex-between">
                                 
-                            </td>
-                            <td name=money>74,880,00 ریال</td>
-                        </tr>
-                       
+                                <p class="destination">Mixed Dormitory Room 10 Beds Basement Floor Ages 18 39
+                                </p>
+
+                                <div class="path">
+                                    <span>بدون وعده غذایی</span>
+                                    <ul class="path flex-between">
+                                        <li>
+                                            <i class="fa fa-hotel rotate-right"></i>
+                                        </li>
+                                        <li>
+                                            <i class="circle"></i>
+                                        </li>
+                                    </ul>
+                                    <span><i class="fa fa-users green"></i> 2 بزرگسال   <i class="green fa fa-child"></i>0 کودک</span>
+                                </div>
+
+
+                                <p class="destination"><p>8 اتاق باقی مانده</p>
+                               </p>
+
+                            </div>
+                            
+
+
+                        </div>
+                        <div class="ticket-choose">
+                            <p class="price">4,880,000 <span>ریال</span></p>
+                            <button class="btn btn-zgreen">رزرو اتاق</button>
+                        </div>
+                    </section>
+
+                    <section class="ticket-detail">
+                        <!-- عناوین  -->
+                        <div class="detail-border"></div>
                         
-                    </table>
+                           
+                            <ul class="hotel_refund_roles">
+                                <li><i class="red far fa-times-circle"></i>در صورت کنسل کردن واچر هتل، مبلغ 2,000,000 ریال کارمزد خدمات از مبلغ کل کسر میگردد</li>
+                                <li><i class="red far fa-times-circle"></i>از ساعت 00:29 تاریخ 1398/08/22 غیر قابل استرداد خواهد بود</li>
 
 
-                    <table class="rounded_table">
-                            <thead>
-                                <tr>
-                                    <th>تاریخ و ساعت ورود</th>
-                                    <th>تاریخ و ساعت خروج</th>
-                                    
-                                </tr>
-                            </thead>
-                            <tr class="green">
-                                <td>
-                                    دوشنبه 13/September/2019 ساعت 12:30
-                                </td>
-                                <td>
-                                    دوشنبه 13/September/2019 ساعت 12:30
-                                </td>
-                               
-                            </tr>
+                            </ul>
+                       
+
+                        
+                    </section>
+                    <div class="more-info flex-between">
+                        <span></span>
+                        <span><i class="fas fa-arrow-circle-up"></i> قوانین کنسلی </span>
+                        <span></span>
+                    </div>
+
+                </div>
+                <!-- یک تیکت تک -->
+                <div class="ticket-container">
+                    <section class="single-ticket flex-between">
+                        <div class="ticket_type">بدون استرداد</div>
+                        <div class="legs">
+                            <!-- لگ رفت و برگشت -->
+                            <!-- لگ رفت -->
+                            <div class="first-leg leg flex-between">
+                                
+                                <p class="destination">Mixed Dormitory Room 10 Beds Basement Floor Ages 18 39
+                                </p>
+
+                                <div class="path">
+                                    <span>بدون وعده غذایی</span>
+                                    <ul class="path flex-between">
+                                        <li>
+                                            <i class="fa fa-hotel rotate-right"></i>
+                                        </li>
+                                        <li>
+                                            <i class="circle"></i>
+                                        </li>
+                                    </ul>
+                                    <span><i class="fa fa-users green"></i> 2 بزرگسال   <i class="green fa fa-child"></i>0 کودک</span>
+                                </div>
+
+
+                                <p class="destination"><p>8 اتاق باقی مانده</p>
+                               </p>
+
+                            </div>
                             
-                            
-                        </table>
 
+
+                        </div>
+                        <div class="ticket-choose">
+                            <p class="price">4,880,000 <span>ریال</span></p>
+                            <button class="btn btn-zgreen">رزرو اتاق</button>
+                        </div>
+                    </section>
+
+                    <section class="ticket-detail">
+                        <!-- عناوین  -->
+                        <div class="detail-border"></div>
+                        
+                           
+                            <ul class="hotel_refund_roles">
+                                <li><i class="red far fa-times-circle"></i>در صورت کنسل کردن واچر هتل، مبلغ 2,000,000 ریال کارمزد خدمات از مبلغ کل کسر میگردد</li>
+                                <li><i class="red far fa-times-circle"></i>از ساعت 00:29 تاریخ 1398/08/22 غیر قابل استرداد خواهد بود</li>
+
+
+                            </ul>
+                       
+
+                        
+                    </section>
+                    <div class="more-info flex-between">
+                        <span></span>
+                        <span><i class="fas fa-arrow-circle-up"></i> قوانین کنسلی </span>
+                        <span></span>
+                    </div>
 
                 </div>
 

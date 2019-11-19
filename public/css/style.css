@@ -2027,11 +2027,46 @@ table.rounded_table {
 .tab_continer {
   margin-bottom: 10px; }
 
+.profile-list {
+  display: flex;
+  position: fixed;
+  top: 50px;
+  background: #FFFFFF;
+  z-index: 10;
+  border-radius: 4px;
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.15); }
+  .profile-list .half.first {
+    border-left: 1px solid #f5f5f5; }
+  .profile-list .half .top {
+    background: #F7F7F7;
+    padding: 15px 5px;
+    text-align: center; }
+    .profile-list .half .top p {
+      display: inline-block;
+      text-align: center; }
+  .profile-list .half .bottom {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 10px; }
+    .profile-list .half .bottom a {
+      color: blue; }
+  .profile-list .half ul.profile-menu li {
+    border-bottom: 1px solid #f5f5f5;
+    padding: 10px; }
+    .profile-list .half ul.profile-menu li a {
+      color: #58595b; }
+    .profile-list .half ul.profile-menu li:hover {
+      background: #F7F7F7; }
+    .profile-list .half ul.profile-menu li .red {
+      color: red; }
+
 .column {
   display: flex;
   flex-direction: column; }
 
-.money {
+.money, .price {
   font-family: IRANSansWebFaNum,'b Homa','tahoma';
   font-size: 18px; }
 
@@ -2066,6 +2101,19 @@ strong {
   color: #006C50; }
 
 /* start of desktop styles */
+ul.hotel_refund_roles {
+  border: initial; }
+  ul.hotel_refund_roles li {
+    font-size: 14px;
+    line-height: 2.7; }
+    ul.hotel_refund_roles li i {
+      margin-left: 5px;
+      color: red; }
+
+.rooms .ticket-container {
+  width: 100%;
+  margin: 10px; }
+
 @media screen and (max-width: 479px) {
   .half {
     width: 100%; } }
