@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="author" content="MahdiAbedi220@yahoo.com">
+    <link rel="stylesheet" href="css/style.css">
+    <title>آژانس هواپیمایی ستاره زمرد</title>
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.10/css/select2.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+
+
+</head>
+
+<body>
+    <!-- slider -->
+    <div class="slider" id="slider">
+        <!-- منوی بالا -->
+        <div class="topmenu">
+
+            <nav class="topmenu-container container">
+                <!-- منوی همبرگر در حالت موبایل  -->
+                <div class="hamberger-menu" onclick="hamburgerMenu(this)">
+                    <div class="bar1"></div>
+                    <div class="bar2"></div>
+                    <div class="bar3"></div>
+                </div>
+
+                <ul class="menu right-menu hide" id="hamburger-menu">
+                    <li class="menu-item active">
+                        <!-- <img src="/img/icons/home.png" alt="منوی"> -->
+                        <a href="/">خانه</a>
+                    </li>
+                    <li class="menu-item">
+                        <!-- <img src="/img/icons/airplane-icon-colored.png" alt="منوی"> -->
+                        <a href="#">بلیط هواپیما</a>
+                    </li>
+                    <li class="menu-item">
+                        <!-- <img src="/img/icons/hotel.png" alt="منوی"> -->
+                        <a href="#">رزو هتل</a>
+                    </li>
+                    <li class="menu-item">
+                        <!-- <img src="/img/icons/tour.png" alt="منوی"> -->
+                        <a href="#">تور مسافرتی</a>
+                    </li>
+                    <li class="menu-item">
+                        <!-- <img src="/img/icons/visa.png" alt="منوی"> -->
+                        <a href="#">ویزا</a>
+                    </li>
+                    <li class="menu-item">
+                        <!-- <img src="/img/icons/bime.png" alt="منوی"> -->
+                        <a href="#">بیمه</a>
+                    </li>
+                    <li class="menu-item">
+                        <!-- <img src="/img/icons/blog.png" alt="منوی"> -->
+                        <a href="#">مجله گردشگری</a>
+                    </li>
+                    <li class="menu-item other">
+                        <a href="#">...</a>
+                    </li>
+
+
+                </ul>
+
+                <ul class="menu left-menu">
+
+                    <li class="menu-item">
+                        <img src="/img/icons/search.png" alt="منوی">
+                    </li>
+
+                    <!-- login -->
+                    <!-- <li class="menu-item" id="login">
+                        <img src="/img/icons/login.png" alt="منوی">
+        
+                    </li> -->
+                    <!-- Login Panel  -->
+                    <div class="login-container">
+                        <form method="POST" action="{{ route('login') }}">
+                            @csrf
+
+                            <!-- <label for="userName">نام کاربری</label> -->
+                            <input type="text" name="email" placeholder="ایمیل">
+                            <input type="password" name="password" placeholder="رمز عبور">
+                            <input type="submit" class="btn btn-blue" value="ورود">
+
+                        </form>
+                        <div class="panel">
+                            <a href="/reset">بازیابی رمز عبور</a>
+                            <hr />
+                            <button onclick="window.location.href = '/register';" class="btn btn-green">ثبت نام</button>
+                        </div>
+                    </div>
+
+                    <a class="menu-item">
+                        <img src="/img/icons/login.png" alt="منوی">
+                        <span>مهدی عابدی عزیز                         <svg fill="#626262" width="12" height="12" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 12" class="v-middle chevron hidden-xs hidden-sm"><g fill-rule="evenodd"><polygon fill-rule="nonzero" points="10.466 3.06 11.173 3.767 6.002 8.939 .83 3.767 1.537 3.06 6.002 7.524"></polygon></g></svg>
+                        </span>
+                    </a>
+
+
+                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+
+                    </form>
+
+
+                    <li class="menu-item">
+                        <a href="tel:02172407">021-72407</a>
+                        <img src="/img/icons/tel.png" class="tel" alt="منوی">
+                    </li>
+
+                    <li class="menu-item logo">
+                        <img src="/img/logo.png" alt="منوی">
+
+                    </li>
+
+                </ul>
+            </nav>
+
+
+        </div>
+        <!-- تصویر هواپیمای بزرگ که روی اسلایدر و منو -->
+        <div class="airplane" id="slider-img">
+            <img src="img/bgs/airplane.png" alt="">
+        </div>
+        <!-- قسمت جستجو بلیط هواپیما،هتل و .. -->
+        <div class="search-container">
+            <!-- {/* آیکون های  */} -->
+            <div class="search_icons">
+                <!-- {/* پرواز خارجی */} -->
+                <div class="search_icon " onclick="showSearchPanel('OutLineTicket')">
+                    <div class="icon_container active" id="OutLineTicket-Icon">
+                        <img class="outline-flight" src="img/icons/outline-flight.png" alt="" />
+                    </div>
+                    <h4 class="out-flight-title"><span>پرواز خارجی</span></h4>
+
+                </div>
+
+                <div class="search_icon" onclick="showSearchPanel('InlineTicket')">
+                    <div class="icon_container" id="InlineTicket-Icon">
+                        <img src="img/icons/inline-flight.png" alt="" />
+                    </div>
+                    <h4 class="inner-flight-title"><span>پرواز داخلی</span></h4>
+                </div>
+                <!-- {/* قطار */} -->
+                <div class="search_icon" onclick="showSearchPanel('TrainTicket')">
+                    <div class="icon_container" id="TrainTicket-Icon">
+                        <img src="img/icons/train.png" alt="" />
+                    </div>
+                    <h4>قطار</h4>
+                </div>
+                <!-- {/* هتل */} -->
+                <div class="search_icon" onclick="showSearchPanel('HotelTicket')">
+                    <div class="icon_container" id="HotelTicket-Icon">
+                        <img src="img/icons/hotel.png" alt="" />
+                    </div>
+                    <h4>هتل</h4>
+                </div>
+                <!-- {/* تور */} -->
+                <div class="search_icon" onclick="showSearchPanel('TourTicket')">
+                    <div class="icon_container" id="TourTicket-Icon">
+                        <img src="img/icons/tour.png" alt="" />
+                    </div>
+                    <h4>تور</h4>
+                </div>
+                <!-- {/* بیمه */} -->
+                <div class="search_icon" onclick="showSearchPanel('InsuranceTicket')">
+                    <div class="icon_container" id="InsuranceTicket-Icon">
+                        <img src="img/icons/bime.png" alt="" />
+                    </div>
+                    <h4>بیمه</h4>
+                </div>
+            </div>
+            <div class="SearchPanel"></div>
+        </div>
+
+    </div>
+    <!-- main part -->
+    <main id="root">
+        <div class="bgwidth bg-white">
+                <div class="main-container">
+                        <div class="home_icons flex">
+                            <div class="home_icon">
+                                <img src="img/icons/waranti.png" alt="">
+                                <p>گارانتی قیمت بازگشت وجه در صورت ارائه قیمت ارزان تر از زمرد</p>
+                            </div>
+                            <div class="home_icon">
+                                <img src="img/icons/travel.png" alt="">
+                                <p>دسترسی به بیش از 300 هتل و ایرلاین در سراسر دنیا</p>
+                            </div>
+                            <div class="home_icon">
+                                <img src="img/icons/support.png" alt="">
+                                <p>ارائه پشتیبانی و خدمات پس از فروش به صورت 24 ساعته</p>
+                            </div>
+                        </div>
+                </div>
+        </div>
+        <!-- متن درباره ستاره زمرد  -->
+        <div class="bgwidth bg-gray">
+            <div class="main-container">
+                <h2 class="special_offers">ستاره زمرد !!</h2><br/>
+                <p class="text-justify">شرکت خدمات مسافرتی ستاره زمرد از شروع فعالیت خود تاکنون هدف گذاری ویژه ای بر روی رضایت مسافران داشته پو در ارائه خدمات با کیفیت از کلیه آژانس های همکار خود پیشی گرفته است. این رضایتمندی آژانس ستاره زمرد  را بر آن داشته است تا با گسترش زمینه فعالیت های خود در حوزه سفر و گردشگری، خود را پیشتاز این رقابت ها بداند.</p>
+            </div>
+        </div>
+        <div class="bgwidth">
+            <div class="main-container">
+                <h2 class="special_offers">هتلت رو با چشم بسته انتخاب کن !</h2><br/>
+                <p class="text-justify">شرکت خدمات مسافرتی ستاره زمرد از شروع فعالیت خود تاکنون هدف گذاری ویژه ای بر روی رضایت مسافران داشته پو در ارائه خدمات با کیفیت از کلیه آژانس های همکار خود پیشی گرفته است. این رضایتمندی آژانس ستاره زمرد  را بر آن داشته است تا با گسترش زمینه فعالیت های خود در حوزه سفر و گردشگری، خود را پیشتاز این رقابت ها بداند.</p>
+            </div>
+        </div>
+
+
+        <div class="bgwidth bg-gray">
+                <div class="main-container">
+                    <h2 class="special_offers">باحالترین هتلها</h2>
+                    <!-- tours -->
+                    <div class="tours flex owl-carousel owl-theme">
+                        <!-- tour -->
+                        <div class="tour">
+                            <img src="img/tours/img-8.jpg" alt="">
+                            <h2>تور بلغارستان "وارنا"</h2>
+                            <p>7 شب و 8 روز -هتل 5 ستاره</p>
+                            <p class="price">7,730,000 تومان</p>
+                        </div>
+                        <!-- tour -->
+                        <div class="tour">
+                            <img src="img/tours/img-6.jpg" alt="">
+                            <h2>تور سوئیس</h2>
+                            <p>7 شب و 8 روز -هتل 5 ستاره</p>
+                            <p class="price">7,730,000 تومان</p>
+                        </div>
+                        <!-- tour -->
+                        <div class="tour">
+                            <img src="img/tours/img-3.jpg" alt="">
+                            <h2>تور فرانسه</h2>
+                            <p>7 شب و 8 روز -هتل 5 ستاره</p>
+                            <p class="price">7,730,000 تومان</p>
+                        </div>
+                        <!-- tour -->
+                        <div class="tour">
+                            <img src="img/tours/img-8.jpg" alt="">
+                            <h2>تور بلغارستان "وارنا"</h2>
+                            <p>7 شب و 8 روز -هتل 5 ستاره</p>
+                            <p class="price">7,730,000 تومان</p>
+                        </div>
+                        <!-- tour -->
+                        <div class="tour">
+                            <img src="img/tours/img-6.jpg" alt="">
+                            <h2>تور سوئیس</h2>
+                            <p>7 شب و 8 روز -هتل 5 ستاره</p>
+                            <p class="price">7,730,000 تومان</p>
+                        </div>
+                        <!-- tour -->
+                        <div class="tour">
+                            <img src="img/tours/img-3.jpg" alt="">
+                            <h2>تور فرانسه</h2>
+                            <p>7 شب و 8 روز -هتل 5 ستاره</p>
+                            <p class="price">7,730,000 تومان</p>
+                        </div>
+                    </div>
+                </div>
+        </div>
+        <div class="bgwidth bg-white">
+                <div class="main-container">
+                    <h2 class="special_offers">خوش قیمت ترین هتلها</h2>
+                    <!-- tours -->
+                    <div class="tours flex owl-carousel owl-theme">
+                        <!-- tour -->
+                        <div class="tour bg-gray">
+                            <img src="img/tours/img-8.jpg" alt="">
+                            <h2>تور بلغارستان "وارنا"</h2>
+                            <p>7 شب و 8 روز -هتل 5 ستاره</p>
+                            <p class="price">7,730,000 تومان</p>
+                        </div>
+                        <!-- tour -->
+                        <div class="tour bg-gray">
+                            <img src="img/tours/img-6.jpg" alt="">
+                            <h2>تور سوئیس</h2>
+                            <p>7 شب و 8 روز -هتل 5 ستاره</p>
+                            <p class="price">7,730,000 تومان</p>
+                        </div>
+                        <!-- tour -->
+                        <div class="tour bg-gray">
+                            <img src="img/tours/img-3.jpg" alt="">
+                            <h2>تور فرانسه</h2>
+                            <p>7 شب و 8 روز -هتل 5 ستاره</p>
+                            <p class="price">7,730,000 تومان</p>
+                        </div>
+                        <!-- tour -->
+                        <div class="tour bg-gray">
+                            <img src="img/tours/img-8.jpg" alt="">
+                            <h2>تور بلغارستان "وارنا"</h2>
+                            <p>7 شب و 8 روز -هتل 5 ستاره</p>
+                            <p class="price">7,730,000 تومان</p>
+                        </div>
+                        <!-- tour -->
+                        <div class="tour">
+                            <img src="img/tours/img-6.jpg" alt="">
+                            <h2>تور سوئیس</h2>
+                            <p>7 شب و 8 روز -هتل 5 ستاره</p>
+                            <p class="price">7,730,000 تومان</p>
+                        </div>
+                        <!-- tour -->
+                        <div class="tour">
+                            <img src="img/tours/img-3.jpg" alt="">
+                            <h2>تور فرانسه</h2>
+                            <p>7 شب و 8 روز -هتل 5 ستاره</p>
+                            <p class="price">7,730,000 تومان</p>
+                        </div>
+                    </div>
+                </div>
+        </div>
+        
+
+        
+    </main>
+    <!-- منوی پایین -->
+    <footer>
+        <div class="footer flex container">
+            <div class="footer1">
+                <div class="about">
+                    <h3>درباره ستاره زمرد</h3>
+                    <p>شرکت خدمات مسافرتی ستاره زمرد مفتخر است به پشتوانه ی مجموعه هلدینگ خود در اعزام محصل و دانشجو به
+                        کشورهای مالزی، سنگاپور، اتریش، آلمان، سوئیس، سوئد، روسیه و کانادا، ارائه دهنده ی بهترین خدمات به
+                        همکاران (B2B)و مسافران (B2C) با گارانتی قیمت و بصورت کاملا رقابتی می باشد.شرکت خدمات مسافرتی
+                        ستاره زمرد مفتخر است به پشتوانه ی مجموعه هلدینگ خود در اعزام محصل و دانشجو به کشورهای مالزی،
+                    </p>
+                </div>
+                <div class="address">
+                    <p>تهران،پاسداران،خیابان گل نبی،خیابان ناطق نوری پ34</p>
+                    <p>شماره تماس 24 ساعته: <a href="tel:02172407">72407-021</a></p>
+                </div>
+            </div>
+            <div class="footer2">
+                <div class="footer_links">
+                    <h3>لینک های مرتبط</h3>
+                    <ul>
+                        <li><a href="">بلیط هواپیما</a></li>
+                        <li><a href="">رزرو هتل</a></li>
+                        <li><a href="">تور مسافرتی</a></li>
+                        <li><a href="">ویزا</a></li>
+                        <li><a href="">بیمه</a></li>
+                        <li><a href="">مجله گردشگری</a></li>
+                        <li><a href="">درباره ما</a></li>
+                        <li><a href="">تماس با ما</a></li>
+                        <li><a href="">قوانین و مقررات</a></li>
+                        <li><a href="">پشتی</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer3">
+                <div class="footer_links">
+                    <h3>لینک های مرتبط</h3>
+                    <ul>
+                        <li><a href="">بلیط هواپیما</a></li>
+                        <li><a href="">رزرو هتل</a></li>
+                        <li><a href="">تور مسافرتی</a></li>
+                        <li><a href="">ویزا</a></li>
+                        <li><a href="">بیمه</a></li>
+                        <li><a href="">مجله گردشگری</a></li>
+                    </ul>
+                </div>
+
+                <div class="mojavezha">
+                    <a href="#"><img src="img/logos/namad1.png" alt=""></a>
+                    <a href="#"><img src="img/logos/namad2.png" alt=""></a>
+                    <a href="#"><img src="img/logos/namad3.png" alt=""></a>
+                    <a href="#"><img src="img/logos/namad4.png" alt=""></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+<!-- jquery -->
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+<!-- select2 -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.10/js/select2.min.js"></script>
+
+<!-- Owl Slider -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+<!-- custom.js -->
+<script src="/js/custom.js"></script>
+
+
+</html>
