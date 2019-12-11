@@ -42,11 +42,7 @@
         padding:10px;
         justify-content: space-between;
 
-        .stars{
-            i{
-                padding:initial !important;
-            }
-        }
+        
         .left,.right{
             display:flex;
             flex-direction: column;
@@ -61,6 +57,12 @@
     }
 
 
+}
+
+span.stars{
+    i{
+        padding:initial !important;
+    }
 }
 .hotels_detail{
     background: $font_green;

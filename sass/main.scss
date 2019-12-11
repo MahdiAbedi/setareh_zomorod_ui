@@ -328,6 +328,7 @@ main{
 
 .bgwidth {
     width: 100%;
+    padding:5px 0;
 }
 .bg-white{
     background:#fff !important;
@@ -335,9 +336,13 @@ main{
 .bg-gray{
     background:#f5f5f5 !important;
 }
-// .organe{
-//     color: $medium_orange !important;
-// }
+.bg-zgreen{
+    background-color: $font_green !important;
+    color:white;
+}
+.organe{
+    color: $medium_orange !important;
+}
 @import 'modules/menu';
 @import 'pages/home';
 @import 'modules/tours';
@@ -369,10 +374,20 @@ main{
 @import 'modules/rounded_table';
 @import 'modules/tab';
 @import 'modules/profileMenu';
+@import 'modules/blog-slider';
+@import 'modules/breadCrums';
+//tags
+@import 'modules/tags';
+// tours 
+@import 'pages/tour_results';
 
 .column{
     display: flex;
     flex-direction: column;
+}
+
+.orange{
+    color:#f19a65!important;
 }
 .money,.price{
     font-family: IRANSansWebFaNum,'b Homa','tahoma';

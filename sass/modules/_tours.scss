@@ -9,10 +9,37 @@
     flex-direction: column;
     width:100%;
     justify-content: center;
-    align-items: center;
+    // align-items: center;
     background-color: #FFF;
     border-radius: 5px;
     cursor: pointer;
+
+    // اگرتور تخفیف داشت 
+    .discount{
+        border-top: 60px solid #f37021;
+        border-bottom: 60px solid transparent;
+        border-radius: 5px;
+        border-left: 60px solid transparent;
+        border-right: 60px solid #f37021;
+        position: absolute;
+        z-index: 100;
+        top:0;
+        right:0;
+        width:80px;
+        height:80px;
+
+        p{
+            color:#fff !important;
+            margin-top:-50px;
+            margin-right: -50px;
+            font-size: larger;
+        }
+        
+    }
+
+    .flex-between{
+        padding:4px;
+    }
 
     img{
         width:100%;
@@ -50,4 +77,51 @@
     }
     #newsletter{width:465px;
     border: 1px solid #eee;}
+}
+
+.text-slider{
+    width:45% !important;
+    a{
+        color:$font_gray;
+        font-size: 15px;
+        // padding:5px;
+        &::after{
+            content: " | ";
+            padding:5px;
+        }
+    }
+}
+
+.owl-prev, .owl-next {
+    width: 15px;
+    height: 100px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    display: block !important;
+    border:0px solid black;
+}
+.owl-prev { left: -80px; }
+.owl-next { right: -80px; }
+.owl-prev i, .owl-next i {transform : scale(2.5); color: #acacac;}
+
+
+.main-container.links {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    ul{
+        list-style: disc;
+        li{
+            margin-top:5px;
+        }
+        a{
+            color:black;
+            &:hover{
+                color:$font_green
+            }
+            
+        }
+    }
 }

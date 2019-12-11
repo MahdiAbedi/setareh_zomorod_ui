@@ -1,0 +1,55 @@
+//بیشتر کدها در تور همان کدهای هتل است
+.tour-result{
+    display: flex;
+    justify-content: center;
+    h2{
+        font-size: 14px;
+    }
+
+
+    img{
+        height: 163px;
+        min-width: 250px;
+        width:250px;
+        object-fit: cover;
+    }
+
+    .price{
+        background:#dcddde;
+        padding:10px;
+        margin:-10px;
+        display: flex;
+        text-align: center;
+        font-size: small;
+        width:150px;
+        p{
+           align-self: center;
+        }
+    }
+
+    .tour_facilities{
+        display:flex;
+        // flex:1;
+        margin-bottom: -3px;
+        // margin-top:-5px;
+        p{
+            background:#dcddde;
+            margin-left: 1px;
+            margin-top: 1px;
+            padding:10px;
+            font-size: 14px;
+            text-align: center;
+            width:calc(100% - 150px /5);
+            max-height: 40px;
+
+            &:last-child{
+                // flex:1;
+                margin-left: 0;
+                min-width:150px;
+                width:150px;
+            }
+        }
+    }
+
+}
+

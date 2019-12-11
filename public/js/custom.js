@@ -85,7 +85,10 @@ function Toggle(tagId) {
         // center:true,
         loop:true,
         margin:10,
-        nav:false,
+        dots:false,
+        nav:true,
+        navText : ['<i class="fa fa-angle-left" aria-hidden="true"></i>','<i class="fa fa-angle-right" aria-hidden="true"></i>'],
+
         items:4,
         // autoWidth:true,
         // stagePadding: 30,
@@ -110,6 +113,18 @@ function Toggle(tagId) {
         }
     })
 
+    $('.text-slider').owlCarousel({
+        rtl:true,
+        // center:true,
+        loop:true,
+        margin:1,
+        nav:true,
+        navText : ['<i class="fa fa-angle-left" aria-hidden="true"></i>','<i class="fa fa-angle-right" aria-hidden="true"></i>'],
+
+        items:5,
+        smartSpeed:450,
+        autoplay:true,
+    })
 
 
     // کلیک کردن روی دکمه ورود به سایت login
