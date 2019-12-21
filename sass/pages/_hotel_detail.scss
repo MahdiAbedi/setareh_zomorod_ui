@@ -135,7 +135,9 @@
 
 @media screen and (max-width: 767px) {
 
-
+    ul.hotel_refund_roles li{
+        width:100%;
+    }
     .hotel_container{
         flex-direction: column;
     }

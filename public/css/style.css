@@ -2050,6 +2050,8 @@ span.stars i {
 
 /* start of desktop styles */
 @media screen and (max-width: 767px) {
+  ul.hotel_refund_roles li {
+    width: 100%; }
   .hotel_container {
     flex-direction: column; }
   .hotel_summery, .gallery {
@@ -2264,6 +2266,11 @@ table.rounded_table {
   justify-content: center; }
   .tour-result h2 {
     font-size: 14px; }
+  .tour-result .hotels_preview_top .parts {
+    display: flex;
+    justify-content: space-between;
+    flex: 1;
+    margin-left: 15px; }
   .tour-result img {
     height: 163px;
     min-width: 250px;
@@ -2295,6 +2302,26 @@ table.rounded_table {
         margin-left: 0;
         min-width: 150px;
         width: 150px; }
+
+/* start of desktop styles */
+@media screen and (max-width: 767px) {
+  .tour-result {
+    flex-direction: column; }
+  .tour-result .tour_facilities p:last-child {
+    min-width: initial;
+    width: auto; }
+  .hotels-container.tour-result img {
+    width: 100% !important; }
+  .hotels .hotels_preview_top {
+    flex-direction: column;
+    border: 1px solid red; }
+    .hotels .hotels_preview_top .parts {
+      margin-bottom: 10px; }
+    .hotels .hotels_preview_top .price {
+      width: 100%;
+      justify-content: center;
+      margin: initial;
+      border-radius: 5px; } }
 
 .column {
   display: flex;
@@ -2353,4 +2380,6 @@ ul.hotel_refund_roles {
 
 @media screen and (max-width: 479px) {
   .half {
-    width: 100%; } }
+    width: 100%; }
+  .container {
+    margin-right: 10px; } }

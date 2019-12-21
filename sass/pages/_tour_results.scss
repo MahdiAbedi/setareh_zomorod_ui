@@ -6,6 +6,14 @@
         font-size: 14px;
     }
 
+    .hotels_preview_top{
+        .parts{
+            display: flex;
+            justify-content: space-between;
+            flex:1;
+            margin-left: 15px;
+        }
+    }
 
     img{
         height: 163px;
@@ -53,3 +61,40 @@
 
 }
 
+
+/* start of desktop styles */
+
+@media screen and (max-width: 991px) {
+    
+}
+
+@media screen and (max-width: 767px) {
+
+    .tour-result{
+        flex-direction: column;
+    }
+    .tour-result .tour_facilities p:last-child{
+        min-width: initial;
+        width:auto;
+    }
+    .hotels-container.tour-result{
+        img{width:100% !important}
+    }
+    .hotels .hotels_preview_top{
+        flex-direction: column;
+        border:1px solid red;
+        .parts{
+            margin-bottom: 10px;
+        }
+        .price{
+            width:100%;
+            justify-content: center;
+            margin:initial;
+            border-radius: 5px;
+        }
+    }
+}
+
+@media screen and (max-width: 479px) {
+
+}
