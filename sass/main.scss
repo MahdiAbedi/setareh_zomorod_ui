@@ -380,6 +380,12 @@ main{
 @import 'modules/tags';
 // tours 
 @import 'pages/tour_results';
+@import 'pages/tourDetail';
+// SlideShow
+// @import 'modules/slideShow';
+body main{
+    background-color: #f5f5f5;
+}
 
 .column{
     display: flex;
