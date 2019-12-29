@@ -80,7 +80,7 @@ function Toggle(tagId) {
     }
 
     // اسلایدشو تورها در صفحه اول سایت
-    $('.tours').owlCarousel({
+    $('.tours.owl-carousel').owlCarousel({
         rtl:true,
         // center:true,
         loop:true,

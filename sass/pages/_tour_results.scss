@@ -72,17 +72,29 @@
 
     .tour-result{
         flex-direction: column;
+
+        .tour_facilities{
+            // flex-direction: column;
+            // justify-content: space-around;
+            flex-wrap: wrap;
+            margin-bottom: 5px;
+            margin-right: 5px;
+
+            p{
+                width:49%;
+            }
+            & p:last-child{
+                min-width: 49%;
+                width:49%;
+            }
+        }
     }
-    .tour-result .tour_facilities p:last-child{
-        min-width: initial;
-        width:auto;
-    }
+
     .hotels-container.tour-result{
         img{width:100% !important}
     }
     .hotels .hotels_preview_top{
         flex-direction: column;
-        border:1px solid red;
         .parts{
             margin-bottom: 10px;
         }

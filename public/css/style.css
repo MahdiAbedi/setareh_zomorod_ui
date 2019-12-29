@@ -410,15 +410,25 @@ ul.menu {
 .tours {
   margin-top: 20px;
   justify-content: space-around; }
+  .tours.owl-carousel .tour {
+    width: 100% !important; }
+
+ul.links {
+  list-style: arabic-indic;
+  /* text-indent: 39px; */
+  line-height: 30px;
+  padding-right: 55px; }
 
 .tour {
   display: flex;
   flex-direction: column;
-  width: 100%;
-  justify-content: center;
+  width: 23%;
+  justify-content: space-between;
   background-color: #FFF;
   border-radius: 5px;
-  cursor: pointer; }
+  cursor: pointer;
+  margin-bottom: 20px;
+  position: relative; }
   .tour .discount {
     border-top: 60px solid #f37021;
     border-bottom: 60px solid transparent;
@@ -441,6 +451,8 @@ ul.menu {
   .tour img {
     width: 100%;
     height: auto;
+    max-height: 215px;
+    object-fit: cover;
     border-radius: 5px;
     margin-bottom: 5px; }
   .tour h2 {
@@ -472,11 +484,16 @@ ul.menu {
 .text-slider {
   width: 45% !important; }
   .text-slider a {
+    white-space: nowrap;
+    display: inline-block;
     color: #4E4E4E;
-    font-size: 15px; }
+    font-size: 15px;
+    padding: 0 5px;
+    width: 140px;
+    margin-right: 5px; }
     .text-slider a::after {
       content: " | ";
-      padding: 5px; }
+      margin-right: 5px; }
 
 .owl-prev, .owl-next {
   width: 15px;
@@ -509,6 +526,11 @@ ul.menu {
       color: black; }
       .main-container.links ul a:hover {
         color: #006C50; }
+
+.tourCatTitle {
+  padding: 10px;
+  border-radius: 4px;
+  margin-bottom: -15px; }
 
 .slider {
   background: url("../img/bgs/outline-flight.jpg") no-repeat center;
@@ -2307,14 +2329,19 @@ table.rounded_table {
 @media screen and (max-width: 767px) {
   .tour-result {
     flex-direction: column; }
-  .tour-result .tour_facilities p:last-child {
-    min-width: initial;
-    width: auto; }
+    .tour-result .tour_facilities {
+      flex-wrap: wrap;
+      margin-bottom: 5px;
+      margin-right: 5px; }
+      .tour-result .tour_facilities p {
+        width: 49%; }
+      .tour-result .tour_facilities p:last-child {
+        min-width: 49%;
+        width: 49%; }
   .hotels-container.tour-result img {
     width: 100% !important; }
   .hotels .hotels_preview_top {
-    flex-direction: column;
-    border: 1px solid red; }
+    flex-direction: column; }
     .hotels .hotels_preview_top .parts {
       margin-bottom: 10px; }
     .hotels .hotels_preview_top .price {
@@ -2323,30 +2350,30 @@ table.rounded_table {
       margin: initial;
       border-radius: 5px; } }
 
-.tourDetail .container {
-  margin-bottom: 10px; }
-
-.tourDetail .panel {
-  padding: 20px 40px; }
-  .tourDetail .panel h3 {
+.tourDetail {
+  background-color: #f5f5f5; }
+  .tourDetail .container {
     margin-bottom: 10px; }
-  .tourDetail .panel p {
-    text-align: justify;
-    line-height: 2.8; }
-
-.tourDetail .anchor {
-  display: flex;
-  justify-content: space-between; }
-  .tourDetail .anchor .anchors {
-    padding: 10px;
-    background-color: #fff;
-    border: 1px solid #bcbcbc;
-    border-radius: 4px; }
-    .tourDetail .anchor .anchors a {
-      padding: 3px 15px;
-      color: black; }
-      .tourDetail .anchor .anchors a:not(:last-child) {
-        border-left: 1px solid #bcbcbc; }
+  .tourDetail .panel {
+    padding: 20px 40px; }
+    .tourDetail .panel h3 {
+      margin-bottom: 10px; }
+    .tourDetail .panel p {
+      text-align: justify;
+      line-height: 2.8; }
+  .tourDetail .anchor {
+    display: flex;
+    justify-content: space-between; }
+    .tourDetail .anchor .anchors {
+      padding: 10px;
+      background-color: #fff;
+      border: 1px solid #bcbcbc;
+      border-radius: 4px; }
+      .tourDetail .anchor .anchors a {
+        padding: 3px 15px;
+        color: black; }
+        .tourDetail .anchor .anchors a:not(:last-child) {
+          border-left: 1px solid #bcbcbc; }
 
 .tourOptions img {
   width: 130px;
@@ -2396,8 +2423,96 @@ table.rounded_table {
     .anchor .btn {
       margin-top: 10px; } }
 
-body main {
-  background-color: #f5f5f5; }
+.accordion {
+  background-color: transparent;
+  color: #006C50;
+  cursor: pointer;
+  width: 100%;
+  border: none;
+  text-align: right;
+  outline: none;
+  font-size: 15px;
+  transition: 0.4s;
+  border-radius: 4px;
+  margin-bottom: 10px;
+  border: 1px solid #dcdbd5;
+  font-family: inherit;
+  display: flex;
+  justify-items: center;
+  align-items: center;
+  position: relative; }
+  .accordion span.title {
+    background: #7d7d7d;
+    padding: 18px;
+    margin-right: -18px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    margin-left: 5px;
+    width: 13%; }
+  .accordion .active, .accordion .accordion:hover {
+    background-color: #ccc; }
+  .accordion .active:after {
+    content: "\2212"; }
+
+.accordion:after {
+  content: '\002B';
+  color: #777;
+  font-weight: bold;
+  float: left;
+  position: absolute;
+  left: 20px; }
+
+.accordionbody {
+  padding: 0 18px;
+  background-color: white;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out; }
+
+.mySlides {
+  display: none;
+  height: 100%; }
+
+img {
+  vertical-align: middle;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 4px; }
+
+.slideShow {
+  /* Slideshow container */
+  /* Next & previous buttons */
+  /* Position the "next button" to the right */
+  /* On hover, add a grey background color */ }
+  .slideShow .slideshow-container {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+    height: 100%; }
+    .slideShow .slideshow-container img {
+      width: 100%;
+      height: 350px;
+      max-height: 350px;
+      object-fit: cover; }
+  .slideShow .prev, .slideShow .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none; }
+  .slideShow .next {
+    left: 0;
+    border-radius: 3px 0 0 3px; }
+  .slideShow .prev:hover, .slideShow .next:hover {
+    background-color: #f1f1f1;
+    color: black; }
 
 .column {
   display: flex;
